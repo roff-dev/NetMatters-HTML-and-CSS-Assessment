@@ -4,6 +4,14 @@ footer {
     padding: 30px 0 0;
     position: relative;
 
+    .footer-social {
+      @include mq ('l') {
+         float: left;
+         padding-right: 5%;
+      }
+    }
+    
+    
     .footer-row {
         display: flex;
         flex-wrap: wrap;
