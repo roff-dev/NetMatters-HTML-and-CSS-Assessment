@@ -1,5 +1,5 @@
 footer {
-    background-color: #323544;
+    background-color: $bg-color;
     color: #fff;
     padding: 30px 0 0;
     position: relative;
@@ -12,15 +12,15 @@ footer {
             flex: 100%;   
             margin-bottom: 30px;
            
-            @media (min-width: 768px) {
+            @include mq ('s') {
                flex: 50%;
             }
 
-            @media (min-width: 992px) {
+            @include mq ('m') {
                flex: 25%;
             }
 
-            @media (min-width: 1260px) {
+            @include mq ('l') {
                margin-bottom: 40px;
             }
 

@@ -1,0 +1,18 @@
+/*===========================================================
+VARIABLES
+============================================================*/
+
+//color variables
+$white: #fff;
+
+$bg-color: #323544;
+
+//breakpoints
+//map used for media query mixin
+$breakpoints: (
+    's': 768px,
+    'm': 992px,
+    'l': 1260px, 
+);
+
+

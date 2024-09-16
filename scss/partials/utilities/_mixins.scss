@@ -1,0 +1,22 @@
+/*=================================================================
+MIXINS
+===================================================================*/
+
+
+//media query breakpoint
+
+@mixin mq($break) {  
+    $value: map-get($breakpoints, $break);
+    $sm: map-get($breakpoints, 'sm');            
+    
+    @if $value == null {
+      @error "`#{$break}` is not a valid breakpoint name.";          
+    }          
+                 
+    @else {
+      @media (min-width: $value) {
+        @content;       
+      }             
+    }  
+  }
+  
