@@ -100,4 +100,15 @@ footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
 }
 
+.welcome {
+  background-color: #333645;
+  width: 100%;
+  padding: 30px 0 0;
+  color: #fff;
+}
+.welcome h1 {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
 /*# sourceMappingURL=styles.css.map */
