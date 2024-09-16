@@ -1,0 +1,54 @@
+%btn {
+    color: $white;
+
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    padding: 0.75em 1.5em;
+    border-radius: 0.35em;
+  
+    &:hover {
+      color: $white;
+      opacity: 0.8;
+    }
+  
+    &:active {
+      opacity: initial;
+    }
+
+}
+
+.btn-welcome {
+    @extend %btn;
+    background-color: $color-accent;
+    display: inline-block;
+    width: fit-content;
+    margin: 15px 0;
+
+    @include mq(m) {
+        display: block;
+    }
+}
+
+.btn-google {
+    @extend %btn;
+    background-color: blue;
+    display: inline-block;
+    width: fit-content;
+    margin: 15px 0;
+    @include mq(m) {
+        display: block;
+    }
+}
+
+.btn-trust {
+    @extend %btn;
+    background-color: green;
+    display: inline-block;
+    width: fit-content;
+    margin: 15px 0;
+    
+    @include mq(m) {
+        display: block;
+    }
+}
