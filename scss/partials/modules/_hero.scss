@@ -6,14 +6,14 @@
     width: 100%;
     
 
-    .container{
+    .middle{
         color: $white;
         display: flex;
         flex-direction: column;
         justify-content: center;
         align-items: center;
         text-align: center;
-        padding: 100px;   
+        padding: 100px 20px;   
     }
 
     p {

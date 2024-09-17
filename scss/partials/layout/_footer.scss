@@ -5,6 +5,7 @@ footer {
     position: relative;
 
     .footer-social {
+      
       @include mq ('l') {
          float: left;
          padding-right: 5%;
@@ -65,5 +66,35 @@ footer {
       &:hover {
          text-decoration: underline;
       }
+   }
+}
+
+
+.social-btn {
+   a {
+      @extend %btn;
+      background-color: $color-accent;
+      display: inline-block;
+ 
+   }
+
+   img {
+      filter: brightness(0) invert(1);
+   }
+
+   a.facebook:hover {
+      background-color: $color-fb;
+   }
+   
+   a.twitter:hover {
+      background-color: $color-tw;
+   }
+   
+   a.instagram:hover {
+      background-color: $color-ig;
+   }
+   
+   a.linkedin:hover {
+      background-color: $color-in;
    }
 }
