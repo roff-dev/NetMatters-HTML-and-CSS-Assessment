@@ -28,6 +28,20 @@
     @include mq(m) {
         display: block;
     }
+
+    a {
+        display: inline-flex;
+        align-items: center;
+        
+        .icon-arrow {
+            width: 1.4em;
+            height: 1.4em;
+            margin-left: 0.5em;
+            fill: currentColor; 
+        }
+
+    }
+    
 }
 
 .btn-google {
@@ -38,6 +52,17 @@
     margin: 15px 0;
     @include mq(m) {
         display: block;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        
+        .icon-arrow {
+            width: 1.4em;
+            height: 1.4em;
+            margin-left: 0.5em;
+            fill: currentColor; 
+        }
     }
 }
 
@@ -50,5 +75,16 @@
     
     @include mq(m) {
         display: block;
+    }
+    a {
+        display: inline-flex;
+        align-items: center;
+        
+        .icon-arrow {
+            width: 1.4em;
+            height: 1.4em;
+            margin-left: 0.5em;
+            fill: currentColor; 
+        }
     }
 }

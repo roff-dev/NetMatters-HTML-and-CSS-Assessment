@@ -159,6 +159,16 @@ footer .footer-row .footer-menu ul a:hover {
     display: block;
   }
 }
+.btn-welcome a {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-welcome a .icon-arrow {
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 0.5em;
+  fill: currentColor;
+}
 
 .btn-google {
   background-color: blue;
@@ -171,6 +181,16 @@ footer .footer-row .footer-menu ul a:hover {
     display: block;
   }
 }
+.btn-google a {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-google a .icon-arrow {
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 0.5em;
+  fill: currentColor;
+}
 
 .btn-trust {
   background-color: green;
@@ -182,6 +202,16 @@ footer .footer-row .footer-menu ul a:hover {
   .btn-trust {
     display: block;
   }
+}
+.btn-trust a {
+  display: inline-flex;
+  align-items: center;
+}
+.btn-trust a .icon-arrow {
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 0.5em;
+  fill: currentColor;
 }
 
 /*# sourceMappingURL=styles.css.map */
