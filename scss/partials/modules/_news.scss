@@ -1,0 +1,40 @@
+.newsbox {
+    box-sizing: border-box;
+    margin: 10px;
+    border: 1px solid black;
+    padding: 20px;
+
+    img {
+        width: 100%;
+        
+    }
+
+    a {
+        color: white;
+        border-radius: .3em;
+        background-color: teal;
+        padding: 10px;
+        
+        text-decoration: none;
+        
+    }
+    .news-info {
+        padding-bottom: 40px;
+        border-bottom: 1px solid black;
+    }
+
+    .news-author {
+        display: flex;
+        
+        ul {
+            list-style-type: none;
+            
+        }
+
+        img {
+            margin-top: 20px;
+            width: 47px;
+            height: 47px;
+        }
+    }
+}
