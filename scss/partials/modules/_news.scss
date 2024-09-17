@@ -1,40 +1,34 @@
-.newsbox {
-    box-sizing: border-box;
-    margin: 10px;
-    border: 1px solid black;
-    padding: 20px;
-
-    img {
-        width: 100%;
-        
+.newsbox1 {
+    @include news;
+    h3 {
+        color: $news-1;
     }
-
     a {
-        color: white;
-        border-radius: .3em;
-        background-color: teal;
-        padding: 10px;
-        
-        text-decoration: none;
-        
-    }
-    .news-info {
-        padding-bottom: 40px;
-        border-bottom: 1px solid black;
-    }
-
-    .news-author {
-        display: flex;
-        
-        ul {
-            list-style-type: none;
-            
-        }
-
-        img {
-            margin-top: 20px;
-            width: 47px;
-            height: 47px;
-        }
+        background-color: $news-1;
     }
 }
+
+.newsbox2 {
+    @include news;
+    h3 {
+        color: $news-2;
+    }
+    a {
+        background-color: $news-2;
+    }
+}
+
+.newsbox3 {
+    @include news;
+    h3 {
+        color: $news-3;
+    }
+    a {
+        background-color: $news-3;
+    }
+}
+
+
+
+
+
