@@ -132,7 +132,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: gray;
 }
 
-.btn-trust, .btn-google, .btn-welcome {
+.btn-trust, .btn-google, .btn-welcome, .btn-hero {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -140,12 +140,29 @@ footer .footer-row .footer-menu ul a:hover {
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
 }
-.btn-trust:hover, .btn-google:hover, .btn-welcome:hover {
+.btn-trust:hover, .btn-google:hover, .btn-welcome:hover, .btn-hero:hover {
   color: #fff;
   opacity: 0.8;
 }
-.btn-trust:active, .btn-google:active, .btn-welcome:active {
+.btn-trust:active, .btn-google:active, .btn-welcome:active, .btn-hero:active {
   opacity: initial;
+}
+
+.btn-hero {
+  background-color: blue;
+}
+.btn-hero a {
+  display: inline-block;
+  align-items: center;
+  color: white;
+  text-decoration: none;
+}
+.btn-hero a .icon-arrow {
+  width: 1.4em;
+  height: 1.4em;
+  margin-left: 0.5em;
+  padding-top: 0.5em;
+  fill: currentColor;
 }
 
 .btn-welcome {
@@ -276,6 +293,26 @@ nav img {
 /* Responsive adjustments if needed */
 @media (max-width: 768px) {
   /* Add any mobile-specific styles here */
+}
+.hero {
+  background-image: url("../../../img/hero.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 100%;
+}
+.hero .container {
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 100px;
+}
+.hero p {
+  font-weight: bold;
+  font-size: 1.25em;
 }
 
 /*# sourceMappingURL=styles.css.map */

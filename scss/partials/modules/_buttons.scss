@@ -18,7 +18,28 @@
 
 }
 
-.btn-welcome {
+.btn-hero {
+    @extend %btn;
+    background-color: blue;
+    a {
+        display: inline-block;
+        align-items: center;
+        color: white;
+        text-decoration: none;
+        
+        .icon-arrow {
+            width: 1.4em;
+            height: 1.4em;
+            margin-left: 0.5em;
+            padding-top: 0.5em;
+            fill: currentColor; 
+        }
+
+    }
+    
+}
+
+.btn-welcome{
     @extend %btn;
     background-color: $color-accent;
     display: inline-block;
