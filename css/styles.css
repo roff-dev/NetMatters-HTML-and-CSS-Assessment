@@ -431,6 +431,48 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #D64541;
 }
 
+.view-all {
+  text-align: center;
+}
+.view-all a {
+  display: inline;
+  color: #212330;
+  font-size: 1.5em;
+  text-decoration: none;
+  text-align: center;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.view-all a:hover {
+  text-decoration: underline;
+}
+.view-all a span {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+.client {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 0;
+}
+.client img {
+  display: inline-block;
+  padding: 20px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.grey {
+  filter: grayscale(100%);
+}
+.grey:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
 .navbar {
   margin-right: auto;
   margin-left: auto;
@@ -513,6 +555,13 @@ nav img {
 .hero p {
   font-weight: bold;
   font-size: 1.25em;
+}
+
+a span {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
 }
 
 /*# sourceMappingURL=styles.css.map */
