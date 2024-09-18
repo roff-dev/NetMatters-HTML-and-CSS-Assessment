@@ -145,9 +145,6 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #212330;
   display: inline-block;
 }
-.social-btn img {
-  filter: brightness(0) invert(1);
-}
 .social-btn a.facebook:hover {
   background-color: #3B5998;
 }
@@ -498,19 +495,24 @@ nav img {
   display: flex;
   gap: 10px; /* Adjust the space between the right-side icons */
 }
+.nav-links span {
+  font-size: 40px;
+}
+.nav-links a {
+  color: #212330;
+  text-decoration: none;
+}
 
 .nav-icon {
   display: inline-flex;
   align-items: right;
   justify-content: right;
-  width: 35px;
-  height: 35px;
   flex-shrink: 0;
 }
 
 .nav-search {
   width: 100%;
-  padding: 10px;
+  padding: 0 10px 20px;
 }
 
 .nav-search form {
@@ -519,9 +521,11 @@ nav img {
 }
 
 .nav-search input[type=text] {
+  background-color: #cdcdcd;
   flex-grow: 1;
-  padding: 5px;
+  padding: 1px;
   border: 1px solid #ccc;
+  height: 3em;
 }
 
 .nav-search button {
