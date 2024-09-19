@@ -158,6 +158,36 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #0077B5;
 }
 
+.grid {
+  display: grid;
+  width: 100%;
+  grid-template-columns: 1fr;
+}
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .grid > *:nth-child(-n+3) {
+    grid-column: 1/-1;
+  }
+}
+@media (min-width: 992px) {
+  .grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  .grid > *:nth-child(n+4) {
+    grid-column: span 1;
+  }
+}
+@media (min-width: 1260px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  .grid > *:nth-child(n+4) {
+    grid-column: span 1;
+  }
+}
+
 .welcome {
   background-color: #333645;
   width: 100%;
@@ -566,6 +596,16 @@ a span {
   vertical-align: middle;
   position: relative;
   top: -2px;
+}
+
+[class^=item] {
+  color: #fff;
+  text-shadow: 0 2px 0 rgba(110, 133, 156, 0.18);
+  padding: 0.85em;
+  background: #6e859c;
+  border: solid 1px rgba(110, 133, 156, 0.15);
+  border-radius: 0.3em;
+  margin-bottom: 30px;
 }
 
 /*# sourceMappingURL=styles.css.map */
