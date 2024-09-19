@@ -611,6 +611,14 @@ a span {
   margin-bottom: 30px;
   text-align: center;
   box-shadow: 1px 1px rgba(0, 0, 0, 0.2);
+  position: relative;
+}
+[class^=item] h2 {
+  font-weight: 300;
+  padding-top: 10px;
+}
+[class^=item] p {
+  color: gray;
 }
 [class^=item] a {
   margin: 30px 0 0;
@@ -621,6 +629,216 @@ a span {
 [class^=item]:hover {
   transform: translateY(-10px);
   transition: 0.5s ease;
+}
+[class^=item] [class^=icon-] {
+  position: relative;
+  z-index: 2;
+  display: inline-block;
+  font-size: 30px;
+  color: white;
+  top: 15px;
+}
+[class^=item]::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  z-index: 1;
+}
+[class^=item] .read-btn {
+  display: inline-block;
+  padding: 10px 20px;
+  margin-top: 15px;
+  border-radius: 3px;
+  color: white;
+  font-weight: bold;
+  text-decoration: none;
+  transition: background-color 0.3s ease;
+}
+
+.item-1::before {
+  background-color: #926fb1;
+}
+.item-1 .read-btn {
+  background-color: #926fb1;
+}
+.item-1:hover {
+  background-color: #926fb1;
+}
+.item-1:hover::before {
+  background-color: white;
+}
+.item-1:hover .read-btn {
+  background-color: white;
+  color: #926fb1;
+}
+.item-1:hover p {
+  color: white;
+}
+.item-1:hover h2 {
+  color: white;
+}
+.item-1:hover [class^=icon-] {
+  color: #926fb1;
+}
+
+.item-2::before {
+  background-color: #4183d7;
+}
+.item-2 .read-btn {
+  background-color: #4183d7;
+}
+.item-2:hover {
+  background-color: #4183d7;
+}
+.item-2:hover::before {
+  background-color: white;
+}
+.item-2:hover .read-btn {
+  background-color: white;
+  color: #4183d7;
+}
+.item-2:hover p {
+  color: white;
+}
+.item-2:hover h2 {
+  color: white;
+}
+.item-2:hover [class^=icon-] {
+  color: #4183d7;
+}
+
+.item-3::before {
+  background-color: #d64541;
+}
+.item-3 .read-btn {
+  background-color: #d64541;
+}
+.item-3:hover {
+  background-color: #d64541;
+}
+.item-3:hover::before {
+  background-color: white;
+}
+.item-3:hover .read-btn {
+  background-color: white;
+  color: #d64541;
+}
+.item-3:hover p {
+  color: white;
+}
+.item-3:hover h2 {
+  color: white;
+}
+.item-3:hover [class^=icon-] {
+  color: #d64541;
+}
+
+.item-4::before {
+  background-color: #67809f;
+}
+.item-4 .read-btn {
+  background-color: #67809f;
+}
+.item-4:hover {
+  background-color: #67809f;
+}
+.item-4:hover::before {
+  background-color: white;
+}
+.item-4:hover .read-btn {
+  background-color: white;
+  color: #67809f;
+}
+.item-4:hover p {
+  color: white;
+}
+.item-4:hover h2 {
+  color: white;
+}
+.item-4:hover [class^=icon-] {
+  color: #67809f;
+}
+
+.item-5::before {
+  background-color: #2ecc71;
+}
+.item-5 .read-btn {
+  background-color: #2ecc71;
+}
+.item-5:hover {
+  background-color: #2ecc71;
+}
+.item-5:hover::before {
+  background-color: white;
+}
+.item-5:hover .read-btn {
+  background-color: white;
+  color: #2ecc71;
+}
+.item-5:hover p {
+  color: white;
+}
+.item-5:hover h2 {
+  color: white;
+}
+.item-5:hover [class^=icon-] {
+  color: #2ecc71;
+}
+
+.item-6::before {
+  background-color: #f62459;
+}
+.item-6 .read-btn {
+  background-color: #f62459;
+}
+.item-6:hover {
+  background-color: #f62459;
+}
+.item-6:hover::before {
+  background-color: white;
+}
+.item-6:hover .read-btn {
+  background-color: white;
+  color: #f62459;
+}
+.item-6:hover p {
+  color: white;
+}
+.item-6:hover h2 {
+  color: white;
+}
+.item-6:hover [class^=icon-] {
+  color: #f62459;
+}
+
+.item-7::before {
+  background-color: #f39c12;
+}
+.item-7 .read-btn {
+  background-color: #f39c12;
+}
+.item-7:hover {
+  background-color: #f39c12;
+}
+.item-7:hover::before {
+  background-color: white;
+}
+.item-7:hover .read-btn {
+  background-color: white;
+  color: #f39c12;
+}
+.item-7:hover p {
+  color: white;
+}
+.item-7:hover h2 {
+  color: white;
+}
+.item-7:hover [class^=icon-] {
+  color: #f39c12;
 }
 
 /*# sourceMappingURL=styles.css.map */

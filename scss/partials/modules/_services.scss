@@ -5,7 +5,16 @@
     margin-bottom: 30px;
     text-align: center;
     box-shadow: 1px 1px rgba(black, 0.2);
+    position: relative;
 
+    h2 {
+        font-weight: 300;
+        padding-top: 10px;
+    }
+    p {
+        color: gray;
+    }
+    
     a {
         margin: 30px 0 0;
         padding: 30px;
@@ -17,4 +26,82 @@
         transform: translateY(-10px);
         transition: .5s ease;
     }
-  }
+    [class^="icon-"] {
+        position: relative;
+        z-index: 2;
+        display: inline-block;
+        font-size: 30px; 
+        color: white; 
+        top: 15px; 
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        
+        left: 50%;
+        transform: translateX(-50%);
+        width: 60px; 
+        height: 60px; 
+        border-radius: 50%;
+        z-index: 1;
+    }
+
+    .read-btn {
+        display: inline-block;
+        padding: 10px 20px;
+        margin-top: 15px;
+        border-radius: 3px;
+        color: white;
+        font-weight: bold;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+    }
+
+    
+}
+
+$colors: (
+    1: #926fb1,
+    2: #4183d7,
+    3: #d64541,
+    4: #67809f,
+    5: #2ecc71,
+    6: #f62459,
+    7: #f39c12
+);
+
+// Generate styles for each item
+@each $item, $color in $colors {
+    .item-#{$item} {
+        &::before {
+            background-color: $color;
+        }
+
+        .read-btn {
+            background-color: $color;
+
+        }
+        &:hover{
+            background-color: $color;
+
+            &::before {
+                background-color: white;
+                
+            }
+            .read-btn {
+                background-color: white;
+                color: $color;
+            }
+            p {
+                color: white;
+            }
+            h2 {
+                color: white;
+            }
+            [class^="icon-"] {
+                color: $color;
+            }
+        }
+    }
+}
