@@ -39,6 +39,28 @@ body {
   }
 }
 
+.client,
+.sponsor {
+  white-space: nowrap;
+  overflow-x: auto;
+  padding: 0;
+}
+.client img,
+.sponsor img {
+  display: inline-block;
+  padding: 20px;
+  vertical-align: middle;
+  align-items: center;
+}
+
+.grey {
+  filter: grayscale(100%);
+}
+.grey:hover {
+  filter: grayscale(0%);
+  -webkit-filter: grayscale(0%);
+}
+
 .floating-r {
   position: fixed;
   bottom: 20px;
@@ -482,26 +504,6 @@ footer .footer-row .footer-menu ul a:hover {
   vertical-align: middle;
   position: relative;
   top: -2px;
-}
-
-.client {
-  white-space: nowrap;
-  overflow-x: auto;
-  padding: 0;
-}
-.client img {
-  display: inline-block;
-  padding: 20px;
-  vertical-align: middle;
-  align-items: center;
-}
-
-.grey {
-  filter: grayscale(100%);
-}
-.grey:hover {
-  filter: grayscale(0%);
-  -webkit-filter: grayscale(0%);
 }
 
 .navbar {
