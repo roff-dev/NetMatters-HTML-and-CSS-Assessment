@@ -1,10 +1,10 @@
 [class^="item"] {
     padding: 0.85em;
-    border: 1px solid black;
+    border: 1px solid rgba(gray, 0.2);
     border-radius: 0.3em;
     margin-bottom: 30px;
     text-align: center;
-    box-shadow: 1px 1px rgba(black, 0.2);
+    box-shadow: 3px 5px rgba(gray, 0.1);
     position: relative;
 
     h2 {
@@ -62,13 +62,13 @@
 }
 
 $colors: (
-    1: #926fb1,
-    2: #4183d7,
-    3: #d64541,
-    4: #67809f,
-    5: #2ecc71,
-    6: #f62459,
-    7: #f39c12
+    1: #926FB1,
+    2: #4183D7,
+    3: #2ECC71,
+    4: #D64541,
+    5: #926FB1,
+    6: #F62459,
+    7: #CE4125
 );
 
 // Generate styles for each item
