@@ -1,34 +1,38 @@
-
 .grid {
-    display: grid;
+    display: flex;
     width: 100%;
-    grid-template-columns: 1fr;
-
+    flex-direction: column;
+    box-sizing: border-box;
 
     @include mq('s') {
-        grid-template-columns: repeat(2, 1fr);
-    
+        flex-flow: row wrap;
+
+        > * {
+            width: 50%; // 2 columns for items 4-7
+        }
+
         > *:nth-child(-n+3) {
-            grid-column: 1 / -1;
+            width: 100%; // Full width for first 3 items
         }
     }
 
     @include mq('m') {
-        grid-template-columns: repeat(3, 1fr);
-    
-        > *:nth-child(n+4) {
-            grid-column: span 1;
+        > * {
+            width: 50%; // Default to 2 columns
+        }
+
+        > *:nth-child(-n+3) {
+            width: 33.333%; // First 3 items in one row
         }
     }
-
     @include mq('l') {
-        grid-template-columns: repeat(4, 1fr);
-    
-        > *:nth-child(n+4) {
-            grid-column: span 1;
+        > * {
+            width: 25%; // Default to 2 columns
+        }
+
+        > *:nth-child(-n+3) {
+            width: 33.333%; // First 3 items in one row
         }
     }
 }
-
-
 
