@@ -549,33 +549,40 @@ nav img {
 .nav-search {
   width: 100%;
   padding: 0 10px 20px;
+  position: relative; /* Added */
 }
 
 .nav-search form {
   display: flex;
   width: 100%;
+  position: relative; /* Added */
 }
 
 .nav-search input[type=text] {
   background-color: #cdcdcd;
-  flex-grow: 1;
-  padding: 1px;
+  width: 100%; /* Ensure the input takes up the full width */
+  padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
   border: 1px solid #ccc;
   height: 3em;
+  box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
 }
 
-.nav-search button {
-  padding: 5px 10px;
-  background-color: #333;
-  color: white;
+.mag {
+  position: absolute;
+  right: 10px; /* Aligns the magnifying glass to the right inside the input */
+  top: 50%; /* Centers it vertically */
+  transform: translateY(-50%); /* Adjusts vertical centering */
   border: none;
+  background: none;
   cursor: pointer;
+  padding: 0;
 }
 
-/* Responsive adjustments if needed */
-@media (max-width: 768px) {
-  /* Add any mobile-specific styles here */
+.mag img {
+  height: 18px;
+  width: 18px;
 }
+
 .hero {
   background-image: url("../../../img/hero.png");
   background-size: cover;
@@ -621,10 +628,15 @@ a span {
   color: gray;
 }
 [class^=item] a {
-  margin: 30px 0 0;
-  padding: 30px;
   text-decoration: none;
   color: black;
+}
+[class^=item] a h2 {
+  font-weight: 300;
+  padding-top: 10px;
+}
+[class^=item] a p {
+  font-size: 16px;
 }
 [class^=item]:hover {
   transform: translateY(-10px);
