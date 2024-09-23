@@ -30,9 +30,7 @@
     a {
         background-color: $news-3;
     }
-    @include mq ('s') {
-        display: none;
-    }
+    
 }
 
 .view-all {
@@ -106,6 +104,9 @@
     .newsbox2 {
         margin-right: 0; // Remove right margin for the last box
     }
+    .newsbox3 {
+        display: none;
+    }
     .news-s {
         display: flex; // Use Flexbox for alignment
         flex-wrap: wrap; // Allow wrapping of boxes
@@ -118,4 +119,11 @@
         display: inline-block;
     }
 }
-
+@include mq('l') {
+    .newsbox1, .newsbox2, .newsbox3 {
+        width: 32%; // Set width to 33.33% for large view
+        display: inline-block; // Ensure they are inline
+        box-sizing: border-box; // Include padding and border in width
+        margin: 0; // Remove margin for alignment
+    }
+}

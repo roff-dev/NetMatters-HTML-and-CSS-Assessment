@@ -483,11 +483,6 @@ footer .footer-row .footer-menu ul a:hover {
 .newsbox3 a {
   background-color: #D64541;
 }
-@media (min-width: 768px) {
-  .newsbox3 {
-    display: none;
-  }
-}
 
 .view-all {
   text-align: center;
@@ -547,6 +542,9 @@ footer .footer-row .footer-menu ul a:hover {
   .newsbox2 {
     margin-right: 0;
   }
+  .newsbox3 {
+    display: none;
+  }
   .news-s {
     display: flex;
     flex-wrap: wrap;
@@ -557,6 +555,14 @@ footer .footer-row .footer-menu ul a:hover {
   }
   .view-all-top {
     display: inline-block;
+  }
+}
+@media (min-width: 1260px) {
+  .newsbox1, .newsbox2, .newsbox3 {
+    width: 32%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0;
   }
 }
 .navbar {
