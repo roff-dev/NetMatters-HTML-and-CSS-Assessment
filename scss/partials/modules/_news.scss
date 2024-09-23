@@ -20,24 +20,7 @@
     }
 }
 
-@include mq('s') {
-    .newsbox1, .newsbox2 {
-        width: 49%; // Set width to 50%
-        display: inline-block; // Display boxes inline
-        box-sizing: border-box; // Include padding and border in width
-        margin: 0 1% 0 0; // Add margin for spacing (adjust as needed)
-        
-    }
 
-    .newsbox2 {
-        margin-right: 0; // Remove right margin for the last box
-    }
-    .news-s {
-        display: flex; // Use Flexbox for alignment
-        flex-wrap: wrap; // Allow wrapping of boxes
-        justify-content: space-between;
-    }
-}
 
 .newsbox3 {
     @include news;
@@ -75,6 +58,64 @@
             position: relative;
             top: -2px;
         }
+    }
+}
+.news-head {
+    
+    h1 {
+        display: inline;
+    }
+}
+
+.view-all-top {
+    display: none;
+    float: right;
+
+    a {
+        display: inline;
+        
+        color: $color-accent;
+        font-size: 1.5em;
+        text-decoration: none;
+        
+        font-weight: 600;
+        padding: 10px 0;
+        
+        &:hover {
+            text-decoration: underline;
+        }
+        
+        span {
+            font-size: 1.25rem;
+            vertical-align: middle;
+            position: relative;
+            top: -2px;
+        }
+    }
+}
+
+@include mq('s') {
+    .newsbox1, .newsbox2 {
+        width: 49%; // Set width to 50%
+        display: inline-block; // Display boxes inline
+        box-sizing: border-box; // Include padding and border in width
+        margin: 0 1% 0 0; // Add margin for spacing (adjust as needed)
+        
+    }
+
+    .newsbox2 {
+        margin-right: 0; // Remove right margin for the last box
+    }
+    .news-s {
+        display: flex; // Use Flexbox for alignment
+        flex-wrap: wrap; // Allow wrapping of boxes
+        justify-content: space-between;
+    }
+    .view-all {
+        display: none;
+    }
+    .view-all-top {
+        display: inline-block;
     }
 }
 

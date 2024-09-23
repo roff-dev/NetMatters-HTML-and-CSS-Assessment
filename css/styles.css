@@ -440,22 +440,6 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #DB8C0D;
 }
 
-@media (min-width: 768px) {
-  .newsbox1, .newsbox2 {
-    width: 49%;
-    display: inline-block;
-    box-sizing: border-box;
-    margin: 0 1% 0 0;
-  }
-  .newsbox2 {
-    margin-right: 0;
-  }
-  .news-s {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-  }
-}
 .newsbox3 {
   box-sizing: border-box;
   margin: 10px;
@@ -527,6 +511,54 @@ footer .footer-row .footer-menu ul a:hover {
   top: -2px;
 }
 
+.news-head h1 {
+  display: inline;
+}
+
+.view-all-top {
+  display: none;
+  float: right;
+}
+.view-all-top a {
+  display: inline;
+  color: #212330;
+  font-size: 1.5em;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 10px 0;
+}
+.view-all-top a:hover {
+  text-decoration: underline;
+}
+.view-all-top a span {
+  font-size: 1.25rem;
+  vertical-align: middle;
+  position: relative;
+  top: -2px;
+}
+
+@media (min-width: 768px) {
+  .newsbox1, .newsbox2 {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 1% 0 0;
+  }
+  .newsbox2 {
+    margin-right: 0;
+  }
+  .news-s {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .view-all {
+    display: none;
+  }
+  .view-all-top {
+    display: inline-block;
+  }
+}
 .navbar {
   margin-right: auto;
   margin-left: auto;
