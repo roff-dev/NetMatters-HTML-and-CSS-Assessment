@@ -253,6 +253,22 @@ footer .footer-row .footer-menu ul a:hover {
   filter: invert(68%) sepia(75%) saturate(2229%) hue-rotate(359deg) brightness(100%) contrast(105%);
 }
 
+@media (min-width: 992px) {
+  .container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  .welcome-top,
+  .welcome-bottom {
+    width: 49%;
+    align-items: center;
+    padding: 10px;
+  }
+  .welcome-bottom .quote {
+    font-size: 1.2em;
+  }
+}
 .btn-trust, .btn-google, .btn-welcome, .btn-hero, .social-btn a {
   color: #fff;
   font-weight: bold;

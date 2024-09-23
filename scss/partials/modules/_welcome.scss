@@ -1,3 +1,4 @@
+
 .welcome {
     background-color: $color-main;
     width: 100%;
@@ -21,7 +22,6 @@
          text-decoration: underline;
       }
    }
-
 }
 .quote {
     font-style: italic;
@@ -40,4 +40,24 @@ padding-top: 10px;
 .star-icon {
     filter: invert(68%) sepia(75%) saturate(2229%) hue-rotate(359deg) brightness(100%) contrast(105%);
     }
+}
+
+@include mq('m') {
+    .container {
+        display: flex; 
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+    
+    .welcome-top, 
+    .welcome-bottom {
+        width: 49%;
+        align-items: center;
+        padding: 10px;
+   }
+   .welcome-bottom {
+    .quote {
+        font-size: 1.2em;
+    }
+   }
 }
