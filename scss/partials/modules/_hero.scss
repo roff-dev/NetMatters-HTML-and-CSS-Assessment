@@ -5,8 +5,9 @@
     background-repeat: no-repeat;
     width: 100%;
     
+    
 
-    .middle{
+    .hero-text{
         color: $white;
         display: flex;
         flex-direction: column;
@@ -20,11 +21,24 @@
         font-weight: bold;
         font-size: 1.25em;
     }
+    a span {
+        font-size: 1.25rem;
+        vertical-align: middle;
+        position: relative;
+        top: -2px;
+    }
+    .break {
+        white-space: nowrap;
+    }
+
+    @include mq('m') {
+        .hero-text {
+            align-items: start;
+        }
+        .break {
+            display: block;
+            text-align: left;
+        }
+    }
 }
 
-a span {
-    font-size: 1.25rem;
-    vertical-align: middle;
-    position: relative;
-    top: -2px;
-}

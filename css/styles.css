@@ -672,7 +672,7 @@ nav img {
   background-repeat: no-repeat;
   width: 100%;
 }
-.hero .middle {
+.hero .hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -685,12 +685,23 @@ nav img {
   font-weight: bold;
   font-size: 1.25em;
 }
-
-a span {
+.hero a span {
   font-size: 1.25rem;
   vertical-align: middle;
   position: relative;
   top: -2px;
+}
+.hero .break {
+  white-space: nowrap;
+}
+@media (min-width: 992px) {
+  .hero .hero-text {
+    align-items: start;
+  }
+  .hero .break {
+    display: block;
+    text-align: left;
+  }
 }
 
 [class^=item] {
