@@ -640,12 +640,13 @@ nav img {
 }
 
 .nav-search input[type=text] {
-  background-color: #cdcdcd;
+  background-color: #e6e6e6;
   width: 100%; /* Ensure the input takes up the full width */
   padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
   border: 1px solid #ccc;
   height: 3em;
   box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
+  box-shadow: inset 0 0 32px -8px gray;
 }
 
 .mag {
@@ -698,7 +699,7 @@ a span {
   border-radius: 0.3em;
   margin-bottom: 30px;
   text-align: center;
-  box-shadow: 3px 5px rgba(128, 128, 128, 0.1);
+  box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.35);
   position: relative;
 }
 [class^=item] h2 {

@@ -54,12 +54,13 @@ nav img {
 }
 
 .nav-search input[type="text"] {
-    background-color: lighten(gray, 30);
+    background-color: lighten(gray, 40);
     width: 100%; /* Ensure the input takes up the full width */
     padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
     border: 1px solid #ccc;
     height: 3em;
     box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
+    box-shadow: inset 0 0 32px -8px gray;
 }
 
 .mag {
