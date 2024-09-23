@@ -1,3 +1,5 @@
+
+
 .newsbox1 {
     @include news;
     h3 {
@@ -18,6 +20,25 @@
     }
 }
 
+@include mq('s') {
+    .newsbox1, .newsbox2 {
+        width: 49%; // Set width to 50%
+        display: inline-block; // Display boxes inline
+        box-sizing: border-box; // Include padding and border in width
+        margin: 0 1% 0 0; // Add margin for spacing (adjust as needed)
+        
+    }
+
+    .newsbox2 {
+        margin-right: 0; // Remove right margin for the last box
+    }
+    .news-s {
+        display: flex; // Use Flexbox for alignment
+        flex-wrap: wrap; // Allow wrapping of boxes
+        justify-content: space-between;
+    }
+}
+
 .newsbox3 {
     @include news;
     h3 {
@@ -25,6 +46,9 @@
     }
     a {
         background-color: $news-3;
+    }
+    @include mq ('s') {
+        display: none;
     }
 }
 

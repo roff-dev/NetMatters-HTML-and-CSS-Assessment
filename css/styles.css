@@ -440,6 +440,22 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #DB8C0D;
 }
 
+@media (min-width: 768px) {
+  .newsbox1, .newsbox2 {
+    width: 49%;
+    display: inline-block;
+    box-sizing: border-box;
+    margin: 0 1% 0 0;
+  }
+  .newsbox2 {
+    margin-right: 0;
+  }
+  .news-s {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+}
 .newsbox3 {
   box-sizing: border-box;
   margin: 10px;
@@ -482,6 +498,11 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox3 a {
   background-color: #D64541;
+}
+@media (min-width: 768px) {
+  .newsbox3 {
+    display: none;
+  }
 }
 
 .view-all {
