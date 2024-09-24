@@ -3,12 +3,15 @@
     width: 100%;
     flex-direction: column;
     box-sizing: border-box;
+    gap: 30px;
+    
 
     @include mq('s') {
         flex-flow: row wrap;
 
         > * {
-            width: 50%; // 2 columns for items 4-7
+            width: calc((100% - (1 * 30px)) / 2);
+            // width: 50%; // 2 columns for items 4-7
         }
 
         > *:nth-child(-n+3) {
@@ -18,20 +21,24 @@
 
     @include mq('m') {
         > * {
-            width: 50%; // Default to 2 columns
+            width: calc((100% - (1 * 30px)) / 2);
+            // width: 50%; // Default to 2 columns
         }
 
         > *:nth-child(-n+3) {
-            width: 33.333%; // First 3 items in one row
+            width: calc((100% - (2 * 30px)) / 3);
+            // width: 33.333%; // First 3 items in one row
         }
     }
     @include mq('l') {
         > * {
-            width: 25%; // Default to 2 columns
+            width: calc((100% - (3 * 30px)) / 4);
+            // width: 25%; // Default to 2 columns
         }
 
         > *:nth-child(-n+3) {
-            width: 33.333%; // First 3 items in one row
+            width: calc((100% - (2 * 30px)) / 3);
+            // width: 33.3%; // First 3 items in one row
         }
     }
 }

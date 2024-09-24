@@ -185,13 +185,14 @@ footer .footer-row .footer-menu ul a:hover {
   width: 100%;
   flex-direction: column;
   box-sizing: border-box;
+  gap: 30px;
 }
 @media (min-width: 768px) {
   .grid {
     flex-flow: row wrap;
   }
   .grid > * {
-    width: 50%;
+    width: calc((100% - 30px) / 2);
   }
   .grid > *:nth-child(-n+3) {
     width: 100%;
@@ -199,18 +200,18 @@ footer .footer-row .footer-menu ul a:hover {
 }
 @media (min-width: 992px) {
   .grid > * {
-    width: 50%;
+    width: calc((100% - 30px) / 2);
   }
   .grid > *:nth-child(-n+3) {
-    width: 33.333%;
+    width: calc((100% - 60px) / 3);
   }
 }
 @media (min-width: 1260px) {
   .grid > * {
-    width: 25%;
+    width: calc((100% - 90px) / 4);
   }
   .grid > *:nth-child(-n+3) {
-    width: 33.333%;
+    width: calc((100% - 60px) / 3);
   }
 }
 
@@ -708,7 +709,6 @@ nav img {
   padding: 0.85em;
   border: 1px solid rgba(128, 128, 128, 0.2);
   border-radius: 0.3em;
-  margin-bottom: 30px;
   text-align: center;
   box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.35);
   position: relative;
