@@ -1,81 +1,194 @@
-.navbar {
-    margin-right: auto;
-    margin-left: auto;
-    padding: 15px 15px 0;
 
-}
-nav img {
-    max-width: 100%;
-}
-.nav-container {
+/* General styling */
+.header{
+    padding: 20px 0px;
+  
+  }
+  
+  .header--hidden {
+    transform: translateY(-100%);
+  }
+  
+  
+  .header-bar-container{
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+  }
+  
+  .top-header{
+    display: flex;
     align-items: center;
-    padding: 10px;
-}
-
-.nav-logo {
-    padding-right: 10px;
-}
-
-.nav-links {
-    display: flex;
-    gap: 10px; /* Adjust the space between the right-side icons */
-    
-    span {
-        
-        font-size: 40px;
-    }
-    a {
-        color: $color-accent;
-        text-decoration: none;
-        
-    }
-}
-.nav-icon {
-    display: inline-flex;
-    align-items: right;
-    justify-content: right;
-    
-    flex-shrink: 0;
-}
-
-
-.nav-search {
+    justify-content: space-between;
     width: 100%;
-    padding: 0 10px 20px;
-    position: relative; /* Added */
-}
-
-.nav-search form {
-    display: flex;
-    width: 100%;
-    position: relative; /* Added */
-}
-
-.nav-search input[type="text"] {
-    background-color: lighten(gray, 40);
-    width: 100%; /* Ensure the input takes up the full width */
-    padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
-    border: 1px solid #ccc;
-    height: 3em;
-    box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
-    box-shadow: inset 0 0 32px -8px gray;
-}
-
-.mag {
+  }
+  
+  .header-phone-icon{
+    color: #333645;
+    background-color: white;
+    font-size: 32px;
+   
+    margin-left: auto;
+  
+    padding-right: 20px;
+  }
+  
+  
+  .hamburger-icon{
+    background-color: #333645;
+    width: 63px;
+    height: 56px;
+    position: relative; 
+  }
+  
+  .hamburger-line{
+    width: 33px;
+    height: 4px;
+    background-color: #fff;
+    margin: 6px 0;
+    
+  }
+  
+  
+  .hamburger-line-container{
     position: absolute;
-    right: 10px; /* Aligns the magnifying glass to the right inside the input */
-    top: 50%; /* Centers it vertically */
-    transform: translateY(-50%); /* Adjusts vertical centering */
-    border: none;
-    background: none;
-    cursor: pointer;
-    padding: 0;
-}
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
+  
+  
+  
+  .small-screen-search-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    
+    position: relative;
+    height: 47px;
+    width: 100%;
+    margin-top: 11px;
+  
+  
+    span{
+        position: relative;
+        padding: 5px 0px 5px 15px;
+        color: #888888;
+        z-index: 2;
+    }
+    .icon-search{
+        position: relative;
+        padding-right: 11px;
+        font-size: 20px;
+        font-weight: 400px;
+        color: $color-accent;
+        z-index: 2;
+    }
+    .small-screen-search-input{
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        
+        padding: 5px 0px 5px 15px;
+  
+        z-index: 1;
+        border: 2px solid #cecece;
+        background-color: #e5e5e5;
+        box-shadow: inset 0 1px 1px rgba(0, 0, 0, .075);
+    }
+  }
+  
+  @media (min-width: 768px){
+  
+    
+    .header-phone-icon{
+        display: none;
+    }
+    
+    
+    .bottom-header{
+        display: none;
+    }
+  
+  }
 
-.mag img {
-    height: 18px;
-    width: 18px;
-}
+
+
+
+
+
+
+// .nav-container {
+//     display: block;
+//     justify-content: space-between;
+//     align-items: center;
+//     position: relative;
+    
+//     margin-right: auto;
+//     margin-left: auto;
+//     padding: 15px 15px 0;
+
+//     img {
+    
+//         max-width: 100%;
+        
+//     } 
+//     .icon-menu {
+//         position: absolute; 
+//         right: 15px; 
+//         top:20px;
+//         font-size: 50px;
+//         color: white;
+//         background-color: $color-accent;
+        
+//     }  
+//     .icon-phone {
+//         position: absolute; 
+//         right: 80px; 
+//         top: 30px; 
+//         font-size: 30px; 
+//         color: $color-accent; 
+        
+//     }
+// }
+  
+
+
+// .nav-search {
+//     width: 100%;
+//     padding: 0 0 20px;
+//     position: relative; /* Added */
+// }
+
+// .nav-search form {
+//     display: flex;
+//     width: 100%;
+//     position: relative; /* Added */
+// }
+
+// .nav-search input[type="text"] {
+//     display: block;
+//     background-color: lighten(gray, 40);
+//     width: 100%; /* Ensure the input takes up the full width */
+//     padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
+//     border: 1px solid #ccc;
+//     height: 3em;
+//     box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
+//     box-shadow: inset 0 0 32px -8px gray;
+// }
+
+// .mag {
+//     position: absolute;
+//     right: 10px; /* Aligns the magnifying glass to the right inside the input */
+//     top: 50%; /* Centers it vertically */
+//     transform: translateY(-50%); /* Adjusts vertical centering */
+//     border: none;
+//     background: none;
+//     cursor: pointer;
+//     padding: 0;
+// }
+
+// .mag img {
+//     height: 18px;
+//     width: 18px;
+// }
 
