@@ -609,6 +609,29 @@ footer .footer-row .footer-menu ul a:hover {
   width: 100%;
 }
 
+.header-buttons {
+  display: flex;
+}
+.header-buttons .support {
+  background-color: #4183d7;
+}
+.header-buttons a {
+  font-size: 1.2em;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  background-color: #999aa2;
+  align-items: center;
+  justify-content: center;
+  padding: 5px 15px;
+  display: flex;
+  margin-right: 15px;
+}
+.header-buttons a span {
+  font-size: 1.5em;
+  margin-right: 5px;
+}
+
 .header-phone-icon {
   color: #333645;
   background-color: white;
@@ -622,6 +645,7 @@ footer .footer-row .footer-menu ul a:hover {
   width: 63px;
   height: 59px;
   position: relative;
+  margin-left: 15px;
 }
 
 .hamburger-line {
@@ -681,8 +705,8 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #999aa2;
   border: none;
   border-radius: 0 5px 5px 0;
-  width: 50px;
-  height: 100%;
+  width: 59px;
+  height: 59px;
   cursor: pointer;
   display: flex;
   align-items: center;
@@ -690,10 +714,28 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .small-search #small-submit span {
   color: white;
+  font-size: 1.5em;
+}
+
+.nav-popout {
+  background-color: #333645;
+}
+.nav-popout ul {
+  margin: 0;
+  list-style-type: none;
+  display: flex;
 }
 
 @media (max-width: 768px) {
   .small-search {
+    display: none;
+  }
+}
+@media (max-width: 991px) {
+  .nav-popout {
+    display: none;
+  }
+  .header-buttons a {
     display: none;
   }
 }
@@ -703,6 +745,16 @@ footer .footer-row .footer-menu ul a:hover {
   }
   .bottom-header {
     display: none;
+  }
+}
+@media (min-width: 992px) {
+  .small-input {
+    display: none;
+  }
+}
+@media (min-width: 1260px) {
+  .small-input {
+    display: flex;
   }
 }
 .hero {

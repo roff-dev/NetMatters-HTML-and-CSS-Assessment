@@ -21,6 +21,31 @@
     justify-content: space-between;
     width: 100%;
   }
+  .header-buttons {
+    display: flex;
+
+    .support {
+        background-color: #4183d7;
+    }
+
+    a {
+        font-size: 1.2em;
+        color: white;
+        text-decoration: none;
+        border-radius: 5px;
+        background-color: #999aa2;
+        align-items: center;
+        justify-content: center;
+        padding: 5px 15px;
+        display: flex;
+        margin-right: 15px;
+
+        span {
+            font-size: 1.5em;
+            margin-right: 5px;
+        }
+    }
+  }
   
   .header-phone-icon{
     color: #333645;
@@ -38,6 +63,7 @@
     width: 63px;
     height: 59px;
     position: relative; 
+    margin-left: 15px;
   }
   
   .hamburger-line{
@@ -108,24 +134,49 @@
         background-color: #999aa2; // Match the button color
         border: none; // Remove default border
         border-radius: 0 5px 5px 0; // Round the right corners
-        width: 50px; // Set a fixed width for the button
-        height: 100%; // Match the height of the input
+        width: 59px; // Set a fixed width for the button
+        height: 59px; // Match the height of the input
         cursor: pointer; // Change cursor to pointer
         display: flex; // Center the icon
         align-items: center; // Center vertically
         justify-content: center; // Center horizontally
+        
         span {
             color: white;
+            font-size: 1.5em;
         }
     }
 }
   
+.nav-popout {
+    background-color: $color-main;
+
+    ul {
+        margin: 0;
+        list-style-type: none;
+        display: flex;
+    }
+}
+
+
  @media (max-width: 768px) {
     .small-search {
         display: none;
     }
  }
  
+ @media (max-width: 991px) {
+    .nav-popout {
+        display: none;
+    }
+    .header-buttons {
+        a {
+            display: none;
+        }
+    }
+ }
+
+
   @include mq ('s'){
   
     
@@ -140,3 +191,16 @@
   
   }
 
+  @include mq ('m') {
+    .small-input {
+        display: none;
+    }
+    
+  }
+  @include mq('l') {
+    .small-input {
+        display: flex;
+        
+    }
+    
+  }
