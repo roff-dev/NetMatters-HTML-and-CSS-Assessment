@@ -10,7 +10,7 @@
   }
   
   
-  .header-bar-container{
+  .header-row{
     display: flex;
     flex-direction: column;
   }
@@ -58,7 +58,7 @@
   
   
   
-  .small-screen-search-bar{
+  .small-search{
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -69,12 +69,7 @@
     margin-top: 11px;
   
   
-    span{
-        position: relative;
-        padding: 5px 0px 5px 15px;
-        color: #888888;
-        z-index: 2;
-    }
+    
     .icon-search{
         position: relative;
         padding-right: 11px;
@@ -83,7 +78,7 @@
         color: $color-accent;
         z-index: 2;
     }
-    .small-screen-search-input{
+    .small-input{
         position: absolute;
         width: 100%;
         height: 100%;
@@ -110,85 +105,4 @@
     }
   
   }
-
-
-
-
-
-
-
-// .nav-container {
-//     display: block;
-//     justify-content: space-between;
-//     align-items: center;
-//     position: relative;
-    
-//     margin-right: auto;
-//     margin-left: auto;
-//     padding: 15px 15px 0;
-
-//     img {
-    
-//         max-width: 100%;
-        
-//     } 
-//     .icon-menu {
-//         position: absolute; 
-//         right: 15px; 
-//         top:20px;
-//         font-size: 50px;
-//         color: white;
-//         background-color: $color-accent;
-        
-//     }  
-//     .icon-phone {
-//         position: absolute; 
-//         right: 80px; 
-//         top: 30px; 
-//         font-size: 30px; 
-//         color: $color-accent; 
-        
-//     }
-// }
-  
-
-
-// .nav-search {
-//     width: 100%;
-//     padding: 0 0 20px;
-//     position: relative; /* Added */
-// }
-
-// .nav-search form {
-//     display: flex;
-//     width: 100%;
-//     position: relative; /* Added */
-// }
-
-// .nav-search input[type="text"] {
-//     display: block;
-//     background-color: lighten(gray, 40);
-//     width: 100%; /* Ensure the input takes up the full width */
-//     padding: 15px 40px 15px 15px; /* Added padding on the right to make space for the icon */
-//     border: 1px solid #ccc;
-//     height: 3em;
-//     box-sizing: border-box; /* Ensure padding doesn't affect the input's size */
-//     box-shadow: inset 0 0 32px -8px gray;
-// }
-
-// .mag {
-//     position: absolute;
-//     right: 10px; /* Aligns the magnifying glass to the right inside the input */
-//     top: 50%; /* Centers it vertically */
-//     transform: translateY(-50%); /* Adjusts vertical centering */
-//     border: none;
-//     background: none;
-//     cursor: pointer;
-//     padding: 0;
-// }
-
-// .mag img {
-//     height: 18px;
-//     width: 18px;
-// }
 
