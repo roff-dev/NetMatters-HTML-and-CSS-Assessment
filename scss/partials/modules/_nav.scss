@@ -174,7 +174,7 @@
           text-decoration: none;
           text-transform: uppercase;
           color: white;
-          width: 167px;
+          width: 134px;
           flex-direction: column;
           align-items: center;
 
@@ -246,11 +246,16 @@ $colors: (
         display: none;
     }
     
+    
   }
   @include mq('l') {
     .small-input {
         display: flex;
         
     }
-    
+    .nav-popout {
+      ul a {
+        width: 167px;
+      }
+    }
   }

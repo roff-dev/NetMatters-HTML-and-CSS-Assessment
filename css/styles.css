@@ -738,7 +738,7 @@ footer .footer-row .footer-menu ul a:hover {
   text-decoration: none;
   text-transform: uppercase;
   color: white;
-  width: 167px;
+  width: 134px;
   flex-direction: column;
   align-items: center;
 }
@@ -846,6 +846,9 @@ footer .footer-row .footer-menu ul a:hover {
 @media (min-width: 1260px) {
   .small-input {
     display: flex;
+  }
+  .nav-popout ul a {
+    width: 167px;
   }
 }
 .hero {
