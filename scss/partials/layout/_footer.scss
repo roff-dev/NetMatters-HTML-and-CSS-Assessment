@@ -1,3 +1,7 @@
+//FOOTER
+
+
+//main footer style
 footer {
     background-color: $color-secondary;
     color: #fff;
@@ -11,7 +15,7 @@ footer {
          padding-right: 5%;
       }
     }
- 
+ // footer links 
     .footer-row {
         display: flex;
         flex-wrap: wrap;
@@ -55,6 +59,7 @@ footer {
     }
 }
 
+//copyright information
 .footer-last {
    background-color: $color-accent;
    color: $white;
@@ -69,7 +74,7 @@ footer {
    }
 }
 
-
+//Social media links and icons
 .social-btn {
    a {
       @extend %btn;

@@ -1,5 +1,6 @@
+//NEWS SECTION
 
-
+//news floating boxes
 .newsbox1 {
     @include news;
     h3 {
@@ -20,8 +21,6 @@
     }
 }
 
-
-
 .newsbox3 {
     @include news;
     h3 {
@@ -33,6 +32,7 @@
     
 }
 
+//see all news link
 .view-all {
     text-align: center;
 
@@ -64,7 +64,7 @@
         display: inline;
     }
 }
-
+//view all for larger viewports
 .view-all-top {
     display: none;
     float: right;
@@ -94,22 +94,22 @@
 
 @include mq('s') {
     .newsbox1, .newsbox2 {
-        width: 49%; // Set width to 50%
-        display: inline-block; // Display boxes inline
-        box-sizing: border-box; // Include padding and border in width
-        margin: 0 1% 0 0; // Add margin for spacing (adjust as needed)
+        width: 49%; 
+        display: inline-block; 
+        box-sizing: border-box; 
+        margin: 0 1% 0 0; 
         
     }
 
     .newsbox2 {
-        margin-right: 0; // Remove right margin for the last box
+        margin-right: 0; 
     }
     .newsbox3 {
         display: none;
     }
     .news-s {
-        display: flex; // Use Flexbox for alignment
-        flex-wrap: wrap; // Allow wrapping of boxes
+        display: flex; 
+        flex-wrap: wrap; 
         justify-content: space-between;
     }
     .view-all {
@@ -121,9 +121,9 @@
 }
 @include mq('l') {
     .newsbox1, .newsbox2, .newsbox3 {
-        width: 32%; // Set width to 33.33% for large view
-        display: inline-block; // Ensure they are inline
-        box-sizing: border-box; // Include padding and border in width
-        margin: 0; // Remove margin for alignment
+        width: 32%; 
+        display: inline-block; 
+        box-sizing: border-box; 
+        margin: 0; 
     }
 }

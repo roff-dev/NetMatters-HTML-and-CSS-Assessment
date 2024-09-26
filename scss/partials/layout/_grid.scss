@@ -1,3 +1,5 @@
+//services grid layout
+
 .grid {
     display: flex;
     width: 100%;
@@ -5,40 +7,35 @@
     box-sizing: border-box;
     gap: 30px;
     
-
+// small viewport item layout
     @include mq('s') {
         flex-flow: row wrap;
 
         > * {
-            width: calc((100% - (1 * 30px)) / 2);
-            // width: 50%; // 2 columns for items 4-7
+            width: calc((100% - (1 * 30px)) / 2); // 2x2 items
         }
 
         > *:nth-child(-n+3) {
-            width: 100%; // Full width for first 3 items
+            width: 100%; // 1 item per row for 3 rows
         }
     }
 
     @include mq('m') {
         > * {
-            width: calc((100% - (1 * 30px)) / 2);
-            // width: 50%; // Default to 2 columns
+            width: calc((100% - (1 * 30px)) / 2); //2x2
         }
 
         > *:nth-child(-n+3) {
-            width: calc((100% - (2 * 30px)) / 3);
-            // width: 33.333%; // First 3 items in one row
+            width: calc((100% - (2 * 30px)) / 3); //1 row of 3 items
         }
     }
     @include mq('l') {
         > * {
-            width: calc((100% - (3 * 30px)) / 4);
-            // width: 25%; // Default to 2 columns
+            width: calc((100% - (3 * 30px)) / 4); //1x4
         }
 
         > *:nth-child(-n+3) {
-            width: calc((100% - (2 * 30px)) / 3);
-            // width: 33.3%; // First 3 items in one row
+            width: calc((100% - (2 * 30px)) / 3); //1x3
         }
     }
 }

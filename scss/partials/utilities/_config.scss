@@ -43,8 +43,8 @@ MIXINS
     box-sizing: border-box;
     margin: 10px;
     margin-bottom: 30px;
-    border: 1px solid black;
-    box-shadow: 5px 5px 5px rgba(black, .2);
+    border: 1px solid gray;
+    box-shadow: 0px 6px 24px -8px rgba(gray, .5);
     
     &:hover {
         transform: translateY(-10px);
@@ -71,7 +71,8 @@ MIXINS
     }
     .news-info {
         padding-bottom: 40px;
-        border-bottom: 1px solid black;
+        border-bottom: 1px solid gray;
+        
         padding: 20px
     }
 

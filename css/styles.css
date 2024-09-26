@@ -379,8 +379,8 @@ footer .footer-row .footer-menu ul a:hover {
   box-sizing: border-box;
   margin: 10px;
   margin-bottom: 30px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
+  box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
 }
 .newsbox1:hover {
   transform: translateY(-10px);
@@ -397,7 +397,7 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox1 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
   padding: 20px;
 }
 .newsbox1 .news-author {
@@ -423,8 +423,8 @@ footer .footer-row .footer-menu ul a:hover {
   box-sizing: border-box;
   margin: 10px;
   margin-bottom: 30px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
+  box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
 }
 .newsbox2:hover {
   transform: translateY(-10px);
@@ -441,7 +441,7 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox2 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
   padding: 20px;
 }
 .newsbox2 .news-author {
@@ -467,8 +467,8 @@ footer .footer-row .footer-menu ul a:hover {
   box-sizing: border-box;
   margin: 10px;
   margin-bottom: 30px;
-  border: 1px solid black;
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
+  border: 1px solid gray;
+  box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
 }
 .newsbox3:hover {
   transform: translateY(-10px);
@@ -485,7 +485,7 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox3 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid gray;
   padding: 20px;
 }
 .newsbox3 .news-author {
@@ -588,7 +588,6 @@ footer .footer-row .footer-menu ul a:hover {
     margin: 0;
   }
 }
-/* General styling */
 .header {
   padding: 20px 0px;
 }
@@ -893,7 +892,7 @@ footer .footer-row .footer-menu ul a:hover {
 [class^=item] {
   padding: 0.85em;
   border: 1px solid rgba(128, 128, 128, 0.2);
-  border-radius: 0.3em;
+  border-radius: 0.9em;
   text-align: center;
   box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.35);
   position: relative;

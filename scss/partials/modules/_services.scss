@@ -1,7 +1,10 @@
+//OUR SERVICES SECTION
+
+//target all item boxes
 [class^="item"] {
     padding: 0.85em;
     border: 1px solid rgba(gray, 0.2);
-    border-radius: 0.3em;
+    border-radius: 0.9em;
     text-align: center;
     box-shadow: 0px 6px 24px -8px rgba(gray, .35);
     position: relative;
@@ -64,7 +67,7 @@
 
     
 }
-
+//colour map
 $colors: (
     1: #926FB1,
     2: #4183D7,

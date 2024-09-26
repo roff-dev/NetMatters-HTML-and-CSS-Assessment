@@ -1,3 +1,6 @@
+//HERO IMAGE AND TEXT
+
+//background image
 .hero {
     background-image: url('../../../img/hero.png');
     background-size: cover;
@@ -6,7 +9,7 @@
     width: 100%;
     
     
-
+    //center text
     .hero-text{
         color: $white;
         display: flex;
@@ -27,6 +30,7 @@
         position: relative;
         top: -2px;
     }
+    //multiline text
     .break {
         white-space: nowrap;
     }
