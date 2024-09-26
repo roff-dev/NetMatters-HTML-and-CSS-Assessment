@@ -719,11 +719,100 @@ footer .footer-row .footer-menu ul a:hover {
 
 .nav-popout {
   background-color: #333645;
+  font-size: 20px;
 }
 .nav-popout ul {
-  margin: 0;
+  line-height: 1;
   list-style-type: none;
   display: flex;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+}
+.nav-popout ul small {
+  font-size: 12px;
+}
+.nav-popout ul a {
+  display: flex;
+  padding: 18px 50px 10px;
+  text-decoration: none;
+  color: white;
+  flex-direction: column;
+  align-items: center;
+}
+.nav-popout ul a span {
+  font-size: 1.35em;
+  padding: 0 0 10px;
+}
+
+.link-1 span {
+  color: #926FB1;
+}
+.link-1:hover {
+  background-color: #c4b1d5;
+}
+.link-1:hover span {
+  color: white;
+}
+
+.link-2 span {
+  color: #4183D7;
+}
+.link-2:hover {
+  background-color: #95bae9;
+}
+.link-2:hover span {
+  color: white;
+}
+
+.link-3 span {
+  color: #2ECC71;
+}
+.link-3:hover {
+  background-color: #7ee2a8;
+}
+.link-3:hover span {
+  color: white;
+}
+
+.link-4 span {
+  color: #D64541;
+}
+.link-4:hover {
+  background-color: #e89795;
+}
+.link-4:hover span {
+  color: white;
+}
+
+.link-5 span {
+  color: #926FB1;
+}
+.link-5:hover {
+  background-color: #c4b1d5;
+}
+.link-5:hover span {
+  color: white;
+}
+
+.link-6 span {
+  color: #F62459;
+}
+.link-6:hover {
+  background-color: #fa86a3;
+}
+.link-6:hover span {
+  color: white;
+}
+
+.link-7 span {
+  color: #CE4125;
+}
+.link-7:hover {
+  background-color: #e68673;
+}
+.link-7:hover span {
+  color: white;
 }
 
 @media (max-width: 768px) {
