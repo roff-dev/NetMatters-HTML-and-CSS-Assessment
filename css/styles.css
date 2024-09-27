@@ -841,11 +841,10 @@ footer .footer-row .footer-menu ul a:hover {
 .pop-link ul li .pop-a {
   text-transform: none;
   flex-direction: initial;
-  padding-left: 0;
-  padding-right: 0;
+  padding-left: 10px;
+  padding-right: 10px;
   align-items: start;
-  word-wrap: normal;
-  white-space: nowrap;
+  width: 100%;
   flex: 0 0 auto;
 }
 .pop-link ul li.h3-item {
