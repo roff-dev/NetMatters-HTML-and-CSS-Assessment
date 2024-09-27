@@ -169,7 +169,7 @@
           
         }
 
-        a {
+        a{
           display: flex;
           padding: 18px 50px 18px;
           text-decoration: none;
@@ -216,6 +216,36 @@ $colors: (
   z-index: 10; 
   width: 100vw;
   left: 0;
+  
+  ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+    width: 75%;
+    margin: 0 auto;
+
+    li {
+      flex: 0 0 calc(33.33%); 
+      .pop-a {
+        text-transform: none;
+        flex-direction: initial;
+        padding-left: 0;
+        padding-right: 0;
+        align-items: start;
+        word-wrap: normal; 
+        white-space: nowrap; 
+        flex: 0 0 auto; 
+      }
+    }
+
+    li.h3-item {
+      font-size: 1.3em;
+      flex: 0 0 100%; 
+      color: white; 
+      display: block; 
+       
+    }
+  }
 }
 
 

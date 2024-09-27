@@ -17,6 +17,10 @@ body {
   box-sizing: border-box;
 }
 
+h3 {
+  font-weight: 500;
+}
+
 .container {
   margin-right: auto;
   margin-left: auto;
@@ -823,6 +827,32 @@ footer .footer-row .footer-menu ul a:hover {
   z-index: 10;
   width: 100vw;
   left: 0;
+}
+.pop-link ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 75%;
+  margin: 0 auto;
+}
+.pop-link ul li {
+  flex: 0 0 33.33%;
+}
+.pop-link ul li .pop-a {
+  text-transform: none;
+  flex-direction: initial;
+  padding-left: 0;
+  padding-right: 0;
+  align-items: start;
+  word-wrap: normal;
+  white-space: nowrap;
+  flex: 0 0 auto;
+}
+.pop-link ul li.h3-item {
+  font-size: 1.3em;
+  flex: 0 0 100%;
+  color: white;
+  display: block;
 }
 
 .pop-link-1 {
