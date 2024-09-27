@@ -20,6 +20,8 @@
         padding: 100px 20px;   
     }
 
+    
+
     p {
         font-weight: bold;
         font-size: 1.25em;
@@ -38,6 +40,9 @@
     @include mq('m') {
         .hero-text {
             align-items: start;
+        }
+        h1 {
+            font-size: 3em;
         }
         .break {
             display: block;

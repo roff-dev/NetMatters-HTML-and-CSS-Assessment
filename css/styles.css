@@ -81,7 +81,7 @@ h3 {
   color: white;
   border-radius: 50%;
   text-decoration: none;
-  font-size: 24px;
+  font-size: 30px;
   font-weight: bold;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
 }
@@ -640,7 +640,7 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: white;
   font-size: 32px;
   margin-left: auto;
-  padding-right: 20px;
+  padding-top: 10px;
 }
 
 .hamburger-icon {
@@ -952,6 +952,9 @@ footer .footer-row .footer-menu ul a:hover {
 @media (min-width: 992px) {
   .hero .hero-text {
     align-items: start;
+  }
+  .hero h1 {
+    font-size: 3em;
   }
   .hero .break {
     display: block;
