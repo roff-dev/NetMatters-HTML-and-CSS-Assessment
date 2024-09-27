@@ -832,7 +832,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 75%;
+  width: 80%;
   margin: 0 auto;
 }
 .pop-link ul li {
