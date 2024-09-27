@@ -153,7 +153,7 @@
     
     background-color: $color-main;
     font-size: 20px;
-
+    position: relative;
     
 
     ul {
@@ -201,7 +201,7 @@ $colors: (
       color: $color; 
       }
       &:hover {
-          background-color: lighten($color, 20%); 
+          background-color: $color; 
           span {
             color: white;
           }
@@ -209,6 +209,30 @@ $colors: (
   }
 }
 
+
+.pop-link {
+  display: none; 
+  position: absolute; 
+  z-index: 10; 
+  width: 100vw;
+  left: 0;
+}
+
+
+@each $key, $color in $colors {
+  .pop-link-#{$key} {
+      background-color: $color; 
+      
+  }
+}
+
+
+.nav-popout ul li a:hover {
+  + .pop-link {
+      display: block; 
+      
+  }
+}
 
  @media (max-width: 768px) {
     .small-search {

@@ -719,6 +719,7 @@ footer .footer-row .footer-menu ul a:hover {
 .nav-popout {
   background-color: #333645;
   font-size: 20px;
+  position: relative;
 }
 .nav-popout ul {
   line-height: 1;
@@ -750,7 +751,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #926FB1;
 }
 .link-1:hover {
-  background-color: #c4b1d5;
+  background-color: #926FB1;
 }
 .link-1:hover span {
   color: white;
@@ -760,7 +761,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #4183D7;
 }
 .link-2:hover {
-  background-color: #95bae9;
+  background-color: #4183D7;
 }
 .link-2:hover span {
   color: white;
@@ -770,7 +771,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #2ECC71;
 }
 .link-3:hover {
-  background-color: #7ee2a8;
+  background-color: #2ECC71;
 }
 .link-3:hover span {
   color: white;
@@ -780,7 +781,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #D64541;
 }
 .link-4:hover {
-  background-color: #e89795;
+  background-color: #D64541;
 }
 .link-4:hover span {
   color: white;
@@ -790,7 +791,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #926FB1;
 }
 .link-5:hover {
-  background-color: #c4b1d5;
+  background-color: #926FB1;
 }
 .link-5:hover span {
   color: white;
@@ -800,7 +801,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: #F62459;
 }
 .link-6:hover {
-  background-color: #fa86a3;
+  background-color: #F62459;
 }
 .link-6:hover span {
   color: white;
@@ -810,10 +811,50 @@ footer .footer-row .footer-menu ul a:hover {
   color: #CE4125;
 }
 .link-7:hover {
-  background-color: #e68673;
+  background-color: #CE4125;
 }
 .link-7:hover span {
   color: white;
+}
+
+.pop-link {
+  display: none;
+  position: absolute;
+  z-index: 10;
+  width: 100vw;
+  left: 0;
+}
+
+.pop-link-1 {
+  background-color: #926FB1;
+}
+
+.pop-link-2 {
+  background-color: #4183D7;
+}
+
+.pop-link-3 {
+  background-color: #2ECC71;
+}
+
+.pop-link-4 {
+  background-color: #D64541;
+}
+
+.pop-link-5 {
+  background-color: #926FB1;
+}
+
+.pop-link-6 {
+  background-color: #F62459;
+}
+
+.pop-link-7 {
+  background-color: #CE4125;
+}
+
+.nav-popout ul li a:hover + .pop-link {
+  display: block;
 }
 
 @media (max-width: 768px) {
