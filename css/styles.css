@@ -5,9 +5,310 @@ VARIABLES
 MIXINS
 ============================================================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.item-1::before {
+  background-color: #926FB1;
+}
+.item-1 .read-btn {
+  background-color: #926FB1;
+}
+.item-1:hover {
+  background-color: #926FB1;
+}
+.item-1:hover::before {
+  background-color: white;
+}
+.item-1:hover .read-btn {
+  background-color: white;
+  color: #926FB1;
+}
+.item-1:hover p {
+  color: white;
+}
+.item-1:hover h2 {
+  color: white;
+}
+.item-1:hover [class^=icon-] {
+  color: #926FB1;
+}
+
+.item-2::before {
+  background-color: #4183D7;
+}
+.item-2 .read-btn {
+  background-color: #4183D7;
+}
+.item-2:hover {
+  background-color: #4183D7;
+}
+.item-2:hover::before {
+  background-color: white;
+}
+.item-2:hover .read-btn {
+  background-color: white;
+  color: #4183D7;
+}
+.item-2:hover p {
+  color: white;
+}
+.item-2:hover h2 {
+  color: white;
+}
+.item-2:hover [class^=icon-] {
+  color: #4183D7;
+}
+
+.item-3::before {
+  background-color: #2ECC71;
+}
+.item-3 .read-btn {
+  background-color: #2ECC71;
+}
+.item-3:hover {
+  background-color: #2ECC71;
+}
+.item-3:hover::before {
+  background-color: white;
+}
+.item-3:hover .read-btn {
+  background-color: white;
+  color: #2ECC71;
+}
+.item-3:hover p {
+  color: white;
+}
+.item-3:hover h2 {
+  color: white;
+}
+.item-3:hover [class^=icon-] {
+  color: #2ECC71;
+}
+
+.item-4::before {
+  background-color: #D64541;
+}
+.item-4 .read-btn {
+  background-color: #D64541;
+}
+.item-4:hover {
+  background-color: #D64541;
+}
+.item-4:hover::before {
+  background-color: white;
+}
+.item-4:hover .read-btn {
+  background-color: white;
+  color: #D64541;
+}
+.item-4:hover p {
+  color: white;
+}
+.item-4:hover h2 {
+  color: white;
+}
+.item-4:hover [class^=icon-] {
+  color: #D64541;
+}
+
+.item-5::before {
+  background-color: #926FB1;
+}
+.item-5 .read-btn {
+  background-color: #926FB1;
+}
+.item-5:hover {
+  background-color: #926FB1;
+}
+.item-5:hover::before {
+  background-color: white;
+}
+.item-5:hover .read-btn {
+  background-color: white;
+  color: #926FB1;
+}
+.item-5:hover p {
+  color: white;
+}
+.item-5:hover h2 {
+  color: white;
+}
+.item-5:hover [class^=icon-] {
+  color: #926FB1;
+}
+
+.item-6::before {
+  background-color: #F62459;
+}
+.item-6 .read-btn {
+  background-color: #F62459;
+}
+.item-6:hover {
+  background-color: #F62459;
+}
+.item-6:hover::before {
+  background-color: white;
+}
+.item-6:hover .read-btn {
+  background-color: white;
+  color: #F62459;
+}
+.item-6:hover p {
+  color: white;
+}
+.item-6:hover h2 {
+  color: white;
+}
+.item-6:hover [class^=icon-] {
+  color: #F62459;
+}
+
+.item-7::before {
+  background-color: #CE4125;
+}
+.item-7 .read-btn {
+  background-color: #CE4125;
+}
+.item-7:hover {
+  background-color: #CE4125;
+}
+.item-7:hover::before {
+  background-color: white;
+}
+.item-7:hover .read-btn {
+  background-color: white;
+  color: #CE4125;
+}
+.item-7:hover p {
+  color: white;
+}
+.item-7:hover h2 {
+  color: white;
+}
+.item-7:hover [class^=icon-] {
+  color: #CE4125;
+}
+
+.link-1 span {
+  color: #926FB1;
+}
+.link-1:hover {
+  background-color: #926FB1;
+}
+.link-1:hover span {
+  color: white;
+}
+
+.link-2 span {
+  color: #4183D7;
+}
+.link-2:hover {
+  background-color: #4183D7;
+}
+.link-2:hover span {
+  color: white;
+}
+
+.link-3 span {
+  color: #2ECC71;
+}
+.link-3:hover {
+  background-color: #2ECC71;
+}
+.link-3:hover span {
+  color: white;
+}
+
+.link-4 span {
+  color: #D64541;
+}
+.link-4:hover {
+  background-color: #D64541;
+}
+.link-4:hover span {
+  color: white;
+}
+
+.link-5 span {
+  color: #926FB1;
+}
+.link-5:hover {
+  background-color: #926FB1;
+}
+.link-5:hover span {
+  color: white;
+}
+
+.link-6 span {
+  color: #F62459;
+}
+.link-6:hover {
+  background-color: #F62459;
+}
+.link-6:hover span {
+  color: white;
+}
+
+.link-7 span {
+  color: #CE4125;
+}
+.link-7:hover {
+  background-color: #CE4125;
+}
+.link-7:hover span {
+  color: white;
+}
+
+.pop-link-1 {
+  background-color: #926FB1;
+}
+
+.pop-link-2 {
+  background-color: #4183D7;
+}
+
+.pop-link-3 {
+  background-color: #2ECC71;
+}
+
+.pop-link-4 {
+  background-color: #D64541;
+}
+
+.pop-link-5 {
+  background-color: #926FB1;
+}
+
+.pop-link-6 {
+  background-color: #F62459;
+}
+
+.pop-link-7 {
+  background-color: #CE4125;
+}
+
 /*=================================================================
 MIXINS
 ===================================================================*/
+.btn-trust, .btn-google, .btn-welcome, .btn-hero, .social-btn a {
+  color: #fff;
+  font-weight: bold;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 0.75em 1.5em;
+  border-radius: 0.35em;
+}
+.btn-trust:hover, .btn-google:hover, .btn-welcome:hover, .btn-hero:hover, .social-btn a:hover {
+  color: #fff;
+  opacity: 0.8;
+}
+.btn-trust:active, .btn-google:active, .btn-welcome:active, .btn-hero:active, .social-btn a:active {
+  opacity: initial;
+}
+
+.nav-popout ul a, .welcome a, footer .footer-row .footer-menu ul a, .floating-r a {
+  text-decoration: none;
+  color: white;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -79,9 +380,7 @@ h3 {
   width: 60px;
   height: 60px;
   background-color: #323544;
-  color: white;
   border-radius: 50%;
-  text-decoration: none;
   font-size: 30px;
   font-weight: bold;
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
@@ -147,10 +446,6 @@ footer .footer-row .footer-menu h4 {
 footer .footer-row .footer-menu ul {
   list-style-type: none;
   padding-left: 0;
-}
-footer .footer-row .footer-menu ul a {
-  text-decoration: none;
-  color: #fff;
 }
 footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
@@ -233,13 +528,6 @@ footer .footer-row .footer-menu ul a:hover {
 .welcome p:nth-of-type(1) {
   font-weight: bold;
 }
-.welcome a {
-  text-decoration: none;
-  color: #fff;
-}
-.welcome a:hover {
-  text-decoration: underline;
-}
 @media (min-width: 1260px) {
   .welcome [class^=btn-] {
     display: inline;
@@ -279,22 +567,6 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .stars .star-icon {
   filter: invert(68%) sepia(75%) saturate(2229%) hue-rotate(359deg) brightness(100%) contrast(105%);
-}
-
-.btn-trust, .btn-google, .btn-welcome, .btn-hero, .social-btn a {
-  color: #fff;
-  font-weight: bold;
-  text-decoration: none;
-  text-transform: uppercase;
-  padding: 0.75em 1.5em;
-  border-radius: 0.35em;
-}
-.btn-trust:hover, .btn-google:hover, .btn-welcome:hover, .btn-hero:hover, .social-btn a:hover {
-  color: #fff;
-  opacity: 0.8;
-}
-.btn-trust:active, .btn-google:active, .btn-welcome:active, .btn-hero:active, .social-btn a:active {
-  opacity: initial;
 }
 
 .btn-hero {
@@ -746,9 +1018,7 @@ footer .footer-row .footer-menu ul a:hover {
 .nav-popout ul a {
   display: flex;
   padding: 18px 50px 18px;
-  text-decoration: none;
   text-transform: uppercase;
-  color: white;
   width: 134px;
   flex-direction: column;
   align-items: center;
@@ -756,76 +1026,6 @@ footer .footer-row .footer-menu ul a:hover {
 .nav-popout ul a span {
   font-size: 1.35em;
   padding: 0 0 10px;
-}
-
-.link-1 span {
-  color: #926FB1;
-}
-.link-1:hover {
-  background-color: #926FB1;
-}
-.link-1:hover span {
-  color: white;
-}
-
-.link-2 span {
-  color: #4183D7;
-}
-.link-2:hover {
-  background-color: #4183D7;
-}
-.link-2:hover span {
-  color: white;
-}
-
-.link-3 span {
-  color: #2ECC71;
-}
-.link-3:hover {
-  background-color: #2ECC71;
-}
-.link-3:hover span {
-  color: white;
-}
-
-.link-4 span {
-  color: #D64541;
-}
-.link-4:hover {
-  background-color: #D64541;
-}
-.link-4:hover span {
-  color: white;
-}
-
-.link-5 span {
-  color: #926FB1;
-}
-.link-5:hover {
-  background-color: #926FB1;
-}
-.link-5:hover span {
-  color: white;
-}
-
-.link-6 span {
-  color: #F62459;
-}
-.link-6:hover {
-  background-color: #F62459;
-}
-.link-6:hover span {
-  color: white;
-}
-
-.link-7 span {
-  color: #CE4125;
-}
-.link-7:hover {
-  background-color: #CE4125;
-}
-.link-7:hover span {
-  color: white;
 }
 
 .pop-link:hover {
@@ -863,34 +1063,6 @@ footer .footer-row .footer-menu ul a:hover {
   flex: 0 0 100%;
   color: white;
   display: block;
-}
-
-.pop-link-1 {
-  background-color: #926FB1;
-}
-
-.pop-link-2 {
-  background-color: #4183D7;
-}
-
-.pop-link-3 {
-  background-color: #2ECC71;
-}
-
-.pop-link-4 {
-  background-color: #D64541;
-}
-
-.pop-link-5 {
-  background-color: #926FB1;
-}
-
-.pop-link-6 {
-  background-color: #F62459;
-}
-
-.pop-link-7 {
-  background-color: #CE4125;
 }
 
 .nav-popout ul li a:hover + .pop-link {
@@ -1040,188 +1212,6 @@ h1 {
   font-weight: bold;
   text-decoration: none;
   transition: background-color 0.3s ease;
-}
-
-.item-1::before {
-  background-color: #926FB1;
-}
-.item-1 .read-btn {
-  background-color: #926FB1;
-}
-.item-1:hover {
-  background-color: #926FB1;
-}
-.item-1:hover::before {
-  background-color: white;
-}
-.item-1:hover .read-btn {
-  background-color: white;
-  color: #926FB1;
-}
-.item-1:hover p {
-  color: white;
-}
-.item-1:hover h2 {
-  color: white;
-}
-.item-1:hover [class^=icon-] {
-  color: #926FB1;
-}
-
-.item-2::before {
-  background-color: #4183D7;
-}
-.item-2 .read-btn {
-  background-color: #4183D7;
-}
-.item-2:hover {
-  background-color: #4183D7;
-}
-.item-2:hover::before {
-  background-color: white;
-}
-.item-2:hover .read-btn {
-  background-color: white;
-  color: #4183D7;
-}
-.item-2:hover p {
-  color: white;
-}
-.item-2:hover h2 {
-  color: white;
-}
-.item-2:hover [class^=icon-] {
-  color: #4183D7;
-}
-
-.item-3::before {
-  background-color: #2ECC71;
-}
-.item-3 .read-btn {
-  background-color: #2ECC71;
-}
-.item-3:hover {
-  background-color: #2ECC71;
-}
-.item-3:hover::before {
-  background-color: white;
-}
-.item-3:hover .read-btn {
-  background-color: white;
-  color: #2ECC71;
-}
-.item-3:hover p {
-  color: white;
-}
-.item-3:hover h2 {
-  color: white;
-}
-.item-3:hover [class^=icon-] {
-  color: #2ECC71;
-}
-
-.item-4::before {
-  background-color: #D64541;
-}
-.item-4 .read-btn {
-  background-color: #D64541;
-}
-.item-4:hover {
-  background-color: #D64541;
-}
-.item-4:hover::before {
-  background-color: white;
-}
-.item-4:hover .read-btn {
-  background-color: white;
-  color: #D64541;
-}
-.item-4:hover p {
-  color: white;
-}
-.item-4:hover h2 {
-  color: white;
-}
-.item-4:hover [class^=icon-] {
-  color: #D64541;
-}
-
-.item-5::before {
-  background-color: #926FB1;
-}
-.item-5 .read-btn {
-  background-color: #926FB1;
-}
-.item-5:hover {
-  background-color: #926FB1;
-}
-.item-5:hover::before {
-  background-color: white;
-}
-.item-5:hover .read-btn {
-  background-color: white;
-  color: #926FB1;
-}
-.item-5:hover p {
-  color: white;
-}
-.item-5:hover h2 {
-  color: white;
-}
-.item-5:hover [class^=icon-] {
-  color: #926FB1;
-}
-
-.item-6::before {
-  background-color: #F62459;
-}
-.item-6 .read-btn {
-  background-color: #F62459;
-}
-.item-6:hover {
-  background-color: #F62459;
-}
-.item-6:hover::before {
-  background-color: white;
-}
-.item-6:hover .read-btn {
-  background-color: white;
-  color: #F62459;
-}
-.item-6:hover p {
-  color: white;
-}
-.item-6:hover h2 {
-  color: white;
-}
-.item-6:hover [class^=icon-] {
-  color: #F62459;
-}
-
-.item-7::before {
-  background-color: #CE4125;
-}
-.item-7 .read-btn {
-  background-color: #CE4125;
-}
-.item-7:hover {
-  background-color: #CE4125;
-}
-.item-7:hover::before {
-  background-color: white;
-}
-.item-7:hover .read-btn {
-  background-color: white;
-  color: #CE4125;
-}
-.item-7:hover p {
-  color: white;
-}
-.item-7:hover h2 {
-  color: white;
-}
-.item-7:hover [class^=icon-] {
-  color: #CE4125;
 }
 
 /*# sourceMappingURL=styles.css.map */

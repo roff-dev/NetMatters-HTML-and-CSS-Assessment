@@ -47,8 +47,7 @@ footer {
               padding-left: 0; 
 
               a {
-               text-decoration: none;
-               color: $white;
+               @extend %a-link;
                
                &:hover {
                   text-decoration: underline;

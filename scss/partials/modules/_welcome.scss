@@ -16,12 +16,7 @@
     }
 
     a {
-      text-decoration: none;
-      color: $white;
-      
-      &:hover {
-         text-decoration: underline;
-      }
+        @extend %a-link;
    }
    @include mq('l') {
         [class^="btn-"] {
