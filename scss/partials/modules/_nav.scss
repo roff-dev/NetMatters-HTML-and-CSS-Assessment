@@ -148,7 +148,8 @@
         }
     }
 }
-  
+
+//dropdown menu
 .nav-popout {
     
     background-color: $color-main;
@@ -209,6 +210,10 @@ $colors: (
   }
 }
 
+
+.pop-link:hover {
+  display: block; 
+}
 
 .pop-link {
   display: none; 

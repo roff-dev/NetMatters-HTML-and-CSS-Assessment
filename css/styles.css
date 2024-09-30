@@ -828,6 +828,10 @@ footer .footer-row .footer-menu ul a:hover {
   color: white;
 }
 
+.pop-link:hover {
+  display: block;
+}
+
 .pop-link {
   display: none;
   position: absolute;
