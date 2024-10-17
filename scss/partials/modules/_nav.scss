@@ -29,19 +29,21 @@
     }
 
     a {
-        font-size: 1.2em;
+        height: 56px;
+        font-size: 1.1em;
+        font-weight: 400;
         color: white;
         text-decoration: none;
-        border-radius: 5px;
+        border-radius: 3px;
         background-color: #999aa2;
         align-items: center;
         justify-content: center;
-        padding: 5px 15px;
+        padding: 6px 12px;
         display: flex;
-        margin-right: 15px;
+        margin-right: 20px;
 
         span {
-            font-size: 1.5em;
+            font-size: 1.35em;
             margin-right: 5px;
         }
     }
@@ -61,7 +63,7 @@
   .hamburger-icon{
     background-color: #333645;
     width: 63px;
-    height: 59px;
+    height: 56px;
     position: relative; 
     margin-left: 15px;
     border: none;
