@@ -7,7 +7,7 @@
 
   //colour map
 $colors: (
-  1: #926FB1,
+  1: #526781,
   2: #4183D7,
   3: #2ECC71,
   4: #D64541,
@@ -22,7 +22,7 @@ $colors: (
       &::before {
           background-color: $color;
       }
-
+      
       .read-btn {
           background-color: $color;
 

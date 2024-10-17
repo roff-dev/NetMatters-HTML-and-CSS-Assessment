@@ -3,20 +3,20 @@ VARIABLES
 ============================================================*/
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 .item-1::before {
-  background-color: #926FB1;
+  background-color: #526781;
 }
 .item-1 .read-btn {
-  background-color: #926FB1;
+  background-color: #526781;
 }
 .item-1:hover {
-  background-color: #926FB1;
+  background-color: #526781;
 }
 .item-1:hover::before {
   background-color: white;
 }
 .item-1:hover .read-btn {
   background-color: white;
-  color: #926FB1;
+  color: #526781;
 }
 .item-1:hover p {
   color: white;
@@ -25,7 +25,7 @@ VARIABLES
   color: white;
 }
 .item-1:hover [class^=icon-] {
-  color: #926FB1;
+  color: #526781;
 }
 
 .item-2::before {
@@ -185,10 +185,10 @@ VARIABLES
 }
 
 .link-1 span {
-  color: #926FB1;
+  color: #526781;
 }
 .link-1:hover {
-  background-color: #926FB1;
+  background-color: #526781;
 }
 .link-1:hover span {
   color: white;
@@ -255,7 +255,7 @@ VARIABLES
 }
 
 .pop-link-1 {
-  background-color: #926FB1;
+  background-color: #526781;
 }
 
 .pop-link-2 {
@@ -1197,7 +1197,7 @@ h1 {
   padding-top: 10px;
 }
 [class^=item] p {
-  color: gray;
+  color: #333645;
 }
 [class^=item] a {
   text-decoration: none;
