@@ -928,6 +928,12 @@ footer .footer-row .footer-menu ul a:hover {
   height: 59px;
   position: relative;
   margin-left: 15px;
+  border: none;
+  border-radius: 4px;
+}
+.hamburger-icon:hover {
+  background-color: #212330;
+  cursor: pointer;
 }
 
 .hamburger-line {
