@@ -404,8 +404,11 @@ h3 {
 footer {
   background-color: #323544;
   color: #fff;
-  padding: 30px 0 0;
+  padding: 40px 0 0;
   position: relative;
+}
+footer .footer-social h4 {
+  font-weight: 400;
 }
 @media (min-width: 1260px) {
   footer .footer-social {
@@ -419,6 +422,8 @@ footer .footer-row {
 }
 footer .footer-row .footer-menu {
   flex: 100%;
+  word-wrap: break-word;
+  padding: 0 15px;
 }
 @media (min-width: 768px) {
   footer .footer-row .footer-menu {
@@ -437,12 +442,17 @@ footer .footer-row .footer-menu {
 }
 footer .footer-row .footer-menu h4 {
   text-transform: uppercase;
-  font-size: 1rem;
+  font-size: 16px;
   margin-bottom: 26px;
+  margin-top: 0;
+  font-weight: 400;
 }
 footer .footer-row .footer-menu ul {
   list-style-type: none;
   padding-left: 0;
+}
+footer .footer-row .footer-menu ul a {
+  font-size: 13px;
 }
 footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
@@ -453,9 +463,15 @@ footer .footer-row .footer-menu ul a:hover {
     max-width: 234px;
   }
 }
+@media (min-width: 1260px) {
+  .net-img img {
+    max-width: 300px;
+  }
+}
 .footer-last {
   background-color: #212330;
   color: #fff;
+  padding: 10px 0 0;
 }
 .footer-last a {
   text-decoration: none;
@@ -504,6 +520,11 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .social-btn a.linkedin:hover {
   background-color: #0077B5;
+}
+
+.license {
+  padding: 5px 0 10px;
+  font-size: 13px;
 }
 
 .grid {
