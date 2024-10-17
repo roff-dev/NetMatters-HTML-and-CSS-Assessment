@@ -465,9 +465,33 @@ footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 480px) {
+  .social-btn {
+    width: 300px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+  }
+  .social-btn a {
+    padding: 12px 22px 16px;
+    width: 112px;
+    height: 56px;
+    text-align: center;
+  }
+  .social-btn span {
+    font-size: 1.5em;
+  }
+}
 .social-btn a {
   background-color: #212330;
   display: inline-block;
+  border-radius: 0;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.social-btn span {
+  font-size: 1.5em;
+  height: 26px;
 }
 .social-btn a.facebook:hover {
   background-color: #3B5998;

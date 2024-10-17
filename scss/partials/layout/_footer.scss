@@ -83,13 +83,37 @@ footer {
 
 //Social media links and icons
 .social-btn {
+   @media (max-width: 480px) {
+      width: 300px;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: wrap;
+
+      a {
+         padding: 12px 22px 16px;
+         width: 112px;
+         height: 56px;
+         text-align: center;
+      }
+      span {
+         font-size: 1.5em
+      }
+   }
    a {
       @extend %btn;
       background-color: $color-accent;
       display: inline-block;
- 
+      border-radius: 0;
+      margin-right: 10px;
+      margin-bottom: 10px;
+      
+      
+      
    }
-
+   span {
+      font-size: 1.5em;
+      height: 26px;
+   }
    a.facebook:hover {
       background-color: $color-fb;
    }
