@@ -26,8 +26,10 @@
 
     .support {
         background-color: #4183d7;
+        &:hover {
+          background-color: darken($color: #4183d7, $amount: 10);
+        }
     }
-
     a {
         height: 56px;
         font-size: 1.1em;
@@ -42,6 +44,9 @@
         display: flex;
         margin-right: 20px;
 
+        &:hover {
+          background-color: darken($color: #999aa2, $amount: 10);
+        }
         span {
             font-size: 1.35em;
             margin-right: 5px;
@@ -159,6 +164,10 @@
   display: flex; 
   align-items: center; 
   justify-content: center; 
+
+  &:hover {
+    background-color: darken($color: #999aa2, $amount: 10);
+  }
   
   span {
       color: white;
