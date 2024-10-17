@@ -1021,7 +1021,7 @@ footer .footer-row .footer-menu ul a:hover {
 
 .nav-popout {
   background-color: #333645;
-  font-size: 20px;
+  font-size: 18px;
   position: relative;
 }
 .nav-popout ul {
@@ -1040,6 +1040,7 @@ footer .footer-row .footer-menu ul a:hover {
   padding: 18px 50px 18px;
   text-transform: uppercase;
   width: 134px;
+  height: 99px;
   flex-direction: column;
   align-items: center;
 }
