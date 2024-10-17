@@ -31,6 +31,7 @@ MIXINS
     &:hover {
         transform: translateY(-10px);
         transition: .5s ease;
+        cursor: pointer;
     }
     
     h3 {
