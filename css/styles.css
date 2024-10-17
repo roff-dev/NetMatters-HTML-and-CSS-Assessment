@@ -448,6 +448,11 @@ footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
 }
 
+@media (max-width: 768px) {
+  .net-img img {
+    max-width: 234px;
+  }
+}
 .footer-last {
   background-color: #212330;
   color: #fff;
@@ -1180,11 +1185,14 @@ footer .footer-row .footer-menu ul a:hover {
     box-sizing: border-box;
   }
   .hero .hero-text h1 {
-    max-width: 399px;
+    max-width: 375px;
     word-wrap: break-word;
   }
+  .hero .hero-text p {
+    max-width: 375px;
+  }
   .hero .hero-text .break {
-    display: hidden;
+    white-space: wrap;
   }
 }
 

@@ -58,6 +58,14 @@ footer {
     }
 }
 
+   @media (max-width: 768px) {
+      .net-img {
+        img {
+          max-width: 234px;
+        }
+      }
+   }
+
 //copyright information
 .footer-last {
    background-color: $color-accent;

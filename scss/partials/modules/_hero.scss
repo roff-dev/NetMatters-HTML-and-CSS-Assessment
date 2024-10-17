@@ -38,10 +38,12 @@
     @include mq('m') {
         .hero-text {
             align-items: start;
+            
         }
         h1 {
             font-size: 3em;
         }
+        
         .break {
             display: block;
             text-align: left;
@@ -50,12 +52,16 @@
     @media (max-width: 768px) {
         .hero-text {
             box-sizing: border-box;
-            h1 {
-                max-width: 399px;
+            
+            h1{
+                max-width: 375px;
                 word-wrap: break-word;
             }
+            p {
+                max-width: 375px;
+            }
             .break {
-                display: hidden;
+                white-space: wrap;
                 
             }
         }
