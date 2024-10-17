@@ -1094,6 +1094,9 @@ footer .footer-row .footer-menu ul a:hover {
   .small-search {
     display: none;
   }
+  .top-header img {
+    max-width: 234px;
+  }
 }
 @media (max-width: 991px) {
   .nav-popout {
@@ -1170,6 +1173,18 @@ footer .footer-row .footer-menu ul a:hover {
   .hero .break {
     display: block;
     text-align: left;
+  }
+}
+@media (max-width: 768px) {
+  .hero .hero-text {
+    box-sizing: border-box;
+  }
+  .hero .hero-text h1 {
+    max-width: 399px;
+    word-wrap: break-word;
+  }
+  .hero .hero-text .break {
+    display: hidden;
   }
 }
 

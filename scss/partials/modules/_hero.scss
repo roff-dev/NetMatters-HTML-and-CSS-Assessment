@@ -47,5 +47,18 @@
             text-align: left;
         }
     }
+    @media (max-width: 768px) {
+        .hero-text {
+            box-sizing: border-box;
+            h1 {
+                max-width: 399px;
+                word-wrap: break-word;
+            }
+            .break {
+                display: hidden;
+                
+            }
+        }
+     }
 }
 
