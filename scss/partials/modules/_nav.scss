@@ -126,35 +126,45 @@
     }
   }
 //search bar for small viewport
-  .small-search {
-    display: flex; 
-    align-items: center; 
-    background-color: #999aa2; 
-    border-radius: 5px; 
-    overflow: hidden; 
-
-    .small-input {
-        padding: 1.5em;
-        width: 175px;
-    }
-
-    #small-submit {
-        background-color: #999aa2; 
-        border: none; 
-        border-radius: 0 5px 5px 0; 
-        width: 59px; 
-        height: 59px; 
-        cursor: pointer; 
-        display: flex; 
-        align-items: center; 
-        justify-content: center; 
-        
-        span {
-            color: white;
-            font-size: 1.5em;
-        }
-    }
+.small-search {
+  display: flex; 
+  align-items: center; 
+  border-radius: 5px; 
+  box-sizing: border-box;
+  
 }
+.small-input {
+  padding: 1.5em;
+  width: 175px;
+  border: 1px solid #e5e5e5;
+  width: 174px;
+  height: 56px;
+  box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+}
+.small-input:focus {
+  box-shadow: -2px 0px 8px 1px rgba(blue,0.22);
+  outline: none;
+  border: none;
+  border: 1px solid rgba(blue,0.22);
+}
+#small-submit {
+  background-color: #999aa2; 
+  border: none; 
+  border-radius: 0 5px 5px 0; 
+  width: 56px; 
+  height: 56px; 
+  cursor: pointer; 
+  display: flex; 
+  align-items: center; 
+  justify-content: center; 
+  
+  span {
+      color: white;
+      font-size: 1.5em;
+  }
+}
+
+
 
 //dropdown menu
 .nav-popout {
@@ -284,17 +294,22 @@
     .small-input {
         display: none;
     }
-    
+    #small-submit{
+      border-radius: 5px 5px;
+    }
     
   }
   @include mq('l') {
     .small-input {
         display: flex;
-        
+        width: 240px;
     }
     .nav-popout {
       ul a {
         width: 167px;
       }
+    }
+    #small-submit{
+      border-radius: 0 5px 5px 0;
     }
   }
