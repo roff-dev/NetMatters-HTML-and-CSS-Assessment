@@ -107,16 +107,18 @@
     height: 47px;
     width: 100%;
     margin-top: 11px;
-  
-  
+
    //search bar magnifying glass 
     .icon-search{
-        position: relative;
-        padding-right: 11px;
-        font-size: 20px;
-        font-weight: 400px;
-        color: $color-accent;
-        z-index: 2;
+      position: absolute; 
+      right: 10px; 
+      top: 50%; 
+      transform: translateY(-50%); 
+      font-size: 20px;
+      font-weight: 400px;
+      color: $color-accent;
+      z-index: 2;
+      cursor: pointer;
     }
     //mobile view text field
     .mobile-input{

@@ -1018,12 +1018,15 @@ footer .footer-row .footer-menu ul a:hover {
   margin-top: 11px;
 }
 .mobile-search .icon-search {
-  position: relative;
-  padding-right: 11px;
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
   font-size: 20px;
   font-weight: 400px;
   color: #212330;
   z-index: 2;
+  cursor: pointer;
 }
 .mobile-search .mobile-input {
   position: absolute;
