@@ -65,6 +65,8 @@
   }
   
   //hamburger menu icon styling
+
+  
   .hamburger-icon{
     background-color: #333645;
     width: 63px;
@@ -73,6 +75,10 @@
     margin-left: 15px;
     border: none;
     border-radius: 4px;
+    span {
+      color: white;
+      font-size: 36px;
+    }
 
     &:hover {
       background-color: $color-accent;
@@ -80,26 +86,26 @@
     }
   }
   
-  .hamburger-line{
-    width: 33px;
-    height: 4px;
-    background-color: #fff;
-    margin: 6px 0;
+  // .hamburger-line{
+  //   width: 33px;
+  //   height: 4px;
+  //   background-color: #fff;
+  //   margin: 6px 0;
     
-  }
-  .hamburger-line-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-  }
+  // }
+  // .hamburger-line-container{
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%); 
+  // }
   
-  .hamburger-line-container{
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%); 
-  }
+  // .hamburger-line-container{
+  //   position: absolute;
+  //   top: 50%;
+  //   left: 50%;
+  //   transform: translate(-50%, -50%); 
+  // }
   
 
   //mobile view searcg bar
