@@ -84,7 +84,41 @@
       background-color: $color-accent;
       cursor: pointer;
     }
+    
+    &::before,
+    &::after {
+        content: ""; 
+        display: block; 
+        width: 33px; 
+        height: 4px; 
+        background-color: #fff; 
+        position: absolute; 
+        left: 50%; 
+        transform: translateX(-50%); 
+    }
+
+    &::before {
+        top: 15px; 
+    }
+
+    &::after {
+        bottom: 15px; 
+    }
+
+    
+    .hamburger-line {
+        position: absolute; 
+        top: 50%; 
+        left: 50%; 
+        width: 33px; 
+        height: 4px; 
+        background-color: #fff; 
+        transform: translate(-50%, -50%); 
+    }
   }
+  
+
+
   
   // .hamburger-line{
   //   width: 33px;

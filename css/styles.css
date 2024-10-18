@@ -1124,6 +1124,31 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #212330;
   cursor: pointer;
 }
+.hamburger-icon::before, .hamburger-icon::after {
+  content: "";
+  display: block;
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.hamburger-icon::before {
+  top: 15px;
+}
+.hamburger-icon::after {
+  bottom: 15px;
+}
+.hamburger-icon .hamburger-line {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 33px;
+  height: 4px;
+  background-color: #fff;
+  transform: translate(-50%, -50%);
+}
 
 .mobile-search {
   display: flex;
