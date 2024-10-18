@@ -69,8 +69,8 @@
     padding-bottom: 30px;
     h1 {
         display: inline;
-        font-weight: 500;
-        
+        font-weight: 600;
+        font-size: 36px;
     }
 }
 //view all for larger viewports
@@ -82,7 +82,7 @@
         display: inline;
         align-items: center;
         color: $color-accent;
-        font-size: 1.5em;
+        font-size: 26px;
         text-decoration: none;
         
         font-weight: 600;
@@ -107,9 +107,12 @@
         display: inline-block; 
         box-sizing: border-box; 
         margin: 0 1% 0 0; 
-        
     }
-
+    .newsbox1, .newsbox2, .newsbox3 {
+        img {
+           height: 202px; 
+        }
+    }
     .newsbox2 {
         margin-right: 0; 
     }
@@ -129,11 +132,25 @@
     }
     
 }
+@include mq('m') {
+    .newsbox1, .newsbox2, .newsbox3 {
+        img {
+           height: 256px; 
+        }
+        .news-info {
+            min-height: 203px;
+        }
+    }
+}
 @include mq('l') {
     .newsbox1, .newsbox2, .newsbox3 {
         width: 32%; 
         display: inline-block; 
         box-sizing: border-box; 
         margin: 0; 
+        img {
+            height: 220px; 
+         }
     }
+    
 }
