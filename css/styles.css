@@ -744,6 +744,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
 }
 .newsbox1:hover {
   transform: translateY(-10px);
@@ -783,11 +784,25 @@ footer .footer-row .footer-menu ul a:hover {
   width: 47px;
   height: 47px;
 }
+.newsbox1 .category-tag {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 4px 6px;
+  color: white;
+  font-size: 0.8em;
+}
+.newsbox1 .category-tag.career {
+  background-color: #4183d7;
+}
+.newsbox1 .category-tag.news {
+  background-color: #926fb1;
+}
 .newsbox1 h3 {
-  color: #4183D7;
+  color: #926fb1;
 }
 .newsbox1 a {
-  background-color: #4183D7;
+  background-color: #926fb1;
 }
 
 .newsbox2 {
@@ -799,6 +814,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
 }
 .newsbox2:hover {
   transform: translateY(-10px);
@@ -838,11 +854,25 @@ footer .footer-row .footer-menu ul a:hover {
   width: 47px;
   height: 47px;
 }
+.newsbox2 .category-tag {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 4px 6px;
+  color: white;
+  font-size: 0.8em;
+}
+.newsbox2 .category-tag.career {
+  background-color: #4183d7;
+}
+.newsbox2 .category-tag.news {
+  background-color: #926fb1;
+}
 .newsbox2 h3 {
-  color: #DB8C0D;
+  color: #4183d7;
 }
 .newsbox2 a {
-  background-color: #DB8C0D;
+  background-color: #4183d7;
 }
 
 .newsbox3 {
@@ -854,6 +884,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: flex;
   flex-direction: column;
   height: 100%;
+  position: relative;
 }
 .newsbox3:hover {
   transform: translateY(-10px);
@@ -893,11 +924,25 @@ footer .footer-row .footer-menu ul a:hover {
   width: 47px;
   height: 47px;
 }
+.newsbox3 .category-tag {
+  position: absolute;
+  top: 10px;
+  right: 0;
+  padding: 4px 6px;
+  color: white;
+  font-size: 0.8em;
+}
+.newsbox3 .category-tag.career {
+  background-color: #4183d7;
+}
+.newsbox3 .category-tag.news {
+  background-color: #926fb1;
+}
 .newsbox3 h3 {
-  color: #D64541;
+  color: #926fb1;
 }
 .newsbox3 a {
-  background-color: #D64541;
+  background-color: #926fb1;
 }
 
 .news-author img {
