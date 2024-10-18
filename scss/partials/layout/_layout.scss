@@ -3,6 +3,8 @@
 body {
     margin: 0;
     font-family: $font-family--primary;
+    width: 100%;
+    overflow-x: hidden;
 }
 
 * {
@@ -17,7 +19,7 @@ h3 {
     margin-left: auto;
     padding-left: 15px;
     padding-right: 15px;
-
+    
     @include mq ('s') {
          width: 750px;
     }
@@ -50,7 +52,7 @@ h3 {
 .client {
     z-index: 9999;
     position: relative;
-    //overflow-x: visible;
+    overflow-x: visible;
     img {
         max-height: 90px;
         max-width: 200px;
@@ -78,6 +80,7 @@ h3 {
     position: relative;
     display: inline-block;
     z-index: 999;
+    
 }
 
 .tooltip .tooltiptext {

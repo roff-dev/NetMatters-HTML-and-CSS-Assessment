@@ -309,6 +309,8 @@ MIXINS
 body {
   margin: 0;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
+  width: 100%;
+  overflow-x: hidden;
 }
 
 * {
@@ -361,6 +363,7 @@ h3 {
 .client {
   z-index: 9999;
   position: relative;
+  overflow-x: visible;
 }
 .client img {
   max-height: 90px;
