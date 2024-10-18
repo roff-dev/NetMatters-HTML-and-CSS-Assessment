@@ -363,7 +363,6 @@ h3 {
 .client {
   z-index: 9999;
   position: relative;
-  overflow-x: visible;
 }
 .client img {
   max-height: 90px;
