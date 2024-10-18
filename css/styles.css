@@ -870,6 +870,10 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #D64541;
 }
 
+.news-author img {
+  border-radius: 50%;
+}
+
 .view-all {
   text-align: center;
 }
