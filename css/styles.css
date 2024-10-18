@@ -350,6 +350,7 @@ h3 {
 }
 .client img,
 .sponsor img {
+  z-index: 999;
   display: inline-block;
   padding: 0 20px;
   vertical-align: middle;
@@ -357,6 +358,10 @@ h3 {
   max-height: 240px;
 }
 
+.client {
+  z-index: 9999;
+  position: relative;
+}
 .client img {
   max-height: 90px;
   max-width: 200px;
@@ -374,6 +379,47 @@ h3 {
 .grey:hover {
   filter: grayscale(0%);
   -webkit-filter: grayscale(0%);
+}
+
+.tooltip {
+  position: relative;
+  display: inline-block;
+  z-index: 999;
+}
+
+.tooltip .tooltiptext {
+  visibility: hidden;
+  width: 200px;
+  background-color: #333;
+  color: #fff;
+  text-align: center;
+  border-radius: 5px;
+  padding: 10px;
+  position: absolute;
+  z-index: 9999;
+  bottom: 125%;
+  left: 50%;
+  margin-left: -100px;
+  opacity: 0;
+  transition: opacity 0.3s;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.tooltip .tooltiptext::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -15px;
+  border-width: 15px;
+  border-style: solid;
+  border-color: #333 transparent transparent transparent;
+}
+
+.tooltip:hover .tooltiptext {
+  visibility: visible;
+  opacity: 1;
+  z-index: 9999;
 }
 
 .floating-r {
@@ -745,6 +791,7 @@ footer .footer-row .footer-menu ul a:hover {
   flex-direction: column;
   height: 100%;
   position: relative;
+  z-index: 1;
 }
 .newsbox1:hover {
   transform: translateY(-10px);
@@ -774,6 +821,7 @@ footer .footer-row .footer-menu ul a:hover {
   margin: 0 20px;
   border-top: 1px solid gray;
   height: 123px;
+  z-index: 1;
 }
 .newsbox1 .news-author ul {
   list-style-type: none;
@@ -814,6 +862,7 @@ footer .footer-row .footer-menu ul a:hover {
   flex-direction: column;
   height: 100%;
   position: relative;
+  z-index: 1;
 }
 .newsbox2:hover {
   transform: translateY(-10px);
@@ -843,6 +892,7 @@ footer .footer-row .footer-menu ul a:hover {
   margin: 0 20px;
   border-top: 1px solid gray;
   height: 123px;
+  z-index: 1;
 }
 .newsbox2 .news-author ul {
   list-style-type: none;
@@ -883,6 +933,7 @@ footer .footer-row .footer-menu ul a:hover {
   flex-direction: column;
   height: 100%;
   position: relative;
+  z-index: 1;
 }
 .newsbox3:hover {
   transform: translateY(-10px);
@@ -912,6 +963,7 @@ footer .footer-row .footer-menu ul a:hover {
   margin: 0 20px;
   border-top: 1px solid gray;
   height: 123px;
+  z-index: 1;
 }
 .newsbox3 .news-author ul {
   list-style-type: none;
