@@ -351,11 +351,23 @@ h3 {
 .client img,
 .sponsor img {
   display: inline-block;
-  padding: 20px;
+  padding: 0 20px;
   vertical-align: middle;
   align-items: center;
+  max-height: 240px;
 }
 
+.client img {
+  max-height: 90px;
+  max-width: 200px;
+}
+
+@media (min-width: 768px) {
+  .client img {
+    max-width: none;
+    max-height: none;
+  }
+}
 .grey {
   filter: grayscale(100%);
 }
