@@ -598,6 +598,9 @@ footer .footer-row .footer-menu ul a:hover {
     display: inline;
     margin-right: 10px;
   }
+  .welcome .author {
+    padding: 15px 0;
+  }
 }
 @media (min-width: 992px) {
   .welcome .container {
@@ -612,7 +615,7 @@ footer .footer-row .footer-menu ul a:hover {
     padding: 10px;
   }
   .welcome .welcome-bottom .quote {
-    font-size: 1.2em;
+    font-size: 1.3em;
   }
 }
 
@@ -623,8 +626,9 @@ footer .footer-row .footer-menu ul a:hover {
 
 .author {
   display: block;
-  padding: 20px 0;
+  padding: 25px 0;
   color: gray;
+  font-size: 1.15em;
 }
 
 .stars {

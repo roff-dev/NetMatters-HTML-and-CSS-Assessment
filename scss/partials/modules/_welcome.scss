@@ -23,10 +23,14 @@
     a {
         @extend %a-link;
    }
+   
    @include mq('l') {
         [class^="btn-"] {
             display: inline;
             margin-right: 10px;
+        }
+        .author {
+            padding: 15px 0;
         }
     }
 
@@ -46,7 +50,7 @@
     }
    .welcome-bottom {
         .quote {
-            font-size: 1.2em;
+            font-size: 1.3em;
             }
         }   
     }  
@@ -58,8 +62,9 @@
 }
 .author {
     display: block;
-    padding: 20px 0;
+    padding: 25px 0;
     color: gray;
+    font-size: 1.15em;
 }
 
 .stars {
