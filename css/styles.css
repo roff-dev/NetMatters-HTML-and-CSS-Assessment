@@ -583,10 +583,12 @@ footer .footer-row .footer-menu ul a:hover {
 .welcome h1 {
   margin-top: 0;
   margin-bottom: 0;
+  font-size: 35px;
 }
 .welcome p {
   line-height: 1.875em;
   letter-spacing: 0.4px;
+  margin: 20px 0;
 }
 .welcome p:nth-of-type(1) {
   font-weight: bold;
@@ -664,6 +666,8 @@ footer .footer-row .footer-menu ul a:hover {
 .btn-welcome a {
   display: inline-flex;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 .btn-welcome a .icon-arrow {
   width: 1.4em;
@@ -686,6 +690,8 @@ footer .footer-row .footer-menu ul a:hover {
 .btn-google a {
   display: inline-flex;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 .btn-google a .icon-arrow {
   width: 1.4em;
@@ -708,6 +714,8 @@ footer .footer-row .footer-menu ul a:hover {
 .btn-trust a {
   display: inline-flex;
   align-items: center;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 .btn-trust a .icon-arrow {
   width: 1.4em;
