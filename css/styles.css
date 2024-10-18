@@ -1135,6 +1135,13 @@ footer .footer-row .footer-menu ul a:hover {
   transform: translate(-50%, -50%);
 }
 
+.hamburger-line-container {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
 .mobile-search {
   display: flex;
   align-items: center;

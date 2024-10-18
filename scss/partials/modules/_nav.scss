@@ -87,7 +87,12 @@
     margin: 6px 0;
     
   }
-  
+  .hamburger-line-container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+  }
   
   .hamburger-line-container{
     position: absolute;
@@ -96,7 +101,7 @@
     transform: translate(-50%, -50%); 
   }
   
-  
+
   //mobile view searcg bar
   .mobile-search{
     display: flex;
@@ -261,19 +266,12 @@
   }
 }
 
-
-
-
-
 .nav-popout ul li a:hover {
   + .pop-link {
       display: block; 
       
   }
 }
-
-  
-
 
  @media (max-width: 768px) {
     .small-search {
