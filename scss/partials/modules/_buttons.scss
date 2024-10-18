@@ -2,12 +2,15 @@
 .btn-hero {
     @extend %btn;
     background-color: #926FB1;
+    border-radius: 3px;
     a {
         display: inline-block;
         align-items: center;
         color: white;
         text-decoration: none;
         
+        font-weight: 400;
+        font-size: 1.2em;
         .icon-arrow {
             width: 1.4em;
             height: 1.4em;

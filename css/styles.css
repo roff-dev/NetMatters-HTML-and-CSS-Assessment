@@ -642,12 +642,15 @@ footer .footer-row .footer-menu ul a:hover {
 
 .btn-hero {
   background-color: #926FB1;
+  border-radius: 3px;
 }
 .btn-hero a {
   display: inline-block;
   align-items: center;
   color: white;
   text-decoration: none;
+  font-weight: 400;
+  font-size: 1.2em;
 }
 .btn-hero a .icon-arrow {
   width: 1.4em;
