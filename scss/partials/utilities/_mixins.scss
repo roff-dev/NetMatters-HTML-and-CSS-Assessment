@@ -27,6 +27,9 @@ MIXINS
     margin-bottom: 30px;
     border: 1px solid gray;
     box-shadow: 0px 6px 24px -8px rgba(gray, .5);
+    display: flex;
+    flex-direction: column; // Stack children vertically
+    height: 100%;
     
     &:hover {
         transform: translateY(-10px);
@@ -36,11 +39,12 @@ MIXINS
     
     h3 {
         @content;
+        margin-top: 0;
     }
 
     img {
         width: 100%;
-        
+        height: 220px;
     }
 
     a {
@@ -54,14 +58,18 @@ MIXINS
     }
     .news-info {
         padding-bottom: 40px;
-        border-bottom: 1px solid gray;
-        
-        padding: 20px
+        flex: 1;
+        padding: 20px;
+        //max-height: 225px;
     }
 
     .news-author {
         display: flex;
-        padding: 20px;
+        padding: 20px 0;
+        margin: 0 20px;
+        border-top: 1px solid gray;
+        height: 123px;
+        
         ul {
             list-style-type: none;
             

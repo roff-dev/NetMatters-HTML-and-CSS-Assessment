@@ -3,6 +3,7 @@
 //news floating boxes
 .newsbox1 {
     @include news;
+    
     h3 {
         color: $news-1;
     }
@@ -15,6 +16,7 @@
     @include news;
     h3 {
         color: $news-2;
+        
     }
     a {
         background-color: $news-2;

@@ -741,14 +741,21 @@ footer .footer-row .footer-menu ul a:hover {
   margin-bottom: 30px;
   border: 1px solid gray;
   box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .newsbox1:hover {
   transform: translateY(-10px);
   transition: 0.5s ease;
   cursor: pointer;
 }
+.newsbox1 h3 {
+  margin-top: 0;
+}
 .newsbox1 img {
   width: 100%;
+  height: 220px;
 }
 .newsbox1 a {
   color: white;
@@ -758,12 +765,15 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox1 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid gray;
+  flex: 1;
   padding: 20px;
 }
 .newsbox1 .news-author {
   display: flex;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid gray;
+  height: 123px;
 }
 .newsbox1 .news-author ul {
   list-style-type: none;
@@ -786,14 +796,21 @@ footer .footer-row .footer-menu ul a:hover {
   margin-bottom: 30px;
   border: 1px solid gray;
   box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .newsbox2:hover {
   transform: translateY(-10px);
   transition: 0.5s ease;
   cursor: pointer;
 }
+.newsbox2 h3 {
+  margin-top: 0;
+}
 .newsbox2 img {
   width: 100%;
+  height: 220px;
 }
 .newsbox2 a {
   color: white;
@@ -803,12 +820,15 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox2 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid gray;
+  flex: 1;
   padding: 20px;
 }
 .newsbox2 .news-author {
   display: flex;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid gray;
+  height: 123px;
 }
 .newsbox2 .news-author ul {
   list-style-type: none;
@@ -831,14 +851,21 @@ footer .footer-row .footer-menu ul a:hover {
   margin-bottom: 30px;
   border: 1px solid gray;
   box-shadow: 0px 6px 24px -8px rgba(128, 128, 128, 0.5);
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 .newsbox3:hover {
   transform: translateY(-10px);
   transition: 0.5s ease;
   cursor: pointer;
 }
+.newsbox3 h3 {
+  margin-top: 0;
+}
 .newsbox3 img {
   width: 100%;
+  height: 220px;
 }
 .newsbox3 a {
   color: white;
@@ -848,12 +875,15 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox3 .news-info {
   padding-bottom: 40px;
-  border-bottom: 1px solid gray;
+  flex: 1;
   padding: 20px;
 }
 .newsbox3 .news-author {
   display: flex;
-  padding: 20px;
+  padding: 20px 0;
+  margin: 0 20px;
+  border-top: 1px solid gray;
+  height: 123px;
 }
 .newsbox3 .news-author ul {
   list-style-type: none;
