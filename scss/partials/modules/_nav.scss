@@ -262,6 +262,28 @@
         }
     }
 }
+//dropdown triangles
+.nav-popout ul li > a[class^="link-"] {
+  position: relative; 
+ 
+
+  &::after {
+    content: ""; 
+    position: absolute; 
+    bottom: -30px; 
+    left: 50%; 
+    transform: translateX(-50%); 
+    border-left: 67px solid transparent; 
+    border-right: 67px solid transparent; 
+    border-top: 30px solid ; 
+    display: none; 
+    z-index: 20;
+  }
+
+  &:hover::after {
+    display: block; 
+  }
+}
 
 
 

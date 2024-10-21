@@ -68,7 +68,15 @@ $colors: (
 //nav dropdown
 @each $key, $color in $colors {
   .pop-link-#{$key} {
-      background-color: $color; 
-      
+      background-color: darken($color: $color, $amount: 10);  
   }
+}
+//nav triangle color
+@each $key, $color in $colors {
+    .link-#{$key} {
+        &::after {
+            border-top: 10px solid $color; 
+            color: $color; 
+        }
+    }
 }

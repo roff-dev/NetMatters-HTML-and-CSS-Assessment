@@ -255,31 +255,66 @@ VARIABLES
 }
 
 .pop-link-1 {
-  background-color: #526781;
+  background-color: #3e4e62;
 }
 
 .pop-link-2 {
-  background-color: #4183D7;
+  background-color: #286abd;
 }
 
 .pop-link-3 {
-  background-color: #2ECC71;
+  background-color: #25a25a;
 }
 
 .pop-link-4 {
-  background-color: #D64541;
+  background-color: #bc2c28;
 }
 
 .pop-link-5 {
-  background-color: #926FB1;
+  background-color: #79539a;
 }
 
 .pop-link-6 {
-  background-color: #F62459;
+  background-color: #de093f;
 }
 
 .pop-link-7 {
-  background-color: #CE4125;
+  background-color: #a3331d;
+}
+
+.link-1::after {
+  border-top: 10px solid #526781;
+  color: #526781;
+}
+
+.link-2::after {
+  border-top: 10px solid #4183D7;
+  color: #4183D7;
+}
+
+.link-3::after {
+  border-top: 10px solid #2ECC71;
+  color: #2ECC71;
+}
+
+.link-4::after {
+  border-top: 10px solid #D64541;
+  color: #D64541;
+}
+
+.link-5::after {
+  border-top: 10px solid #926FB1;
+  color: #926FB1;
+}
+
+.link-6::after {
+  border-top: 10px solid #F62459;
+  color: #F62459;
+}
+
+.link-7::after {
+  border-top: 10px solid #CE4125;
+  color: #CE4125;
 }
 
 /*=================================================================
@@ -1305,6 +1340,25 @@ footer .footer-row .footer-menu ul a:hover {
 .nav-popout ul a span {
   font-size: 1.35em;
   padding: 0 0 10px;
+}
+
+.nav-popout ul li > a[class^=link-] {
+  position: relative;
+}
+.nav-popout ul li > a[class^=link-]::after {
+  content: "";
+  position: absolute;
+  bottom: -30px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-left: 67px solid transparent;
+  border-right: 67px solid transparent;
+  border-top: 30px solid;
+  display: none;
+  z-index: 20;
+}
+.nav-popout ul li > a[class^=link-]:hover::after {
+  display: block;
 }
 
 .pop-link:hover {
