@@ -1399,6 +1399,10 @@ footer .footer-row .footer-menu ul a:hover {
   height: 60px;
   flex: 0 0 auto;
 }
+.pop-link ul li .pop-a span {
+  padding-right: 10px;
+  margin-top: -3px;
+}
 .pop-link ul li.h3-item {
   font-size: 28px;
   flex: 0 0 100%;
