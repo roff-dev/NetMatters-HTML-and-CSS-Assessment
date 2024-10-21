@@ -1458,7 +1458,7 @@ footer .footer-row .footer-menu ul a:hover {
   }
 }
 .hero {
-  background-image: url("https://roff-dev.github.io/NetMatters-HTML-and-CSS-Assessment/img/hero.png"), url("../img/hero.png");
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/hero.png"), url("https://roff-dev.github.io/NetMatters-HTML-and-CSS-Assessment/img/hero.png");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
