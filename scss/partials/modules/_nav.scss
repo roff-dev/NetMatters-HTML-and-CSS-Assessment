@@ -278,6 +278,10 @@
     border-top: 30px solid ; 
     display: none; 
     z-index: 20;
+    @include mq ('l') {
+      border-left: 84px solid transparent; 
+      border-right: 84px solid transparent;
+    }
   }
 
   &:hover::after {

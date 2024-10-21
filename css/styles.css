@@ -1357,6 +1357,12 @@ footer .footer-row .footer-menu ul a:hover {
   display: none;
   z-index: 20;
 }
+@media (min-width: 1260px) {
+  .nav-popout ul li > a[class^=link-]::after {
+    border-left: 84px solid transparent;
+    border-right: 84px solid transparent;
+  }
+}
 .nav-popout ul li > a[class^=link-]:hover::after {
   display: block;
 }
