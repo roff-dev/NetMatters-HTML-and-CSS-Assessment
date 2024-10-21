@@ -1383,7 +1383,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-  width: 80%;
+  width: 970px;
   margin: 30px auto;
 }
 .pop-link ul li {
@@ -1451,7 +1451,7 @@ footer .footer-row .footer-menu ul a:hover {
     width: 167px;
   }
   .pop-link ul {
-    width: 95%;
+    width: 1200px;
   }
   #small-submit {
     border-radius: 0 5px 5px 0;
