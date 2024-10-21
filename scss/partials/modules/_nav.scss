@@ -266,7 +266,6 @@
 .nav-popout ul li > a[class^="link-"] {
   position: relative; 
  
-
   &::after {
     content: ""; 
     position: absolute; 
@@ -284,12 +283,11 @@
     }
   }
 
-  &:hover::after {
-    display: block; 
-  }
+  &:hover::after,
+    .nav-popout:hover ul li > a[class^="link-"]::after {
+      display: block; 
+    }
 }
-
-
 
 .pop-link:hover {
   display: block; 
@@ -307,7 +305,7 @@
     flex-wrap: wrap;
     justify-content: flex-start;
     width: 80%;
-    margin: 0 auto;
+    margin: 30px auto;
 
     li {
       flex: 0 0 calc(33.33%); 
@@ -318,12 +316,13 @@
         padding-right: 10px;
         align-items: start;
         width: 100%;
+        height: 60px;
         flex: 0 0 auto; 
       }
     }
 
     li.h3-item {
-      font-size: 1.3em;
+      font-size: 28px;
       flex: 0 0 100%; 
       color: white; 
       display: block; 
@@ -393,6 +392,9 @@
       ul a {
         width: 167px;
       }
+    }
+    .pop-link ul {
+      width: 95%;
     }
     #small-submit{
       border-radius: 0 5px 5px 0;
