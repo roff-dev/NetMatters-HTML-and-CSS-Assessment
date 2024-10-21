@@ -197,15 +197,12 @@
   }
 }
 
-
-
 //dropdown menu
 .nav-popout {
     
     background-color: $color-main;
     font-size: 18px;
     position: relative;
-    
 
     ul {
         line-height: 1;
@@ -244,7 +241,7 @@
   &::after {
     content: ""; 
     position: absolute; 
-    bottom: -30px; 
+    bottom: -29px; 
     left: 50%; 
     transform: translateX(-50%); 
     border-left: 67px solid transparent; 

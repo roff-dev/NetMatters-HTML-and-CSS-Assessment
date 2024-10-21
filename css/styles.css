@@ -1348,7 +1348,7 @@ footer .footer-row .footer-menu ul a:hover {
 .nav-popout ul li > a[class^=link-]::after {
   content: "";
   position: absolute;
-  bottom: -30px;
+  bottom: -29px;
   left: 50%;
   transform: translateX(-50%);
   border-left: 67px solid transparent;
