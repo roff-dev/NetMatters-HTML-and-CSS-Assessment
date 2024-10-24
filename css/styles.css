@@ -818,6 +818,56 @@ footer .footer-row .footer-menu ul a:hover {
   fill: currentColor;
 }
 
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
+.cookie-consent {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: #fff;
+  color: #333;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  display: none;
+  width: 90%;
+  text-align: center;
+}
+
+.cookie-consent button {
+  margin: 10px;
+  padding: 10px 15px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+#acceptCookies {
+  background-color: #4CAF50;
+  color: white;
+}
+
+#declineCookies {
+  background-color: #f44336;
+  color: white;
+}
+
+@media (min-width: 768px) {
+  .cookie-consent {
+    width: 600px;
+  }
+}
 .newsbox1 {
   box-sizing: border-box;
   margin: 10px;
