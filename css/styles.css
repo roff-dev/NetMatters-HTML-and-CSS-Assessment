@@ -320,7 +320,7 @@ VARIABLES
 /*=================================================================
 MIXINS
 ===================================================================*/
-.btn-trust, .btn-google, .btn-welcome, .btn-hero, .social-btn a {
+.cookie-consent button, .btn-trust, .btn-google, .btn-welcome, .btn-hero, .social-btn a {
   color: #fff;
   font-weight: bold;
   text-decoration: none;
@@ -328,11 +328,11 @@ MIXINS
   padding: 0.75em 1.5em;
   border-radius: 0.35em;
 }
-.btn-trust:hover, .btn-google:hover, .btn-welcome:hover, .btn-hero:hover, .social-btn a:hover {
+.cookie-consent button:hover, .btn-trust:hover, .btn-google:hover, .btn-welcome:hover, .btn-hero:hover, .social-btn a:hover {
   color: #fff;
   opacity: 0.8;
 }
-.btn-trust:active, .btn-google:active, .btn-welcome:active, .btn-hero:active, .social-btn a:active {
+.cookie-consent button:active, .btn-trust:active, .btn-google:active, .btn-welcome:active, .btn-hero:active, .social-btn a:active {
   opacity: initial;
 }
 
@@ -837,12 +837,21 @@ footer .footer-row .footer-menu ul a:hover {
   background: #fff;
   color: #333;
   padding: 20px;
-  border-radius: 8px;
+  border-radius: 5px;
   box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
   z-index: 1000;
   display: none;
   width: 90%;
   text-align: center;
+}
+.cookie-consent h3 {
+  border-bottom: 1px solid grey;
+  text-align: left;
+}
+.cookie-consent p {
+  border-bottom: 1px solid grey;
+  word-spacing: 2px;
+  line-height: 1.75rem;
 }
 
 .cookie-consent button {
@@ -854,12 +863,12 @@ footer .footer-row .footer-menu ul a:hover {
 }
 
 #acceptCookies {
-  background-color: #4CAF50;
+  background-color: blue;
   color: white;
 }
 
-#declineCookies {
-  background-color: #f44336;
+#changeCookies {
+  background-color: grey;
   color: white;
 }
 

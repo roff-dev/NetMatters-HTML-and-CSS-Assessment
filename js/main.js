@@ -38,7 +38,7 @@ document.addEventListener('DOMContentLoaded', function() {
         hideConsentPopup();
     };
 
-    document.getElementById('declineCookies').onclick = function() {
+    document.getElementById('changeCookies').onclick = function() {
         setCookieConsent('declined', 30); //30 days
         hideConsentPopup();
     };

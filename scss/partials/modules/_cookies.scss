@@ -19,16 +19,26 @@
     background: #fff;
     color: #333;
     padding: 20px;
-    border-radius: 8px;
+    border-radius: 5px;
     box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
     z-index: 1000;
     display: none; 
     width: 90%; 
     text-align: center; 
+    h3 {
+        border-bottom: 1px solid grey;
+        text-align: left;
+    }
+    p {
+        border-bottom: 1px solid grey;
+        word-spacing: 2px;
+        line-height: 1.75rem;
+    }
 }
 
 //buttons
 .cookie-consent button {
+    @extend %btn;
     margin: 10px; 
     padding: 10px 15px; 
     border: none; 
@@ -38,12 +48,12 @@
 
 
 #acceptCookies {
-    background-color: #4CAF50; 
+    background-color: blue; 
     color: white; 
 }
 
-#declineCookies {
-    background-color: #f44336; 
+#changeCookies {
+    background-color: grey; 
     color: white; 
 }
 @include mq('s') {
