@@ -1568,29 +1568,27 @@ footer .footer-row .footer-menu ul a:hover {
     border-radius: 0 5px 5px 0;
   }
 }
-/* Wrapper to control visibility and positioning of both navs */
 .header-wrapper {
-  position: relative; /* Positioned at the top of the page by default */
+  position: relative;
   width: 100%;
   z-index: 1000;
-  transition: top 0.3s ease; /* Smooth transition when toggling */
+  transition: transform 0.3s ease-in-out;
 }
 
-/* The fixed positioning for .header-wrapper when scrolling up */
-.header-wrapper--fixed {
+.header-wrapper.sticky {
   position: fixed;
   top: 0;
-}
-
-/* Optional: Styling for the header and nav elements */
-.header {
+  left: 0;
   width: 100%;
+  background: white; /* Add your background color */
 }
 
-.nav {
-  display: flex;
-  justify-content: space-between;
-  /* Additional styles as needed */
+.header-wrapper.slide-up {
+  transform: translateY(-100%);
+}
+
+.header-wrapper.slide-down {
+  transform: translateY(0);
 }
 
 .hero {

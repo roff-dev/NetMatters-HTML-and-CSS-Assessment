@@ -1,22 +1,118 @@
-// Track the last scroll position
+//////////////////////////////////////////////////////////////////////////////// 
+// STICKY NAV
+////////////////////////////////////////////////////////////////////////////////  
+
+//track scroll variables
 let lastScrollY = window.scrollY;
+let ticking = false;
+let isSticky = false;
+let navTop;
+let headerOffset;
+
+//get header
 const headerWrapper = document.querySelector('.header-wrapper');
+const nav = document.querySelector('.nav-popout');
 
+//placeholder div for jumping position
+const placeholder = document.createElement('div');
+placeholder.style.display = 'none';
+headerWrapper.parentNode.insertBefore(placeholder, headerWrapper.nextSibling);
+
+// start positions
+function updateNavPosition() {
+    //get relative header pos
+    const headerRect = headerWrapper.getBoundingClientRect();
+    headerOffset = headerRect.top + window.scrollY;
+    
+    //calc nav original pos
+    navTop = headerOffset;
+    
+    //update placeholder
+    placeholder.style.height = `${headerWrapper.offsetHeight}px`;
+}
+
+//position calculation
+updateNavPosition();
+
+//scroll behavior function
+function handleScroll() {
+    const currentScrollY = window.scrollY;
+    
+    // at or above nav default pos
+    if (currentScrollY <= navTop) {
+        if (isSticky) {
+            //remove stick
+            headerWrapper.classList.remove('sticky');
+            headerWrapper.classList.remove('slide-up');
+            headerWrapper.classList.remove('slide-down');
+            placeholder.style.display = 'none';
+            isSticky = false;
+        }
+    } else if (currentScrollY < lastScrollY) {
+        //scroll up and below def pos
+        if (!isSticky) {
+            //slide down animation
+            headerWrapper.classList.add('sticky');
+            headerWrapper.classList.remove('slide-up');
+            headerWrapper.classList.add('slide-down');
+            placeholder.style.display = 'block';
+            isSticky = true;
+        }
+    } else {
+        //if scroll down
+        if (isSticky) {
+            // add slide up
+            headerWrapper.classList.add('slide-up');
+            headerWrapper.classList.remove('slide-down');
+            
+            //wait for animation to complete
+            setTimeout(() => {
+                if (currentScrollY > lastScrollY) {  
+                    headerWrapper.classList.remove('sticky');
+                    placeholder.style.display = 'none';
+                    isSticky = false;
+                }
+            }, 300); 
+        }
+    }
+
+    lastScrollY = currentScrollY;
+    ticking = false;
+}
+
+//scroll event listener
 window.addEventListener('scroll', () => {
-  const currentScrollY = window.scrollY;
-
-  if (currentScrollY < lastScrollY) {
-    // Scrolling up - make header fixed and visible
-    headerWrapper.classList.add('header-wrapper--fixed');
-  } else {
-    // Scrolling down - remove the fixed class to hide the header
-    headerWrapper.classList.remove('header-wrapper--fixed');
-  }
-
-  // Update the last scroll position
-  lastScrollY = currentScrollY;
+    if (!ticking) {
+        window.requestAnimationFrame(() => {
+            handleScroll();
+        });
+        ticking = true;
+    }
 });
 
+//reset on page refresh
+window.addEventListener('beforeunload', () => {
+    headerWrapper.classList.remove('sticky');
+    headerWrapper.classList.remove('slide-up');
+    headerWrapper.classList.remove('slide-down');
+    placeholder.style.display = 'none';
+});
+
+//window resize
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(() => {
+        updateNavPosition();
+    }, 250);
+});
+
+
+document.addEventListener('DOMContentLoaded', updateNavPosition);
+
+//////////////////////////////////////////////////////////////////////////////// 
+// COOKIE CONSENT
+////////////////////////////////////////////////////////////////////////////////  
 
 //cookie consent with expiration
 function setCookieConsent(consent, days) {
