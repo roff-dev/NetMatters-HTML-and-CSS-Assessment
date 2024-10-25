@@ -2,7 +2,7 @@
 
 .header{
     padding: 20px 0px;
-  
+    background-color: white;
   }
   
   .header--hidden {
@@ -20,6 +20,7 @@
     align-items: center;
     justify-content: space-between;
     width: 100%;
+    
   }
   .header-buttons {
     display: flex;
@@ -376,3 +377,28 @@
       border-radius: 0 5px 5px 0;
     }
   }
+
+/* Wrapper to control visibility and positioning of both navs */
+.header-wrapper {
+  position: relative; /* Positioned at the top of the page by default */
+  width: 100%;
+  z-index: 1000;
+  transition: top 0.3s ease; /* Smooth transition when toggling */
+}
+
+/* The fixed positioning for .header-wrapper when scrolling up */
+.header-wrapper--fixed {
+  position: fixed;
+  top: 0;
+}
+
+/* Optional: Styling for the header and nav elements */
+.header {
+  width: 100%;
+}
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  /* Additional styles as needed */
+}

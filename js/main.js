@@ -1,3 +1,23 @@
+// Track the last scroll position
+let lastScrollY = window.scrollY;
+const headerWrapper = document.querySelector('.header-wrapper');
+
+window.addEventListener('scroll', () => {
+  const currentScrollY = window.scrollY;
+
+  if (currentScrollY < lastScrollY) {
+    // Scrolling up - make header fixed and visible
+    headerWrapper.classList.add('header-wrapper--fixed');
+  } else {
+    // Scrolling down - remove the fixed class to hide the header
+    headerWrapper.classList.remove('header-wrapper--fixed');
+  }
+
+  // Update the last scroll position
+  lastScrollY = currentScrollY;
+});
+
+
 //cookie consent with expiration
 function setCookieConsent(consent, days) {
     const now = new Date();
@@ -57,3 +77,4 @@ function hideConsentPopup() {
     document.getElementById('overlay').style.display = 'none'; 
     document.getElementById('cookieConsent').style.display = 'none'; 
 }
+
