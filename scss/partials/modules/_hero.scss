@@ -1,4 +1,4 @@
-.slick-dots {
+.slick-dots { 
     position: absolute;
     bottom: 20px;
     left: 50%;
@@ -19,16 +19,23 @@
     height: 12px;
     background-color: #ccc;
     border-radius: 50%;
-    border: 2px solid transparent;
     transition: all 0.3s ease;
   }
   
   .slick-dots li.slick-active button {
     background-color: #fff;
-    border: 2px solid #333;
+    border: 2px solid white;
+    
   }
+    .slick-dots li button:before {
+        font-family: 'slick';
+        content: '';
+        color: transparent;
+}
+
 //background image
 [class^="banner"] {
+    height: 550px;
     
     background-size: cover;
     background-position: center;
