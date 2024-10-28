@@ -1591,14 +1591,15 @@ footer .footer-row .footer-menu ul a:hover {
   transform: translateY(0);
 }
 
-.hero {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/hero.png"), url("https://roff-dev.github.io/NetMatters-HTML-and-CSS-Assessment/img/hero.png");
+[class^=banner] {
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   width: 100%;
+  background-color: #f0f0f0;
+  min-height: 400px;
 }
-.hero .hero-text {
+[class^=banner] .hero-text {
   color: #fff;
   display: flex;
   flex-direction: column;
@@ -1607,45 +1608,73 @@ footer .footer-row .footer-menu ul a:hover {
   text-align: center;
   padding: 100px 20px;
 }
-.hero p {
+[class^=banner] p {
   font-weight: bold;
   font-size: 1.25em;
 }
-.hero a span {
+[class^=banner] a span {
   font-size: 1.25rem;
   vertical-align: middle;
   position: relative;
   top: -2px;
 }
-.hero .break {
+[class^=banner] .break {
   white-space: nowrap;
 }
 @media (min-width: 992px) {
-  .hero .hero-text {
+  [class^=banner] .hero-text {
     align-items: start;
   }
-  .hero h1 {
+  [class^=banner] h1 {
     font-size: 3em;
   }
-  .hero .break {
+  [class^=banner] .break {
     display: block;
     text-align: left;
   }
 }
 @media (max-width: 768px) {
-  .hero .hero-text {
+  [class^=banner] .hero-text {
     box-sizing: border-box;
   }
-  .hero .hero-text h1 {
+  [class^=banner] .hero-text h1 {
     max-width: 375px;
     word-wrap: break-word;
   }
-  .hero .hero-text p {
+  [class^=banner] .hero-text p {
     max-width: 375px;
   }
-  .hero .hero-text .break {
+  [class^=banner] .hero-text .break {
     white-space: wrap;
   }
+}
+
+.banner-1 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/hero.png");
+}
+
+.banner-2 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/bespoke.jpeg");
+}
+
+.banner-3 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/it-sup.png");
+}
+
+.banner-4 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/dig-mark.png");
+}
+
+.banner-5 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/telecom.png");
+}
+
+.banner-6 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/web-des.jpeg");
+}
+
+.banner-7 {
+  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/cyber.png");
 }
 
 .top-row {
