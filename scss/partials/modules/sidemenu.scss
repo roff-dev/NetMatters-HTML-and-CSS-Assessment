@@ -1,9 +1,6 @@
 .side-menu ul li {
-    
     text-transform: uppercase;
     list-style: none;
-    border-top: 1px solid hsla(0, 0%, 100%, .1);
-    border-bottom: 1px solid rgba(0, 0, 0, .25);
 }
 .side-menu ul {
     display: flex;
@@ -20,20 +17,23 @@
     text-decoration: none;
     color: #e3e3e3;
     background-color: #262834;
-    padding: 20px;
+    padding: 15px 20px;
     font-size: 14px;
+    border-top: 1px solid hsla(0, 0%, 100%, .05);
 }
 .side-menu ul li a:first-child {
     background-color: #3D404E;
     font-size: 16px;
-
+    padding:20px;
     &:before {
         content: '';
         padding-right: 0;
     }
 }
-
 .side-menu ul li a:before {
     content: "\BB";
     padding-right: 15px;
+}
+.side-menu ul li a:first-child:hover {
+    background-color: lighten($color: #3D404E, $amount: 10);
 }
