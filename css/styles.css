@@ -318,6 +318,34 @@ VARIABLES
   color: #CE4125;
 }
 
+.banner-1 .btn-hero {
+  background-color: #926FB1;
+}
+
+.banner-2 .btn-hero {
+  background-color: #F7B322;
+}
+
+.banner-3 .btn-hero {
+  background-color: #4183D7;
+}
+
+.banner-4 .btn-hero {
+  background-color: #2ECC71;
+}
+
+.banner-5 .btn-hero {
+  background-color: #D64541;
+}
+
+.banner-6 .btn-hero {
+  background-color: #926FB1;
+}
+
+.banner-7 .btn-hero {
+  background-color: #F62459;
+}
+
 /*=================================================================
 MIXINS
 ===================================================================*/
@@ -730,8 +758,8 @@ footer .footer-row .footer-menu ul a:hover {
 }
 
 .btn-hero {
-  background-color: #926FB1;
   border-radius: 3px;
+  margin-top: 1.938rem;
 }
 .btn-hero a {
   display: inline-block;
@@ -1703,6 +1731,7 @@ footer .footer-row .footer-menu ul a:hover {
 [class^=banner] p {
   font-weight: bold;
   font-size: 1.25em;
+  text-align: left;
 }
 [class^=banner] a span {
   font-size: 1.25rem;
@@ -1712,6 +1741,21 @@ footer .footer-row .footer-menu ul a:hover {
 }
 [class^=banner] .break {
   white-space: nowrap;
+}
+@media (min-width: 1260px) {
+  [class^=banner] .hero-text h1 {
+    font-size: 64px;
+    font-weight: 600;
+    margin: 0 0 20px;
+    line-height: 5rem;
+  }
+  [class^=banner] .hero-text p {
+    margin: 0 0 6px;
+    font-size: 26px;
+    width: 100%;
+    line-height: 2.5rem;
+    font-weight: 600;
+  }
 }
 @media (min-width: 992px) {
   [class^=banner] .hero-text {
