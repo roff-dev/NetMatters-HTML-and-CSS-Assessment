@@ -90,6 +90,17 @@ document.addEventListener('DOMContentLoaded', () => {
             toggleMenu();
         });
 
+        //failsafe for if hamburger is not visible
+        // click overlay to close
+        overlay.addEventListener('click', closeMenu);
+
+        // esc key to close
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && sideMenu.classList.contains('active')) {
+                closeMenu();
+            }
+        });
+
         let touchStartX = 0;
         let touchEndX = 0;
 
