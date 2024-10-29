@@ -1638,6 +1638,16 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #53576b;
 }
 
+.side-menu {
+  transform: translateX(100%);
+  transition: transform 0.3s ease-in-out;
+  overflow-y: auto; /* For scrolling if content is too tall */
+}
+
+.side-menu.active {
+  transform: translateX(0);
+}
+
 .slick-dots {
   position: absolute;
   bottom: 20px;
