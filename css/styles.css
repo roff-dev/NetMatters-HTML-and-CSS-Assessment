@@ -1,3 +1,4 @@
+@charset "UTF-8";
 /*===========================================================
 VARIABLES
 ============================================================*/
@@ -1580,7 +1581,7 @@ footer .footer-row .footer-menu ul a:hover {
   top: 0;
   left: 0;
   width: 100%;
-  background: white; /* Add your background color */
+  background: white;
 }
 
 .header-wrapper.slide-up {
@@ -1589,6 +1590,48 @@ footer .footer-row .footer-menu ul a:hover {
 
 .header-wrapper.slide-down {
   transform: translateY(0);
+}
+
+.side-menu ul li {
+  text-transform: uppercase;
+  list-style: none;
+  border-top: 1px solid hsla(0, 0%, 100%, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.25);
+}
+
+.side-menu ul {
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  width: 335px;
+}
+
+.side-menu ul li a:first-child {
+  background-color: red;
+}
+
+.side-menu ul li a {
+  display: block;
+  text-decoration: none;
+  color: #e3e3e3;
+  background-color: #262834;
+  padding: 20px;
+  font-size: 14px;
+}
+
+.side-menu ul li a:first-child {
+  background-color: #3D404E;
+  font-size: 16px;
+}
+.side-menu ul li a:first-child:before {
+  content: "";
+  padding-right: 0;
+}
+
+.side-menu ul li a:before {
+  content: "»";
+  padding-right: 15px;
 }
 
 .slick-dots {
