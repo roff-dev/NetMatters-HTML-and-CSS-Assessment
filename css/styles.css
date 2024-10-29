@@ -760,6 +760,7 @@ footer .footer-row .footer-menu ul a:hover {
 .btn-hero {
   border-radius: 3px;
   margin-top: 1.938rem;
+  padding: 15px 20px;
 }
 .btn-hero a {
   display: inline-block;
@@ -767,7 +768,7 @@ footer .footer-row .footer-menu ul a:hover {
   color: white;
   text-decoration: none;
   font-weight: 400;
-  font-size: 1.2em;
+  font-size: 20px;
 }
 .btn-hero a .icon-arrow {
   width: 1.4em;
@@ -1746,7 +1747,6 @@ footer .footer-row .footer-menu ul a:hover {
   [class^=banner] .hero-text h1 {
     font-size: 64px;
     font-weight: 600;
-    margin: 0 0 20px;
     line-height: 5rem;
   }
   [class^=banner] .hero-text p {
@@ -1763,6 +1763,7 @@ footer .footer-row .footer-menu ul a:hover {
   }
   [class^=banner] h1 {
     font-size: 3em;
+    margin: 0 0 20px;
   }
   [class^=banner] .break {
     display: block;
