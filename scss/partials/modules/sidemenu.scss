@@ -1,85 +1,100 @@
-.side-menu ul li {
-    text-transform: uppercase;
-    list-style: none;
-}
-.side-menu ul {
-    display: flex;
-    flex-direction: column;
-    padding: 0;
-    margin: 0;
-    width: 335px;
-}
-.side-menu ul li a:first-child {
-    background-color: red;
-}
-.side-menu ul li a {
-    display: block;
-    text-decoration: none;
-    color: #e3e3e3;
-    background-color: #262834;
-    padding: 15px 20px;
-    font-size: 14px;
-    border-top: 1px solid hsla(0, 0%, 100%, .05);
-}
-.side-menu ul li a:first-child {
-    background-color: #3D404E;
-    font-size: 16px;
-    padding:20px;
-    &:before {
-        content: '';
-        padding-right: 0;
-    }
-}
-.side-menu ul li a:before {
-    content: "\BB";
-    padding-right: 15px;
-}
-.side-menu ul li a:first-child:hover {
-    background-color: lighten($color: #3D404E, $amount: 10);
-}
 .side-menu {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    overflow-y: auto; 
-}
+    overflow-y: auto;
 
-.side-menu.active {
-    transform: translateX(0);
-}
-.side-menu-mobile {
-    background-color: #3D404E;
-    padding: 21px;
-    text-align: center;
-    
-}
+    &.active {
+        transform: translateX(0);
+    }
 
-.side-menu-mobile li {
-    padding: 20px 0 0;
-}
-.side-menu-mobile li a:before {
-    content: none !important;
-}
-.side-menu-mobile li a:first-child {
-    border-radius: 3px;
-    border: 1px solid hsla(0, 0%, 100%, .1);
-    outline: 1px solid rgba(0, 0, 0, .25);;
-    padding-top: 0;
-}
-.side-menu-mobile-box {
-    border-radius: 5px;
-    display: flex !important;
-    flex-direction: column;
-    border: 1px solid hsla(0, 0%, 100%, .1);
-    outline: 1px solid rgba(0, 0, 0, .25);
-    font-size: 18px;
-    span {
-        font-size: 1.5em;
-        padding-bottom: 10px;
+    ul {
+        display: flex;
+        flex-direction: column;
+        padding: 0;
+        margin: 0;
+        width: 335px;
+        list-style: none;
+
+        li {
+            text-transform: uppercase;
+
+            a {
+                display: block;
+                text-decoration: none;
+                color: #e3e3e3;
+                background-color: #262834;
+                padding: 15px 20px;
+                font-size: 14px;
+                border-top: 1px solid hsla(0, 0%, 100%, 0.05);
+
+                &:before {
+                    content: "\BB";
+                    padding-right: 15px;
+                }
+
+                &:first-child {
+                    background-color: #3D404E;
+                    font-size: 16px;
+                    padding: 20px;
+
+                    &:hover {
+                        background-color: lighten(#3D404E, 10%);
+                    }
+
+                    &:before {
+                        content: '';
+                        padding-right: 0;
+                    }
+                }
+            }
+        }
     }
-    small {
-        font-size: 10px;
+
+    &-mobile {
+        background-color: #3D404E;
+        padding: 21px;
+        text-align: center;
+        
+        li {
+            padding: 20px 0 0;
+
+            a {
+                &:before {
+                    content: none !important;
+                }
+
+                &:first-child {
+                    border-radius: 3px;
+                    border: 1px solid hsla(0, 0%, 100%, 0.1);
+                    outline: 1px solid rgba(0, 0, 0, 0.25);
+                    padding-top: 0;
+                }
+            }
+        }
+
+        &-box {
+            border-radius: 5px;
+            display: flex !important;
+            flex-direction: column;
+            border: 1px solid hsla(0, 0%, 100%, 0.1);
+            outline: 1px solid rgba(0, 0, 0, 0.25);
+            font-size: 18px;
+            margin-bottom: 20px;
+
+            span {
+                font-size: 1.5em;
+                padding-bottom: 10px;
+            }
+
+            small {
+                font-size: 10px;
+            }
+        }
+
+        &-contact {
+            padding-top: 0 !important;
+        }
+
+        
     }
-}
-.side-menu-mobile-contact {
-    padding-top: 0 !important;
 }
