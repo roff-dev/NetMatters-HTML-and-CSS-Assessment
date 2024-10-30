@@ -40,9 +40,46 @@
 .side-menu {
     transform: translateX(100%);
     transition: transform 0.3s ease-in-out;
-    overflow-y: auto; /* For scrolling if content is too tall */
+    overflow-y: auto; 
 }
 
 .side-menu.active {
     transform: translateX(0);
+}
+.side-menu-mobile {
+    background-color: #3D404E;
+    padding: 21px;
+    text-align: center;
+    
+}
+
+.side-menu-mobile li {
+    padding: 20px 0 0;
+}
+.side-menu-mobile li a:before {
+    content: none !important;
+}
+.side-menu-mobile li a:first-child {
+    border-radius: 3px;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    outline: 1px solid rgba(0, 0, 0, .25);;
+    padding-top: 0;
+}
+.side-menu-mobile-box {
+    border-radius: 5px;
+    display: flex !important;
+    flex-direction: column;
+    border: 1px solid hsla(0, 0%, 100%, .1);
+    outline: 1px solid rgba(0, 0, 0, .25);
+    font-size: 18px;
+    span {
+        font-size: 1.5em;
+        padding-bottom: 10px;
+    }
+    small {
+        font-size: 10px;
+    }
+}
+.side-menu-mobile-contact {
+    padding-top: 0 !important;
 }
