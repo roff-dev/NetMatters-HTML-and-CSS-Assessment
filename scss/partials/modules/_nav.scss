@@ -66,55 +66,67 @@
   }
   
   //hamburger menu icon styling
-
-  
-  .hamburger-icon{
+  .hamburger-icon {
     background-color: #333645;
     width: 63px;
     height: 56px;
-    position: relative; 
+    position: relative;
     margin-left: 15px;
     border: none;
     border-radius: 4px;
+    
     span {
       color: white;
       font-size: 36px;
     }
-
+  
     &:hover {
       background-color: $color-accent;
       cursor: pointer;
     }
-    
+  
     &::before,
     &::after {
-        content: ""; 
-        display: block; 
-        width: 33px; 
-        height: 4px; 
-        background-color: #fff; 
-        position: absolute; 
-        left: 50%; 
-        transform: translateX(-50%); 
+      content: "";
+      display: block;
+      width: 33px;
+      height: 4px;
+      background-color: #fff;
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
     }
-
+  
     &::before {
-        top: 15px; 
+      top: 15px;
     }
-
+  
     &::after {
-        bottom: 15px; 
+      bottom: 15px;
     }
-
-    
+  
     .hamburger-line {
-        position: absolute; 
-        top: 50%; 
-        left: 50%; 
-        width: 33px; 
-        height: 4px; 
-        background-color: #fff; 
-        transform: translate(-50%, -50%); 
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      width: 33px;
+      height: 4px;
+      background-color: #fff;
+      transform: translate(-50%, -50%);
+    }
+  
+    &.active .hamburger-line {
+      display: none;
+    }
+  
+    &.active::before {
+      top: 50%;
+      transform: translate(-50%, -50%) rotate(45deg);
+    }
+  
+    &.active::after {
+      bottom: 50%;
+      transform: translate(-50%, 50%) rotate(-45deg);
     }
   }
 

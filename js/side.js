@@ -51,6 +51,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.pointerEvents = 'auto';
         body.style.overflow = 'hidden';
         hamburgerIcon.classList.add('active');
+        hamburgerIcon.querySelector('.hamburger-line').classList.add('x-icon');
     }
 
     //close the menu
@@ -61,6 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.pointerEvents = 'none';
         body.style.overflow = '';
         hamburgerIcon.classList.remove('active');
+        hamburgerIcon.querySelector('.hamburger-line').classList.remove('x-icon');
     }
 
     //menu function

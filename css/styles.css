@@ -1375,6 +1375,17 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #fff;
   transform: translate(-50%, -50%);
 }
+.hamburger-icon.active .hamburger-line {
+  display: none;
+}
+.hamburger-icon.active::before {
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(45deg);
+}
+.hamburger-icon.active::after {
+  bottom: 50%;
+  transform: translate(-50%, 50%) rotate(-45deg);
+}
 
 .mobile-search {
   display: flex;
