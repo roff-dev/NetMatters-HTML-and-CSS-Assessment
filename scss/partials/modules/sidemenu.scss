@@ -12,7 +12,7 @@
         flex-direction: column;
         padding: 0;
         margin: 0;
-        width: 335px;
+        width: 275px;
         list-style: none;
 
         li {
@@ -96,5 +96,26 @@
         }
 
         
+    }
+}
+.menu-round-top {
+    border-radius: 5px 5px 0 0;
+}
+.menu-round-bottom {
+    border-radius: 0 0 5px 5px;
+}
+
+@include mq('m') {
+    .side-menu {
+        ul {
+            width: 335px;
+        }
+    }
+    .side-menu-mobile {
+        display: none;
+
+        &-support {
+            display: none;
+        }
     }
 }

@@ -1,83 +1,29 @@
-@charset "UTF-8";
-.side-menu {
-  transform: translateX(100%);
-  transition: transform 0.3s ease-in-out;
-  overflow-y: auto;
-}
-.side-menu.active {
-  transform: translateX(0);
-}
-.side-menu ul {
-  display: flex;
-  flex-direction: column;
-  padding: 0;
-  margin: 0;
-  width: 335px;
-  list-style: none;
-}
-.side-menu ul li {
-  text-transform: uppercase;
-}
-.side-menu ul li a {
-  display: block;
-  text-decoration: none;
-  color: #e3e3e3;
-  background-color: #262834;
-  padding: 15px 20px;
-  font-size: 14px;
-  border-top: 1px solid hsla(0, 0%, 100%, 0.05);
-}
-.side-menu ul li a:before {
-  content: "»";
-  padding-right: 15px;
-}
-.side-menu ul li a:first-child {
-  background-color: #3D404E;
-  font-size: 16px;
-  padding: 20px;
-}
-.side-menu ul li a:first-child:hover {
-  background-color: #53576b;
-}
-.side-menu ul li a:first-child:before {
-  content: "";
-  padding-right: 0;
-}
-.side-menu-mobile {
-  background-color: #3D404E;
-  padding: 21px;
-  text-align: center;
-}
-.side-menu-mobile li {
-  padding: 20px 0 0;
-}
-.side-menu-mobile li a:before {
-  content: none !important;
-}
-.side-menu-mobile li a:first-child {
-  border-radius: 3px;
-  border: 1px solid hsla(0, 0%, 100%, 0.1);
-  outline: 1px solid rgba(0, 0, 0, 0.25);
-  padding-top: 0;
-}
-.side-menu-mobile-box {
-  border-radius: 5px;
-  display: flex !important;
-  flex-direction: column;
-  border: 1px solid hsla(0, 0%, 100%, 0.1);
-  outline: 1px solid rgba(0, 0, 0, 0.25);
-  font-size: 18px;
-  margin-bottom: 20px;
-}
-.side-menu-mobile-box span {
-  font-size: 1.5em;
-  padding-bottom: 10px;
-}
-.side-menu-mobile-box small {
-  font-size: 10px;
-}
-.side-menu-mobile-contact {
-  padding-top: 0 !important;
-}
+/* Error: Undefined mixin.
+ *     ,
+ * 108 | / @include mq('m') {
+ * 109 | |     .side-menu {
+ * 110 | |         ul {
+ * 111 | |             width: 335px;
+ * 112 | |         }
+ * 113 | |     }
+ * 114 | |     .side-menu-mobile {
+ * 115 | |         display: none;
+ * 116 | | 
+ * 117 | |         &-support {
+ * 118 | |             display: none;
+ * 119 | |         }
+ * 120 | |     }
+ * 121 | \ }
+ *     '
+ *   scss\partials\modules\sidemenu.scss 108:1  root stylesheet */
 
-/*# sourceMappingURL=sidemenu.css.map */
+body::before {
+  font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+      "Droid Sans Mono", monospace, monospace;
+  white-space: pre;
+  display: block;
+  padding: 1em;
+  margin-bottom: 1em;
+  border-bottom: 2px solid black;
+  content: "Error: Undefined mixin.\a     \2577 \a 108 \2502  \250c  @include mq('m') {\a 109 \2502  \2502      .side-menu {\a 110 \2502  \2502          ul {\a 111 \2502  \2502              width: 335px;\a 112 \2502  \2502          }\a 113 \2502  \2502      }\a 114 \2502  \2502      .side-menu-mobile {\a 115 \2502  \2502          display: none;\a 116 \2502  \2502  \a 117 \2502  \2502          &-support {\a 118 \2502  \2502              display: none;\a 119 \2502  \2502          }\a 120 \2502  \2502      }\a 121 \2502  \2514  }\a     \2575 \a   scss\\partials\\modules\\sidemenu.scss 108:1  root stylesheet";
+}
