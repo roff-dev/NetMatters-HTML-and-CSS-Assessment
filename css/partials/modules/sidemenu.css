@@ -1,21 +1,9 @@
-/* Error: Undefined mixin.
- *     ,
- * 108 | / @include mq('m') {
- * 109 | |     .side-menu {
- * 110 | |         ul {
- * 111 | |             width: 335px;
- * 112 | |         }
- * 113 | |     }
- * 114 | |     .side-menu-mobile {
- * 115 | |         display: none;
- * 116 | | 
- * 117 | |         &-support {
- * 118 | |             display: none;
- * 119 | |         }
- * 120 | |     }
- * 121 | \ }
- *     '
- *   scss\partials\modules\sidemenu.scss 108:1  root stylesheet */
+/* Error: Undefined variable.
+ *    ,
+ * 58 |         @each $key, $color in $colors {
+ *    |                               ^^^^^^^
+ *    '
+ *   scss\partials\modules\sidemenu.scss 58:31  root stylesheet */
 
 body::before {
   font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
@@ -25,5 +13,5 @@ body::before {
   padding: 1em;
   margin-bottom: 1em;
   border-bottom: 2px solid black;
-  content: "Error: Undefined mixin.\a     \2577 \a 108 \2502  \250c  @include mq('m') {\a 109 \2502  \2502      .side-menu {\a 110 \2502  \2502          ul {\a 111 \2502  \2502              width: 335px;\a 112 \2502  \2502          }\a 113 \2502  \2502      }\a 114 \2502  \2502      .side-menu-mobile {\a 115 \2502  \2502          display: none;\a 116 \2502  \2502  \a 117 \2502  \2502          &-support {\a 118 \2502  \2502              display: none;\a 119 \2502  \2502          }\a 120 \2502  \2502      }\a 121 \2502  \2514  }\a     \2575 \a   scss\\partials\\modules\\sidemenu.scss 108:1  root stylesheet";
+  content: "Error: Undefined variable.\a    \2577 \a 58 \2502          @each $key, $color in $colors {\d\a    \2502                                ^^^^^^^\a    \2575 \a   scss\\partials\\modules\\sidemenu.scss 58:31  root stylesheet";
 }

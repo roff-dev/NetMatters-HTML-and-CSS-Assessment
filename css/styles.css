@@ -1654,7 +1654,7 @@ footer .footer-row .footer-menu ul a:hover {
 .side-menu ul li a {
   display: block;
   text-decoration: none;
-  color: #e3e3e3;
+  color: white;
   background-color: #262834;
   padding: 15px 20px;
   font-size: 14px;
@@ -1665,21 +1665,42 @@ footer .footer-row .footer-menu ul a:hover {
   padding-right: 15px;
 }
 .side-menu ul li a:first-child {
-  background-color: #3D404E;
+  background-color: #333645;
   font-size: 16px;
   padding: 20px;
 }
 .side-menu ul li a:first-child:hover {
-  background-color: #53576b;
+  background-color: #494d62;
 }
 .side-menu ul li a:first-child:before {
   content: "";
   padding-right: 0;
 }
 .side-menu-mobile {
-  background-color: #3D404E;
+  background-color: #333645;
   padding: 21px;
   text-align: center;
+}
+.side-menu-mobile .icon-1 {
+  color: #526781;
+}
+.side-menu-mobile .icon-2 {
+  color: #4183D7;
+}
+.side-menu-mobile .icon-3 {
+  color: #2ECC71;
+}
+.side-menu-mobile .icon-4 {
+  color: #D64541;
+}
+.side-menu-mobile .icon-5 {
+  color: #926FB1;
+}
+.side-menu-mobile .icon-6 {
+  color: #F62459;
+}
+.side-menu-mobile .icon-7 {
+  color: #CE4125;
 }
 .side-menu-mobile li {
   padding: 20px 0 0;

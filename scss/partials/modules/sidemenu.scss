@@ -21,7 +21,7 @@
             a {
                 display: block;
                 text-decoration: none;
-                color: #e3e3e3;
+                color: white;
                 background-color: #262834;
                 padding: 15px 20px;
                 font-size: 14px;
@@ -33,12 +33,12 @@
                 }
 
                 &:first-child {
-                    background-color: #3D404E;
+                    background-color: #333645;
                     font-size: 16px;
                     padding: 20px;
 
                     &:hover {
-                        background-color: lighten(#3D404E, 10%);
+                        background-color: lighten(#333645, 10%);
                     }
 
                     &:before {
@@ -51,10 +51,16 @@
     }
 
     &-mobile {
-        background-color: #3D404E;
+        background-color: #333645;
         padding: 21px;
         text-align: center;
         
+        @each $key, $color in $colors {
+            .icon-#{$key} {
+                color: $color; 
+            }
+          }
+
         li {
             padding: 20px 0 0;
 
