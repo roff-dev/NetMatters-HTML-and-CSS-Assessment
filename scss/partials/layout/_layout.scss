@@ -52,7 +52,7 @@ h3 {
 .client {
     z-index: 9999;
     position: relative;
-    //overflow-x: visible;
+    overflow-x: visible !important;
     img {
         max-height: 90px;
         max-width: 200px;
@@ -75,48 +75,64 @@ h3 {
         -webkit-filter: grayscale(0%);
     }
 }
-
+.grey {
+    max-height: 90px;
+    max-width: 200px;
+    transition: filter 0.3s;
+}
 .tooltip {
     position: relative;
     display: inline-block;
-    z-index: 999;
-    
 }
 
-.tooltip .tooltiptext {
+.tooltiptext {
     visibility: hidden;
-    width: 200px; 
+    width: 200px;
     background-color: #333;
     color: #fff;
     text-align: center;
     border-radius: 5px;
-    padding: 10px; 
-    position: absolute;
-    z-index: 9999;
-    bottom: 125%; 
-    left: 50%;
-    margin-left: -100px; 
-    opacity: 0;
-    transition: opacity 0.3s;
+    padding: 10px;
     
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-
-.tooltip .tooltiptext::after {
-    content: '';
+    /* Position the tooltip */
     position: absolute;
-    top: 100%; 
+    z-index: 99999;
+    bottom: 120%;
     left: 50%;
-    margin-left: -15px; 
-    border-width: 15px; 
-    border-style: solid;
-    border-color: #333 transparent transparent transparent; 
-    
+    transform: translateX(-50%);
 }
 
 .tooltip:hover .tooltiptext {
     visibility: visible;
     opacity: 1;
-    z-index: 9999;
+}
+
+.tooltiptext::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -10px;
+    border-width: 10px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+}
+.logo-wrapper {
+    overflow: visible !important;
+}
+.slick-list {
+    overflow: visible !important;
+}
+
+.slick-track {
+    display: flex !important;
+    align-items: center;
+}
+
+.slick-slide {
+    height: auto;
+    float: none;
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
 }
