@@ -1,5 +1,7 @@
 //NEWS SECTION
-
+.news {
+    padding-bottom: 50px;
+}
 //news floating boxes
 .newsbox1 {
     @include news;
