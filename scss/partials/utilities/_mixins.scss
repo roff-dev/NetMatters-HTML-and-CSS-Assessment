@@ -32,6 +32,7 @@ MIXINS
     height: 100%;
     position: relative;
     z-index: 1;
+    
     &:hover {
         transform: translateY(-10px);
         transition: .5s ease;

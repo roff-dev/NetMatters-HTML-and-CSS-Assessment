@@ -410,7 +410,6 @@ h3 {
 .client,
 .sponsor {
   white-space: nowrap;
-  overflow-x: auto;
   padding: 0;
   padding: 50px 0;
 }
