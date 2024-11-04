@@ -1742,6 +1742,10 @@ footer .footer-row .footer-menu ul a:hover {
   border-radius: 0 0 5px 5px;
 }
 
+.slick-next, .slick-prev {
+  display: none;
+}
+
 @media (min-width: 992px) {
   .side-menu ul {
     width: 335px;

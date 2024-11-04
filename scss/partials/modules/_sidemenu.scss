@@ -110,7 +110,9 @@
 .menu-round-bottom {
     border-radius: 0 0 5px 5px;
 }
-
+.slick-next, .slick-prev {
+    display: none;
+}
 @include mq('m') {
     .side-menu {
         ul {
