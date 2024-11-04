@@ -1,7 +1,8 @@
 $('.slick-slider').slick({
     dots: true,
     speed: 250,
-    cssEase: 'linear'
+    cssEase: 'linear',
+    arrows: false
     
 });
 $(document).ready(function(){
@@ -20,5 +21,6 @@ $(document).ready(function(){
         cssEase: 'linear',
         centerMode: false,
         variableWidth: true,
+        arrows: false
     });
 });
