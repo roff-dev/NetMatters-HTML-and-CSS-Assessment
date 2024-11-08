@@ -565,6 +565,9 @@ footer .footer-row .footer-menu {
   word-wrap: break-word;
   padding: 0 15px;
 }
+footer .footer-row .footer-menu:first-child {
+  padding-left: 0;
+}
 @media (min-width: 768px) {
   footer .footer-row .footer-menu {
     flex: 50%;
@@ -621,6 +624,9 @@ footer .footer-row .footer-menu ul a:hover {
   text-decoration: underline;
 }
 
+.social-btn {
+  margin-bottom: 20px;
+}
 @media (max-width: 480px) {
   .social-btn {
     width: 300px;

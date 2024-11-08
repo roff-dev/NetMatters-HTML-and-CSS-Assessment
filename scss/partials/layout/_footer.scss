@@ -27,6 +27,9 @@ footer {
             word-wrap: break-word;
             padding: 0 15px;
 
+            &:first-child {
+               padding-left: 0;
+            }
             @include mq ('s') {
                flex: 50%;
             }
@@ -95,6 +98,7 @@ footer {
 
 //Social media links and icons
 .social-btn {
+   margin-bottom: 20px;
    @media (max-width: 480px) {
       width: 300px;
       display: flex;
