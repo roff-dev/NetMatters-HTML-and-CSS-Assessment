@@ -27,6 +27,7 @@ document.addEventListener('DOMContentLoaded', () => {
         contentWrapper.style.position = 'relative';
         contentWrapper.style.width = '100%';
         contentWrapper.style.left = '0';
+        contentWrapper.style.overflow = 'hidden';
     }
 
     //overlay element

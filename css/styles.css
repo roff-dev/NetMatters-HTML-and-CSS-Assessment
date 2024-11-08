@@ -374,7 +374,6 @@ body {
   margin: 0;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
   width: 100%;
-  overflow-x: hidden;
 }
 
 * {
@@ -426,7 +425,6 @@ h3 {
 .client {
   z-index: 9999;
   position: relative;
-  overflow-x: visible !important;
 }
 .client img {
   padding: 0 35px;
@@ -479,22 +477,18 @@ h3 {
 }
 
 .logo-wrapper {
-  overflow: visible !important;
-}
-
-.slick-list {
-  overflow: visible !important;
+  overflow: visible;
 }
 
 .slick-track {
-  display: flex !important;
+  display: flex;
   align-items: center;
 }
 
 .slick-slide {
   height: auto;
   float: none;
-  display: flex !important;
+  display: flex;
   justify-content: center;
   align-items: center;
 }
