@@ -30,13 +30,15 @@
     background-color: $color-accent;
     display: inline-block;
     width: fit-content;
-    margin: 15px 0;
+    margin: 15px 5px 0 0;
     border-radius: 3px;
 
     @include mq(m) {
         display: block;
     }
-
+    @media (max-width: 500px) {
+        margin-bottom: 0;
+    }
     a {
         display: inline-flex;
         align-items: center;
@@ -59,7 +61,7 @@
     background-color: #4387F6;
     display: inline-block;
     width: fit-content;
-    margin: 15px 0;
+    margin: 15px 5px 0 0;
     border-radius: 3px;
     @include mq(m) {
         display: block;

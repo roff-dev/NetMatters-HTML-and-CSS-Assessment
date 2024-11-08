@@ -793,12 +793,17 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #212330;
   display: inline-block;
   width: fit-content;
-  margin: 15px 0;
+  margin: 15px 5px 0 0;
   border-radius: 3px;
 }
 @media (min-width: 992px) {
   .btn-welcome {
     display: block;
+  }
+}
+@media (max-width: 500px) {
+  .btn-welcome {
+    margin-bottom: 0;
   }
 }
 .btn-welcome a {
@@ -818,7 +823,7 @@ footer .footer-row .footer-menu ul a:hover {
   background-color: #4387F6;
   display: inline-block;
   width: fit-content;
-  margin: 15px 0;
+  margin: 15px 5px 0 0;
   border-radius: 3px;
 }
 @media (min-width: 992px) {
