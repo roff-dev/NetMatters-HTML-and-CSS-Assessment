@@ -25,11 +25,9 @@ footer {
         .footer-menu {   
             flex: 100%;   
             word-wrap: break-word;
-            padding: 0 15px;
+            padding: 0 15px 0 0;
 
-            &:first-child {
-               padding-left: 0;
-            }
+            
             @include mq ('s') {
                flex: 50%;
             }

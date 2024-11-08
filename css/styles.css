@@ -563,10 +563,7 @@ footer .footer-row {
 footer .footer-row .footer-menu {
   flex: 100%;
   word-wrap: break-word;
-  padding: 0 15px;
-}
-footer .footer-row .footer-menu:first-child {
-  padding-left: 0;
+  padding: 0 15px 0 0;
 }
 @media (min-width: 768px) {
   footer .footer-row .footer-menu {
@@ -1003,16 +1000,21 @@ footer .footer-row .footer-menu ul a:hover {
 .newsbox1 img {
   width: 100%;
 }
+.newsbox1 p {
+  font-size: 14px;
+  color: #333645;
+  margin-bottom: 30px;
+}
 .newsbox1 a {
   color: white;
-  border-radius: 0.3em;
-  padding: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 18px;
   text-decoration: none;
 }
 .newsbox1 .news-info {
-  padding-bottom: 40px;
   flex: 1;
-  padding: 20px;
+  padding: 20px 25px 35px;
 }
 .newsbox1 .news-author {
   display: flex;
@@ -1049,6 +1051,7 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .newsbox1 a {
   background-color: #926fb1;
+  margin-top: 20px;
 }
 
 .newsbox2 {
@@ -1074,16 +1077,21 @@ footer .footer-row .footer-menu ul a:hover {
 .newsbox2 img {
   width: 100%;
 }
+.newsbox2 p {
+  font-size: 14px;
+  color: #333645;
+  margin-bottom: 30px;
+}
 .newsbox2 a {
   color: white;
-  border-radius: 0.3em;
-  padding: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 18px;
   text-decoration: none;
 }
 .newsbox2 .news-info {
-  padding-bottom: 40px;
   flex: 1;
-  padding: 20px;
+  padding: 20px 25px 35px;
 }
 .newsbox2 .news-author {
   display: flex;
@@ -1145,16 +1153,21 @@ footer .footer-row .footer-menu ul a:hover {
 .newsbox3 img {
   width: 100%;
 }
+.newsbox3 p {
+  font-size: 14px;
+  color: #333645;
+  margin-bottom: 30px;
+}
 .newsbox3 a {
   color: white;
-  border-radius: 0.3em;
-  padding: 10px;
+  border-radius: 3px;
+  padding: 10px 15px;
+  font-size: 18px;
   text-decoration: none;
 }
 .newsbox3 .news-info {
-  padding-bottom: 40px;
   flex: 1;
-  padding: 20px;
+  padding: 20px 25px 35px;
 }
 .newsbox3 .news-author {
   display: flex;
@@ -1202,7 +1215,7 @@ footer .footer-row .footer-menu ul a:hover {
 }
 .view-all a {
   display: inline;
-  color: #212330;
+  color: #333645;
   font-size: 1.5em;
   text-decoration: none;
   text-align: center;
