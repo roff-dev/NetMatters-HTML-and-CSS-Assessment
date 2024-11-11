@@ -1596,12 +1596,9 @@ footer .footer-row .footer-menu ul a:hover {
     border-right: 84px solid transparent;
   }
 }
-.nav-popout ul li > a[class^=link-]:hover::after,
-.nav-popout ul li > a[class^=link-] .nav-popout:hover ul li > a[class^=link-]::after {
-  display: block;
-}
 
-.pop-link:hover {
+.nav-popout ul li:hover > a[class^=link-]::after,
+.nav-popout ul li > a[class^=link-]:hover::after {
   display: block;
 }
 
@@ -1643,7 +1640,7 @@ footer .footer-row .footer-menu ul a:hover {
   display: block;
 }
 
-.nav-popout ul li a:hover + .pop-link {
+.nav-popout ul li:hover .pop-link {
   display: block;
 }
 

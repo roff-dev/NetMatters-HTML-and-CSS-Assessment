@@ -213,119 +213,113 @@
 
 //dropdown menu
 .nav-popout {
-    
-    background-color: $color-main;
-    font-size: 18px;
-    position: relative;
+  background-color: $color-main;
+  font-size: 18px;
+  position: relative;
 
-    ul {
-        line-height: 1;
-        list-style-type: none;
-        display: flex;
-        margin: 0;
-        padding: 0;
-        width: 100%;
+  ul {
+      line-height: 1;
+      list-style-type: none;
+      display: flex;
+      margin: 0;
+      padding: 0;
+      width: 100%;
+      
+      small {
+        font-size: 12px;
         
-        small {
-          font-size: 12px;
-          
-        }
+      }
 
-        a{
-          @extend %a-link;
-          display: flex;
-          padding: 18px 50px 18px;
-          text-transform: uppercase;
-          width: 134px;
-          height: 99px;
-          flex-direction: column;
-          align-items: center;
+      a{
+        @extend %a-link;
+        display: flex;
+        padding: 18px 50px 18px;
+        text-transform: uppercase;
+        width: 134px;
+        height: 99px;
+        flex-direction: column;
+        align-items: center;
 
-          span {
-            font-size: 1.35em;
-            padding: 0 0 10px;
-          }
+        span {
+          font-size: 1.35em;
+          padding: 0 0 10px;
         }
-    }
+      }
+  }
 }
 //dropdown triangles
 .nav-popout ul li > a[class^="link-"] {
-  position: relative; 
- 
-  &::after {
-    content: ""; 
-    position: absolute; 
-    bottom: -29px; 
-    left: 50%; 
-    transform: translateX(-50%); 
-    border-left: 67px solid transparent; 
-    border-right: 67px solid transparent; 
-    border-top: 30px solid ; 
-    display: none; 
-    z-index: 20;
-    @include mq ('l') {
-      border-left: 84px solid transparent; 
-      border-right: 84px solid transparent;
-    }
-  }
+position: relative; 
 
-  &:hover::after,
-    .nav-popout:hover ul li > a[class^="link-"]::after {
-      display: block; 
-    }
+&::after {
+  content: ""; 
+  position: absolute; 
+  bottom: -29px; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  border-left: 67px solid transparent; 
+  border-right: 67px solid transparent; 
+  border-top: 30px solid ; 
+  display: none; 
+  z-index: 20;
+  @include mq ('l') {
+    border-left: 84px solid transparent; 
+    border-right: 84px solid transparent;
+  }
+}
 }
 
-.pop-link:hover {
+.nav-popout ul li:hover > a[class^="link-"],
+.nav-popout ul li > a[class^="link-"]:hover {
+&::after {
   display: block; 
+}
 }
 
 .pop-link {
-  display: none; 
-  position: absolute; 
-  z-index: 10; 
-  width: 100vw;
-  left: 0;
-  
-  ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: flex-start;
-    width: 970px;
-    margin: 30px auto;
+display: none; 
+position: absolute; 
+z-index: 10; 
+width: 100vw;
+left: 0;
 
-    li {
-      flex: 0 0 calc(33.33%); 
-      .pop-a {
-        text-transform: none;
-        flex-direction: initial;
-        padding-left: 0;
+ul {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+  width: 970px;
+  margin: 30px auto;
+
+  li {
+    flex: 0 0 calc(33.33%); 
+    .pop-a {
+      text-transform: none;
+      flex-direction: initial;
+      padding-left: 0;
+      padding-right: 10px;
+      align-items: start;
+      width: 100%;
+      height: 60px;
+      flex: 0 0 auto; 
+      span {
         padding-right: 10px;
-        align-items: start;
-        width: 100%;
-        height: 60px;
-        flex: 0 0 auto; 
-        span {
-          padding-right: 10px;
-          margin-top: -3px;
-        }
+        margin-top: -3px;
       }
     }
+  }
 
-    li.h3-item {
-      font-size: 28px;
-      flex: 0 0 100%; 
-      color: white; 
-      display: block; 
-       
-    }
+  li.h3-item {
+    font-size: 28px;
+    flex: 0 0 100%; 
+    color: white; 
+    display: block; 
+     
   }
 }
+}
 
-.nav-popout ul li a:hover {
-  + .pop-link {
-      display: block; 
-      
-  }
+.nav-popout ul li:hover .pop-link {
+display: block; 
 }
 
  @media (max-width: 767px) {
