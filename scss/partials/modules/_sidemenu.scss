@@ -50,7 +50,7 @@
         }
     }
 
-    &-mobile {
+    .side-menu-mobile {
         background-color: #333645;
         padding: 21px;
         text-align: center;
@@ -73,7 +73,7 @@
                     border-radius: 3px;
                     border: 1px solid hsla(0, 0%, 100%, 0.1);
                     outline: 1px solid rgba(0, 0, 0, 0.25);
-                    padding-top: 0;
+                    //padding-top: 0;
                 }
             }
         }
@@ -118,12 +118,12 @@
         ul {
             width: 335px;
         }
-    }
-    .side-menu-mobile {
-        display: none;
-
-        &-support {
+        .side-menu-mobile {
             display: none;
+            &-support {
+                display: none;
+            }
         }
     }
+    
 }

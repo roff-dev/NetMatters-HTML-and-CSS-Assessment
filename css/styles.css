@@ -1758,45 +1758,44 @@ footer .footer-row .footer-menu ul a:hover {
   content: "";
   padding-right: 0;
 }
-.side-menu-mobile {
+.side-menu .side-menu-mobile {
   background-color: #333645;
   padding: 21px;
   text-align: center;
 }
-.side-menu-mobile .icon-1 {
+.side-menu .side-menu-mobile .icon-1 {
   color: #526781;
 }
-.side-menu-mobile .icon-2 {
+.side-menu .side-menu-mobile .icon-2 {
   color: #4183D7;
 }
-.side-menu-mobile .icon-3 {
+.side-menu .side-menu-mobile .icon-3 {
   color: #2ECC71;
 }
-.side-menu-mobile .icon-4 {
+.side-menu .side-menu-mobile .icon-4 {
   color: #D64541;
 }
-.side-menu-mobile .icon-5 {
+.side-menu .side-menu-mobile .icon-5 {
   color: #926FB1;
 }
-.side-menu-mobile .icon-6 {
+.side-menu .side-menu-mobile .icon-6 {
   color: #F62459;
 }
-.side-menu-mobile .icon-7 {
+.side-menu .side-menu-mobile .icon-7 {
   color: #CE4125;
 }
-.side-menu-mobile li {
+.side-menu .side-menu-mobile li {
   padding: 20px 0 0;
 }
-.side-menu-mobile li a:before {
+.side-menu .side-menu-mobile li a:before {
   content: none !important;
 }
-.side-menu-mobile li a:first-child {
+.side-menu .side-menu-mobile li a:first-child {
   border-radius: 3px;
   border: 1px solid hsla(0, 0%, 100%, 0.1);
   outline: 1px solid rgba(0, 0, 0, 0.25);
-  padding-top: 0;
 }
-.side-menu-mobile-box {
+.side-menu .side-menu-mobile-box {
   border-radius: 5px;
   display: flex !important;
   flex-direction: column;
@@ -1805,14 +1804,14 @@ footer .footer-row .footer-menu ul a:hover {
   font-size: 18px;
   margin-bottom: 20px;
 }
-.side-menu-mobile-box span {
+.side-menu .side-menu-mobile-box span {
   font-size: 1.5em;
   padding-bottom: 10px;
 }
-.side-menu-mobile-box small {
+.side-menu .side-menu-mobile-box small {
   font-size: 10px;
 }
-.side-menu-mobile-contact {
+.side-menu .side-menu-mobile-contact {
   padding-top: 0 !important;
 }
 
@@ -1832,10 +1831,10 @@ footer .footer-row .footer-menu ul a:hover {
   .side-menu ul {
     width: 335px;
   }
-  .side-menu-mobile {
+  .side-menu .side-menu-mobile {
     display: none;
   }
-  .side-menu-mobile-support {
+  .side-menu .side-menu-mobile-support {
     display: none;
   }
 }
