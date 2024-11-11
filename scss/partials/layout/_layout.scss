@@ -39,7 +39,7 @@ h3 {
     white-space: nowrap;
     padding: 50px 0;
     img {
-        z-index: 999;
+        z-index: 99;
         display: inline-block;
         padding: 0 20px;
         vertical-align: middle;
@@ -49,7 +49,7 @@ h3 {
     }
 }
 .client {
-    z-index: 9999;
+    z-index: 99;
     position: relative;
     //overflow-x: visible;
     img {
@@ -86,7 +86,7 @@ h3 {
     
     /* Position the tooltip */
     position: absolute;
-    z-index: 99999;
+    z-index: 99;
     bottom: 200%;
     left: 50%;
     transform: translateX(-50%);
