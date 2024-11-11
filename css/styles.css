@@ -445,19 +445,36 @@ h3 {
 
 .tooltiptext {
   visibility: hidden;
-  width: 200px;
+  width: 275px;
   background-color: #333645;
   color: #fff;
   text-align: center;
-  border-radius: 5px;
-  padding: 10px;
+  padding: 20px;
   text-wrap: wrap;
+  height: auto;
+  font-size: 18px;
   /* Position the tooltip */
   position: absolute;
   z-index: 99999;
   bottom: 200%;
   left: 50%;
   transform: translateX(-50%);
+}
+.tooltiptext a {
+  border-radius: 3px;
+  background-color: orange;
+  padding: 10px 15px;
+  text-decoration: none;
+  color: white;
+  text-transform: uppercase;
+  font-weight: 500;
+  line-height: 35px;
+  height: auto;
+  width: 100%;
+  font-size: 16px;
+}
+.tooltiptext p {
+  font-size: 13px;
 }
 
 .tooltip:hover .tooltiptext {
