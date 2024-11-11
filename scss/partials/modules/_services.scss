@@ -124,6 +124,9 @@
         }
     }
 }
+.dig-mar-text {
+    padding-bottom: 20px;
+}
 @include mq ('s') {
     .view-our-work {
         display: block;

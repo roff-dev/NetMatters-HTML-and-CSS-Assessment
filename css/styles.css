@@ -2094,6 +2094,10 @@ footer .footer-row .footer-menu ul a:hover {
   margin-bottom: 0;
 }
 
+.dig-mar-text {
+  padding-bottom: 20px;
+}
+
 @media (min-width: 768px) {
   .view-our-work {
     display: block;
