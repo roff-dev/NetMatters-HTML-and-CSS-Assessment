@@ -462,7 +462,6 @@ h3 {
 }
 .tooltiptext a {
   border-radius: 3px;
-  background-color: orange;
   padding: 10px 15px;
   text-decoration: none;
   color: white;
@@ -475,6 +474,15 @@ h3 {
 }
 .tooltiptext p {
   font-size: 13px;
+}
+.tooltiptext .client-blue {
+  background-color: #926FB1;
+}
+.tooltiptext .client-green {
+  background-color: #2ECC71;
+}
+.tooltiptext .client-orange {
+  background-color: #F7B322;
 }
 
 .tooltip:hover .tooltiptext {

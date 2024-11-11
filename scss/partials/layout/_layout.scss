@@ -93,7 +93,7 @@ h3 {
 
     a {
         border-radius: 3px;
-        background-color: orange;
+        
         padding: 10px 15px;
         text-decoration: none;
         color: white;
@@ -106,6 +106,15 @@ h3 {
     }
     p {
         font-size: 13px;
+    }
+    .client-blue{
+        background-color: $client-blue;
+    }
+    .client-green{
+        background-color: $client-green;
+    }
+    .client-orange{
+        background-color: $client-orange;
     }
 }
 
