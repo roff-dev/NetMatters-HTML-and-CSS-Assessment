@@ -16,37 +16,33 @@ $colors: (
 );
 // Services Boxes 
 @each $item, $color in $colors {
-  .item-#{$item} {
-      &::before {
-          background-color: $color;
-      }
-      
-      .read-btn {
-          background-color: $color;
-
-      }
-      &:hover{
-          background-color: $color;
-
-          &::before {
-              background-color: white;
-              
-          }
-          .read-btn {
-              background-color: white;
-              color: $color;
-          }
-          p {
-              color: white;
-          }
-          h2 {
-              color: white;
-          }
-          [class^="icon-"] {
-              color: $color;
-          }
-      }
-  }
+    .item-#{$item} {
+        &::before {
+            background-color: $color;
+        }
+        .read-btn {
+            background-color: $color;
+        }
+        &:hover{
+            background-color: $color;
+            &::before {
+                background-color: white;
+            }
+            .read-btn {
+                background-color: white;
+                color: $color;
+            }
+             p {
+                color: white;
+            }
+            h2 {
+                color: white;
+            }
+            [class^="icon-"] {
+                color: $color;
+            }
+        }
+    } 
 }
 //nav links
 @each $key, $color in $colors {

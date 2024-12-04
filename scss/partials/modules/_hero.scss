@@ -32,7 +32,12 @@
         content: '';
         color: transparent;
 }
-
+.slick-dots li.slick-active button:before {
+    border: 3px solid white;
+    border-radius: 50%;
+    margin-left: -5.5px;
+    margin-top: -5.5px;
+}
 //background image
 [class^="banner"] {
     height: 550px;
