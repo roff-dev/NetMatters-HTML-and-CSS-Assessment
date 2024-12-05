@@ -1,6 +1,8 @@
 $('.slick-slider').slick({
     dots: true,
     speed: 250,
+    autoplay: true,
+    autoplaySpeed: 2000,
     cssEase: 'linear',
     arrows: false
     
