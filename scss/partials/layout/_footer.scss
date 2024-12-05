@@ -71,10 +71,18 @@ footer {
         }
       }
    }
+   @include mq('m') {
+      .net-img {
+        img {
+            
+            max-height: 65px;
+        }
+      }
+   }
    @include mq('l') {
       .net-img {
         img {
-          max-width: 300px;
+            max-width: 300px;
         }
       }
    }
@@ -123,8 +131,6 @@ footer {
       border-radius: 0;
       margin-right: 6px;
       margin-bottom: 10px;
-      
-      
       
    }
    span {

@@ -622,6 +622,11 @@ footer .footer-row .footer-menu ul a:hover {
     max-width: 234px;
   }
 }
+@media (min-width: 992px) {
+  .net-img img {
+    max-height: 65px;
+  }
+}
 @media (min-width: 1260px) {
   .net-img img {
     max-width: 300px;
