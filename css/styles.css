@@ -642,6 +642,7 @@ footer .footer-row .footer-menu ul a:hover {
 
 .social-btn {
   margin-bottom: 20px;
+  line-height: 6px;
 }
 @media (max-width: 480px) {
   .social-btn {
@@ -651,7 +652,7 @@ footer .footer-row .footer-menu ul a:hover {
     flex-wrap: wrap;
   }
   .social-btn a {
-    padding: 12px 22px 16px;
+    padding: 16px 22px 16px;
     width: 112px;
     height: 56px;
     text-align: center;
@@ -661,10 +662,11 @@ footer .footer-row .footer-menu ul a:hover {
   }
 }
 .social-btn a {
+  padding: 16px 22px 16px;
   background-color: #212330;
   display: inline-block;
   border-radius: 0;
-  margin-right: 10px;
+  margin-right: 6px;
   margin-bottom: 10px;
 }
 .social-btn span {

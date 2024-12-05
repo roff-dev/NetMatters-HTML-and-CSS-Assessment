@@ -97,6 +97,7 @@ footer {
 //Social media links and icons
 .social-btn {
    margin-bottom: 20px;
+   line-height: 6px;
    @media (max-width: 480px) {
       width: 300px;
       display: flex;
@@ -104,10 +105,11 @@ footer {
       flex-wrap: wrap;
 
       a {
-         padding: 12px 22px 16px;
+         padding: 16px 22px 16px;
          width: 112px;
          height: 56px;
          text-align: center;
+         
       }
       span {
          font-size: 1.5em
@@ -115,10 +117,11 @@ footer {
    }
    a {
       @extend %btn;
+      padding: 16px 22px 16px;
       background-color: $color-accent;
       display: inline-block;
       border-radius: 0;
-      margin-right: 10px;
+      margin-right: 6px;
       margin-bottom: 10px;
       
       
