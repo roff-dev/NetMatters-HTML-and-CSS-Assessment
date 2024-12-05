@@ -144,6 +144,7 @@ function getCookieConsent() {
 
 document.addEventListener('DOMContentLoaded', function() {
     const consent = getCookieConsent();
+
     if (!consent) {
         // show overlay
         document.getElementById('overlay').style.display = 'block';

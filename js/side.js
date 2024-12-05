@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', () => {
         overlay.style.opacity = '0';
         overlay.style.transition = 'opacity 0.3s ease-in-out';
         overlay.style.pointerEvents = 'none';
-        overlay.style.zIndex = '999';
+        overlay.style.zIndex = '99999';
         contentWrapper.appendChild(overlay);
     }
 

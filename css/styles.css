@@ -1701,7 +1701,7 @@ footer .footer-row .footer-menu ul a:hover {
 .header-wrapper {
   position: relative;
   width: 100%;
-  z-index: 1000;
+  z-index: 10;
   transition: transform 0.3s ease-in-out;
 }
 
