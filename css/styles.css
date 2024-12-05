@@ -1298,7 +1298,7 @@ footer .footer-row .footer-menu ul a:hover {
 .view-all-top a {
   display: inline;
   align-items: center;
-  color: #212330;
+  color: #333645;
   font-size: 26px;
   text-decoration: none;
   font-weight: 600;
@@ -1950,11 +1950,12 @@ footer .footer-row .footer-menu ul a:hover {
     box-sizing: border-box;
   }
   [class^=banner] .hero-text h1 {
-    max-width: 375px;
+    max-width: 575px;
     word-wrap: break-word;
   }
   [class^=banner] .hero-text p {
     max-width: 375px;
+    text-align: center;
   }
   [class^=banner] .hero-text .break {
     white-space: wrap;

@@ -110,11 +110,12 @@
             box-sizing: border-box;
             
             h1{
-                max-width: 375px;
+                max-width: 575px;
                 word-wrap: break-word;
             }
             p {
                 max-width: 375px;
+                text-align: center;
             }
             .break {
                 white-space: wrap;
