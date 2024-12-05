@@ -3,6 +3,7 @@ $('.slick-slider').slick({
     speed: 250,
     autoplay: true,
     autoplaySpeed: 2000,
+    infinite: true,
     cssEase: 'linear',
     arrows: false
     
