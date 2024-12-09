@@ -22,6 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
         //body wrapper add
         body.insertBefore(contentWrapper, sideMenu);
 
+        //POTENTIAL ISSUE - CHANGING OVERLAY MAKES HEADER NOT WORK?
         //transition wrapper
         contentWrapper.style.transition = 'transform 0.3s ease-in-out';
         contentWrapper.style.position = 'relative';

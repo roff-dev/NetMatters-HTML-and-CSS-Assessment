@@ -14,12 +14,14 @@ let headerOffset;
 const headerWrapper = document.querySelector('.header-wrapper');
 const nav = document.querySelector('.nav-popout');
 
+//AND HERE
 //placeholder div for jumping position
 const placeholder = document.createElement('div');
 placeholder.style.display = 'none';
 headerWrapper.parentNode.insertBefore(placeholder, headerWrapper.nextSibling);
 
 // start positions
+//POTENTIAL ISSUE HERE
 function updateNavPosition() {
     //get relative header pos
     const headerRect = headerWrapper.getBoundingClientRect();
