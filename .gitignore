@@ -1,0 +1,2 @@
+# exluding .env environmental variable file
+.env
