@@ -33,8 +33,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //overlay element
     function createOverlay() {
-        overlay = document.getElementById('overlay');
-        
+        overlay = document.createElement('div');
+        //overlay.classList.add('menu-overlay');
+        overlay.style.position = 'fixed';
+        overlay.style.inset = '0';
+        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
+        overlay.style.opacity = '0';
+        overlay.style.transition = 'opacity 0.3s ease-in-out';
+        overlay.style.pointerEvents = 'none';
+        overlay.style.zIndex = '99999';
         contentWrapper.appendChild(overlay);
     }
 
@@ -101,19 +108,19 @@ document.addEventListener('DOMContentLoaded', () => {
             }
         });
 
-        let touchStartX = 0;
-        let touchEndX = 0;
+        // let touchStartX = 0;
+        // let touchEndX = 0;
 
-        sideMenu.addEventListener('touchstart', (e) => {
-            touchStartX = e.changedTouches[0].screenX;
-        }, { passive: true });
+        // sideMenu.addEventListener('touchstart', (e) => {
+        //     touchStartX = e.changedTouches[0].screenX;
+        // }, { passive: true });
 
-        sideMenu.addEventListener('touchend', (e) => {
-            touchEndX = e.changedTouches[0].screenX;
-            if (touchEndX - touchStartX > 50) {
-                closeMenu();
-            }
-        }, { passive: true });
+        // sideMenu.addEventListener('touchend', (e) => {
+        //     touchEndX = e.changedTouches[0].screenX;
+        //     if (touchEndX - touchStartX > 50) {
+        //         closeMenu();
+        //     }
+        // }, { passive: true });
 
         //window resize
         window.addEventListener('resize', () => {

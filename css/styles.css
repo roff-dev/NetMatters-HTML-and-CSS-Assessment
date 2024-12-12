@@ -370,6 +370,25 @@ MIXINS
   color: white;
 }
 
+#content-wrapper {
+  position: relative;
+  width: 100%;
+  left: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease-in-out;
+}
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 999;
+  display: none;
+}
+
 body {
   margin: 0;
   font-family: "Poppins", "Helvetica Neue", Helvetica, Arial, sans-serif;
@@ -896,17 +915,6 @@ footer .footer-row .footer-menu ul a:hover {
   height: 1.4em;
   margin-left: 0.5em;
   fill: currentColor;
-}
-
-.overlay {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background: rgba(0, 0, 0, 0.5);
-  z-index: 999;
-  display: none;
 }
 
 .cookie-consent {

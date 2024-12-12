@@ -3,7 +3,7 @@
 include ("inc/header.php");
 
 ?>
-    
+<div id="content-wrapper">   
     <div class="slick-slider">
         <div class="banner-1">
             <div class="container hero-text">
@@ -413,7 +413,7 @@ include ("inc/header.php");
             </div>
         </div>
     </div>
-    
+</div>    
 
 <?php
 
