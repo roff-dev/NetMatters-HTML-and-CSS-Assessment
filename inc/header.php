@@ -17,10 +17,10 @@
         <div class="header">
             <div class="container">
                 <div class="top-header">
-                    <img src="img/nm-logo.png"  alt="Netmatters Logo in black">
+                    <a href="index.php"><img src="img/nm-logo.png"  alt="Netmatters Logo in black"></a>
                     <div class="header-buttons">
                         <a class="support" href="#"><span class="icon-mouse1"></span>SUPPORT</a>
-                        <a class="contact" href="#"><span style="transform: scaleX(-1);" class="icon-paperplane"></span>CONTACT</a>
+                        <a class="contact" href="contact.php"><span style="transform: scaleX(-1);" class="icon-paperplane"></span>CONTACT</a>
                         <div class="small-search">
                             <input class="small-input" placeholder="Search...">
                             <button type="submit" id="small-submit">
