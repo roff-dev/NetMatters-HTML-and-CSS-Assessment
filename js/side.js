@@ -33,15 +33,8 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //overlay element
     function createOverlay() {
-        overlay = document.createElement('div');
-        overlay.classList.add('menu-overlay');
-        overlay.style.position = 'fixed';
-        overlay.style.inset = '0';
-        overlay.style.backgroundColor = 'rgba(0, 0, 0, 0.5)';
-        overlay.style.opacity = '0';
-        overlay.style.transition = 'opacity 0.3s ease-in-out';
-        overlay.style.pointerEvents = 'none';
-        overlay.style.zIndex = '99999';
+        overlay = document.getElementById('overlay');
+        
         contentWrapper.appendChild(overlay);
     }
 
@@ -71,6 +64,7 @@ document.addEventListener('DOMContentLoaded', () => {
     function toggleMenu() {
         if (sideMenu.classList.contains('active')) {
             closeMenu();
+            
         } else {
             openMenu();
         }
@@ -92,6 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.addEventListener('click', (e) => {
             e.preventDefault();
             toggleMenu();
+            
         });
 
         //failsafe for if hamburger is not visible
@@ -102,6 +97,7 @@ document.addEventListener('DOMContentLoaded', () => {
         document.addEventListener('keydown', (e) => {
             if (e.key === 'Escape' && sideMenu.classList.contains('active')) {
                 closeMenu();
+                
             }
         });
 
