@@ -1,0 +1,52 @@
+.breadcrumb {
+    padding: 0;
+    margin: 0;
+    a {
+        text-decoration: none;
+        color: $color-main;
+        font-weight: 700;
+    }
+    li {
+        list-style: none;
+        padding: 0;
+        display: inline-block;
+        font-size: 13px;
+    }
+}
+
+.contact-header {
+    margin: 0 0 50px;
+    padding: 24px 0;
+    //padding-top: 50px;
+    background-color: $color-main;
+    h1 {
+        margin: 0;
+        color: white;
+        font-weight: 400;
+        font-size: 36px;
+    }
+}
+.location-bar {
+    display: none;
+}
+
+
+
+@include mq('s') {
+    .location-bar {
+        display: block;
+        border-top: 1px solid black;
+        padding: 14px 0 13px;
+    } 
+}
+@include mq('m') {
+    .contact-header {
+        background-color: white;
+        margin: 50px 0 0;
+        padding: 0;
+        h1 {
+            margin: 0 0 28px;
+            color: black;
+        }
+    }
+}

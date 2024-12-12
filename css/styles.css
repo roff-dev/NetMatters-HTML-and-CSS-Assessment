@@ -750,6 +750,56 @@ footer .footer-row .footer-menu ul a:hover {
   }
 }
 
+.breadcrumb {
+  padding: 0;
+  margin: 0;
+}
+.breadcrumb a {
+  text-decoration: none;
+  color: #333645;
+  font-weight: 700;
+}
+.breadcrumb li {
+  list-style: none;
+  padding: 0;
+  display: inline-block;
+  font-size: 13px;
+}
+
+.contact-header {
+  margin: 0 0 50px;
+  padding: 24px 0;
+  background-color: #333645;
+}
+.contact-header h1 {
+  margin: 0;
+  color: white;
+  font-weight: 400;
+  font-size: 36px;
+}
+
+.location-bar {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .location-bar {
+    display: block;
+    border-top: 1px solid black;
+    padding: 14px 0 13px;
+  }
+}
+@media (min-width: 992px) {
+  .contact-header {
+    background-color: white;
+    margin: 50px 0 0;
+    padding: 0;
+  }
+  .contact-header h1 {
+    margin: 0 0 28px;
+    color: black;
+  }
+}
 .welcome {
   background-color: #333645;
   width: 100%;
