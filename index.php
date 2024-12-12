@@ -257,56 +257,26 @@ include ("inc/connection.php");
                 </div>
             </div>
             <div class="news-s">
-                <div class="newsbox1">
-                    <div class="category-tag career">Career</div>
-                    <img src="img/hire1.jpeg" alt="Hiring Information">
+            <?php foreach ($newsItems as $index => $item): ?>  
+                <div class="newsbox<?= $index + 1 ?>">  
+                <div class="category-tag <?= strtolower(htmlspecialchars($item['category'])) ?>">
+                        <?= htmlspecialchars($item['category']) ?>
+                    </div>
+                    <img src="<?= htmlspecialchars($item['img']) ?>" alt="<?= htmlspecialchars($item['title']) ?>">
                     <div class="news-info">
-                        <h3>Trainee IT Technician</h3>
-                        <p>Salary Range £25,000 -£26,000. Potential OTE at £6k-£8k Hours 40 hours per week, Monday - Friday</p>
+                        <h3><?= htmlspecialchars($item['title']) ?></h3>
+                        <p><?= htmlspecialchars($item['bodyText']) ?></p>
                         <a href="#">Read More</a>
                     </div>
                     <div class="news-author">
-                        <img src="img/bethany.jpeg" alt="Small Logo">
+                        <img src="<?= htmlspecialchars($item['authorImg']) ?>" alt="Small Logo">
                         <ul>
-                            <li>Posted By Bethany Shakespeare</li>
-                            <li>16th September 2024</li>
+                            <li>Posted By <?= htmlspecialchars($item['author']) ?></li>
+                            <li><?= htmlspecialchars(date("jS F Y", strtotime($item['authorDate']))) ?></li>
                         </ul>
                     </div>
                 </div>
-            
-                <div class="newsbox2">
-                    <div class="category-tag news">News</div>
-                    <img src="img/hire2.png" alt="Hiring Information">
-                    <div class="news-info">
-                        <h3>Mark Reilly - Netmatters 5 Years</h3>
-                        <p>Mark Reilly - Netmatters 5 year legend today, we celebrate the brilliant accomplishments of Mark Reilly</p>
-                        <a href="#">Read More</a>
-                    </div>
-                    <div class="news-author">
-                        <img src="img/logo-small.png" alt="Small Logo">
-                        <ul>
-                            <li>Posted By Netmatters</li>
-                            <li>16th September 2024</li>
-                        </ul>
-                    </div>
-                </div>
-            
-                <div class="newsbox3">
-                    <div class="category-tag career">Career</div>
-                    <img src="img/hire.png" alt="Hiring Information">
-                    <div class="news-info">
-                        <h3>Telemarketer</h3>
-                        <p>Salary Range £25,000 -£26,000. Potential OTE at £6k-£8k Hours 40 hours per week, Monday - Friday</p>
-                        <a href="#">Read More</a>
-                    </div>
-                    <div class="news-author">
-                        <img src="img/rebecca.jpeg" alt="Small Logo">
-                        <ul>
-                            <li>Posted By Rebecca Moore</li>
-                            <li>12th September 2024</li>
-                        </ul>
-                    </div>
-                </div>
+            <?php endforeach; ?>
             </div>
             <div class="view-all">
                 <a href="#">View All <span class="icon-arrow-right"></span></a>
