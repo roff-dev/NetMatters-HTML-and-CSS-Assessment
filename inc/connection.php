@@ -31,3 +31,11 @@ try {
 }
 //////////////////////////////////////////
 //COMMAND TO INSTALL COMPOSTER composer require vlucas/phpdotenv
+// Fetch data from the 'news' table
+try {
+    $stmt = $pdo->query("SELECT title, img, category, bodyText, author, authorImg, authorDate FROM news_articles");
+    $newsItems = $stmt->fetchAll(); // Fetch all rows as an associative array
+} catch (PDOException $e) {
+    die("Error fetching news data: " . $e->getMessage());
+}
+?>

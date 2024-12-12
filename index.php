@@ -1,6 +1,7 @@
 <?php
 
 include ("inc/header.php");
+include ("inc/connection.php");
 
 ?>
 <div id="content-wrapper">   
