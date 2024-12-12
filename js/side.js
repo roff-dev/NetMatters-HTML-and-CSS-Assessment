@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerIcon = document.querySelector('.hamburger-icon');
     const sideMenu = document.querySelector('.side-menu');
@@ -21,6 +19,9 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = 'hidden';
         hamburgerIcon.classList.add('active');
         hamburgerIcon.querySelector('.hamburger-line').classList.add('x-icon');
+
+        // Update header position when the menu is opened
+        updateNavPosition(); // Call the function to recalculate header position
     }
 
     //close the menu
@@ -33,6 +34,9 @@ document.addEventListener('DOMContentLoaded', () => {
         body.style.overflow = '';
         hamburgerIcon.classList.remove('active');
         hamburgerIcon.querySelector('.hamburger-line').classList.remove('x-icon');
+
+        // Reset header position and calculations
+        updateNavPosition(); // Call the function to reset header position
     }
 
     //menu function
@@ -54,12 +58,10 @@ document.addEventListener('DOMContentLoaded', () => {
         sideMenu.style.height = '100%';
         sideMenu.style.zIndex = '1000';
         
-        //content wrapper
-        
-
+    
         hamburgerIcon.addEventListener('click', (e) => {
             e.preventDefault();
-            console.log('Hamburger icon clicked'); // Debug log
+            
             toggleMenu();
         });
 

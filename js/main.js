@@ -31,7 +31,7 @@ function updateNavPosition() {
     navTop = headerOffset;
     
     //update placeholder
-    placeholder.style.height = `${headerWrapper.offsetHeight}px`;
+    //placeholder.style.height = `${headerWrapper.offsetHeight}px`;
 }
 
 //position calculation
@@ -41,6 +41,10 @@ updateNavPosition();
 function handleScroll() {
     const currentScrollY = window.scrollY;
     
+    // Check if the side menu is active
+    const sideMenu = document.querySelector('.side-menu');
+    const isSideMenuActive = sideMenu.classList.contains('active');
+    
     // at or above nav default pos
     if (currentScrollY <= navTop) {
         if (isSticky) {
@@ -48,12 +52,12 @@ function handleScroll() {
             headerWrapper.classList.remove('sticky');
             headerWrapper.classList.remove('slide-up');
             headerWrapper.classList.remove('slide-down');
-            placeholder.style.display = 'none';
+            //placeholder.style.display = 'none';
             isSticky = false;
         }
     } else if (currentScrollY < lastScrollY) {
         //scroll up and below def pos
-        if (!isSticky) {
+        if (!isSticky && !isSideMenuActive) {
             //slide down animation
             headerWrapper.classList.add('sticky');
             headerWrapper.classList.remove('slide-up');
@@ -67,7 +71,7 @@ function handleScroll() {
             // add slide up
             headerWrapper.classList.add('slide-up');
             headerWrapper.classList.remove('slide-down');
-            
+            headerWrapper.classList.remove('sticky');
             //wait for animation to complete
             setTimeout(() => {
                 if (currentScrollY > lastScrollY) {  
