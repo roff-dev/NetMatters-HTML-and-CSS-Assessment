@@ -782,6 +782,29 @@ footer .footer-row .footer-menu ul a:hover {
   display: none;
 }
 
+.office_content {
+  padding: 30px;
+  border: 1px solid black;
+  border-top: 0;
+}
+
+.office_cards {
+  display: flex;
+  flex-direction: column;
+}
+
+[class^=office-] {
+  align-items: baseline;
+}
+[class^=office-] img {
+  width: 100%;
+  border-radius: 20px 20px 0 0;
+  vertical-align: middle;
+}
+
+/*----------------------------------------------------------------------------------------------
+//////////////////////////// MEDIA QUERIES //////////////////////////////////////////
+----------------------------------------------------------------------------------------------*/
 @media (min-width: 768px) {
   .location-bar {
     display: block;
@@ -798,6 +821,20 @@ footer .footer-row .footer-menu ul a:hover {
   .contact-header h1 {
     margin: 0 0 28px;
     color: black;
+  }
+  .office_cards {
+    display: flex;
+    flex-direction: row;
+    padding: 0;
+  }
+  [class^=office-] {
+    padding: 0 15px;
+  }
+  .office-1 {
+    padding-left: 0;
+  }
+  .office-3 {
+    padding-right: 0;
   }
 }
 .welcome {

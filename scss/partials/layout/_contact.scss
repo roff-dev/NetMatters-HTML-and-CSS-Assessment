@@ -13,11 +13,9 @@
         font-size: 13px;
     }
 }
-
 .contact-header {
     margin: 0 0 50px;
     padding: 24px 0;
-    //padding-top: 50px;
     background-color: $color-main;
     h1 {
         margin: 0;
@@ -29,9 +27,26 @@
 .location-bar {
     display: none;
 }
-
-
-
+.office_content {
+    padding: 30px;
+    border: 1px solid black;
+    border-top: 0;
+}
+.office_cards {
+    display: flex;
+    flex-direction: column;
+}
+[class^="office-"] {
+    align-items: baseline;
+    img {
+        width: 100%;
+        border-radius: 20px 20px 0 0;
+        vertical-align: middle;
+    }
+}
+/*----------------------------------------------------------------------------------------------
+//////////////////////////// MEDIA QUERIES //////////////////////////////////////////
+----------------------------------------------------------------------------------------------*/
 @include mq('s') {
     .location-bar {
         display: block;
@@ -48,5 +63,19 @@
             margin: 0 0 28px;
             color: black;
         }
+    }
+    .office_cards {
+        display: flex;
+        flex-direction: row;
+        padding: 0;
+    }
+    [class^="office-"] {
+        padding: 0 15px;
+    }
+    .office-1 {
+        padding-left: 0;
+    }
+    .office-3 {
+        padding-right: 0;
     }
 }
