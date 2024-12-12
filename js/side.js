@@ -20,8 +20,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.classList.add('active');
         hamburgerIcon.querySelector('.hamburger-line').classList.add('x-icon');
 
-        // Update header position when the menu is opened
-        updateNavPosition(); // Call the function to recalculate header position
     }
 
     //close the menu
@@ -35,8 +33,6 @@ document.addEventListener('DOMContentLoaded', () => {
         hamburgerIcon.classList.remove('active');
         hamburgerIcon.querySelector('.hamburger-line').classList.remove('x-icon');
 
-        // Reset header position and calculations
-        updateNavPosition(); // Call the function to reset header position
     }
 
     //menu function

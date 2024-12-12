@@ -110,7 +110,7 @@ let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
     resizeTimeout = setTimeout(() => {
-        updateNavPosition();
+        //updateNavPosition();
     }, 250);
 });
 
