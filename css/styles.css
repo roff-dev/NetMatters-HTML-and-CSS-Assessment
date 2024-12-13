@@ -855,6 +855,9 @@ footer .footer-row .footer-menu ul a:hover {
   margin: 0 0 25px;
   line-height: 1.875rem;
 }
+.contact-details span {
+  font-size: 25px;
+}
 .contact-details strong {
   font-weight: 600;
   color: #333645;
@@ -942,6 +945,9 @@ footer .footer-row .footer-menu ul a:hover {
 }
 
 .captcha {
+  padding: 0 !important;
+}
+.captcha span {
   font-size: 11px;
   color: #333645;
   font-size: 11px;
@@ -1000,16 +1006,35 @@ input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
     display: flex;
     flex-direction: row;
     padding: 0;
-  }
-  [class^=office-] {
-    margin: 0 15px;
-    margin-bottom: 0;
+    gap: 30px;
   }
   .office-1 {
     padding-left: 0;
   }
   .office-3 {
     padding-right: 0;
+  }
+}
+@media (min-width: 1260px) {
+  .contact-section {
+    display: flex;
+    flex-direction: row-reverse;
+    padding-top: 40px;
+  }
+  .contact-form {
+    min-width: 770px;
+  }
+  .contact-details {
+    width: 100%;
+    padding: 0 15px;
+  }
+  .group-wide {
+    display: flex;
+    flex-wrap: wrap; /* Allows items to wrap into the next row */
+  }
+  .form-group {
+    flex: 1 1 45%; /* Adjusts the width of each form-group */
+    padding: 0 15px;
   }
 }
 .welcome {

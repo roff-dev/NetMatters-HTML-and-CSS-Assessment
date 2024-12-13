@@ -69,31 +69,34 @@ include ("inc/header.php");
     </div>
 
 
-    <div class="contact-section">
-        <div class="container">
+    <div class="container">
+        <div class="contact-section">
             <div class="contact-details">
                 <p><strong>Email us on:</strong></p>
                 <p class="h3email"><a href="#">sales@netmatters.com</a></p>
                 <p><strong>Business Hours:</strong></p>
                 <p><strong>Monday - Friday 07:00 - 18:00</strong></p>
-                <p><strong>Out of hours IT Support <span class="icon-keyboard_arrow_down"></span></strong></p>
+                <p><strong>Out of hours IT Support <span class="icon-keyboard_arrow_down" style="vertical-align: middle;"></span></strong></p>
             </div>
             <div class="contact-form">
-                <div class="form-group">
-                    <label for="firstname">Your Name</label>
-                    <input type="text" name="firstname" id="firstname">
-                </div>
-                <div class="form-group">
-                    <label for="companyname">Company Name</label>
-                    <input type="text" name="companyname" id="companyname">
-                </div>
-                <div class="form-group">
-                    <label for="email">Your Email</label>
-                    <input type="text" name="email" id="email">
-                </div>
-                <div class="form-group">
-                    <label for="phone">Your Telephone Number</label>
-                    <input type="text" name="phone" id="phone">
+                <div class="group-wide">
+                    <div class="form-group">
+                        <label for="firstname">Your Name</label>
+                        <input type="text" name="firstname" id="firstname">
+                    </div>
+                    <div class="form-group">
+                        <label for="companyname">Company Name</label>
+                        <input type="text" name="companyname" id="companyname">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Your Email</label>
+                        <input type="text" name="email" id="email">
+                    </div>
+                    <div class="form-group">
+                        <label for="phone">Your Telephone Number</label>
+                        <input type="text" name="phone" id="phone">
+                    </div>
+
                 </div>
                 <div class="form-group">
                     <label for="message">Message</label>
@@ -111,8 +114,8 @@ include ("inc/header.php");
                         </div>
                     </label>
                 </div>
-                <div class="form-group">
-                    <span class="captcha">This site is protected by reCAPTCHA and the google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</span>
+                <div class="form-group captcha">
+                    <span>This site is protected by reCAPTCHA and the google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</span>
                 </div>
                 <div class="send-form">
                     <button>send enquiry</button>
