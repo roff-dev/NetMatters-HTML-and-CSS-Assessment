@@ -99,6 +99,21 @@ include ("inc/header.php");
                     <label for="message">Message</label>
                     <textarea name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
                 </div>
+                <div class="form-group">
+                    <label for="">
+                        <span>
+                            <span class="icon-checkbox-unchecked"></span>
+                            <span>Please tick ths box of you wish to receive marketing information from us, please see our <a href="">Privacy Policy</a> for more information on how we keep your data safe.</span>
+                        </span>
+                    </label>
+                </div>
+                <div class="form-group">
+                    <span>This site is protected by reCAPTCHA and the google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</span>
+                </div>
+                <div class="send-form">
+                    <button>send enquiry</button>
+                    <small>Fields Required</small>
+                </div>
             </div>
         </div>
     </div>
