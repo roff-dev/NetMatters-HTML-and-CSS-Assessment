@@ -1,5 +1,5 @@
-const dropdown = document.getElementById('accordian-dropdown');
-const bodyText = document.querySelector('.accordian-text');
+const dropdown = document.getElementById('accordion-dropdown');
+const bodyText = document.querySelector('.accordion-text');
 
 //initially set the height to 0 and add hidden class
 //not setting height first was meaning first open didnt have effect

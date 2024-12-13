@@ -76,9 +76,9 @@ include ("inc/header.php");
                 <p class="h3email"><a href="#">sales@netmatters.com</a></p>
                 <p><strong>Business Hours:</strong></p>
                 <p><strong>Monday - Friday 07:00 - 18:00</strong></p>
-                <div class="accordian">
-                    <p><strong><a id="accordian-dropdown">Out of hours IT Support <span class="icon-keyboard_arrow_down" style="vertical-align: middle;"></span></a></strong></p>
-                    <div class="accordian-text">
+                <div class="accordion">
+                    <p><strong><a id="accordion-dropdown">Out of hours IT Support <span class="icon-keyboard_arrow_down" style="vertical-align: middle;"></span></a></strong></p>
+                    <div class="accordion-text">
                         <p>Netmatters IT are offering an Out of Hours service for Emergency and Critical tasks.</p>
                         <p><strong>Monday - Friday 18:00 - 22:00 Saturday 08:00 - 16:00
                         Sunday 10:00 - 18:00</strong></p>

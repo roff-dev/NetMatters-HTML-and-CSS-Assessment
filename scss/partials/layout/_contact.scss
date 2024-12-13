@@ -221,7 +221,7 @@ input[type="checkbox"]:checked + .icon-checkbox-unchecked::before {
 .checkbox span a, .form-group span a {
     color: #333645;
 }
-.accordian {
+.accordion {
     a {
         color: #333645;
         text-decoration: none;
@@ -230,7 +230,7 @@ input[type="checkbox"]:checked + .icon-checkbox-unchecked::before {
             cursor: pointer;
         }
     }
-    .accordian-text {
+    .accordion-text {
         transition: height 0.3s ease; 
         overflow: hidden;
         color: #666;

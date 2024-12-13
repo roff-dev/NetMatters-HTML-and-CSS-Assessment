@@ -981,15 +981,15 @@ input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
   color: #333645;
 }
 
-.accordian a {
+.accordion a {
   color: #333645;
   text-decoration: none;
 }
-.accordian a:hover {
+.accordion a:hover {
   text-decoration: underline;
   cursor: pointer;
 }
-.accordian .accordian-text {
+.accordion .accordion-text {
   transition: height 0.3s ease;
   overflow: hidden;
   color: #666;
