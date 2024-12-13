@@ -72,11 +72,11 @@ include ("inc/header.php");
     <div class="contact-section">
         <div class="container">
             <div class="contact-details">
-                <p>Email us on:</p>
-                <p><a href="#">sales@netmatters.com</a></p>
-                <p>Business Hours:</p>
-                <p>Monday - Friday 07:00 - 18:00</p>
-                <p>Out of hours IT Support <span class="icon-keyboard_arrow_down"></span></p>
+                <p><strong>Email us on:</strong></p>
+                <p class="h3email"><a href="#">sales@netmatters.com</a></p>
+                <p><strong>Business Hours:</strong></p>
+                <p><strong>Monday - Friday 07:00 - 18:00</strong></p>
+                <p><strong>Out of hours IT Support <span class="icon-keyboard_arrow_down"></span></strong></p>
             </div>
             <div class="contact-form">
                 <div class="form-group">
