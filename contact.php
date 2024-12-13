@@ -25,42 +25,42 @@ include ("inc/header.php");
                 <div class="office-1">
                     <img src="img/cambridge.jpeg" alt="">
                     <div class="office_content">
-                        <a href="">Cambridge Office</a>
+                        <p class="h2"><a href="#">Cambridge Office</a></p>
                         <p>Unit 1.31, <br>
                             St John Innovation Centre, <br>
                             Cowley Road Milton, <br>
                             Cambridge, <br>
                             CB4 0WS
                         </p>
-                        <a href="">01223 37 57 72</a> <br>
+                        <a href="#" class="phonenumber">01223 37 57 72</a> <br>
                         <button>View More</button>
                     </div>
                 </div>
                 <div class="office-2">
                     <img src="img/wymondham.jpeg" alt="">
                     <div class="office_content">
-                        <a href="">Wynmondham Office</a>
+                        <p class="h2"><a href="#">Wynmondham Office</a></p>
                         <p>Unit 15, <br>
                             Penfold Drive, <br>
                             Gateway 11 Business Park, <br>
                             Wynmondham, Norfolk, <br>
                             NR18 0WZ
                         </p>
-                        <a href="">01603 70 40 20</a> <br>
+                        <a href="#" class="phonenumber">01603 70 40 20</a> <br>
                         <button>View More</button>
                     </div>
                 </div>
-                <div class="office-2">
+                <div class="office-3">
                     <img src="img/yarmouth-2.jpeg" alt="">
                     <div class="office_content">
-                        <a href="">Great Yarmouth Office</a>
+                        <p class="h2"><a href="">Great Yarmouth Office</a></p>
                         <p>Suite F23, <br>
                             Beacon Innovation Centre, <br>
                             Beacon Park, Gorleston, <br>
                             Great Yarmouth, Norfolk, <br>
                             NR31 7RA
                         </p>
-                        <a href="">01493 60 32 04</a> <br>
+                        <a href="#" class="phonenumber">01493 60 32 04</a> <br>
                         <button>View More</button>
                     </div>
                 </div>
