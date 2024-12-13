@@ -923,7 +923,7 @@ footer .footer-row .footer-menu ul a:hover {
 .send-form button {
   font-size: 1.063rem;
   color: #fff;
-  background-color: #926fb1;
+  background-color: #333645;
   border-radius: 3px;
   border: 1px solid transparent;
   height: auto;
@@ -949,15 +949,16 @@ footer .footer-row .footer-menu ul a:hover {
 }
 
 .icon-checkbox-unchecked {
-  font-size: 20px;
+  font-size: 35px;
   color: #333645;
   cursor: pointer;
-  transition: color 0.3s ease;
+  margin-right: 20px;
 }
 
 .checkbox {
   display: flex;
   align-items: start;
+  line-height: 32px;
 }
 
 input[type=checkbox]:not(:checked) + .icon-checkbox-unchecked::before {
@@ -967,6 +968,10 @@ input[type=checkbox]:not(:checked) + .icon-checkbox-unchecked::before {
 
 input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
   content: "\ea52";
+  color: #333645;
+}
+
+.checkbox span a, .form-group span a {
   color: #333645;
 }
 
