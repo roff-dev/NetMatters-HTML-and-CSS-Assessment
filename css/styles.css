@@ -981,6 +981,28 @@ input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
   color: #333645;
 }
 
+.accordian a {
+  color: #333645;
+  text-decoration: none;
+}
+.accordian a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+.accordian .accordian-text {
+  transition: height 0.3s ease;
+  overflow: hidden;
+  color: #666;
+}
+
+.visible {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
 /*----------------------------------------------------------------------------------------------
 //////////////////////////// MEDIA QUERIES //////////////////////////////////////////
 ----------------------------------------------------------------------------------------------*/
