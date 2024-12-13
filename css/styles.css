@@ -989,6 +989,7 @@ input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
     display: block;
     border-top: 1px solid black;
     padding: 14px 0 13px;
+    box-shadow: 0 5px 35px rgba(0, 0, 0, 0.1);
   }
 }
 @media (min-width: 992px) {
