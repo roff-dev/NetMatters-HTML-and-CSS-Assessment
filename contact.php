@@ -3,7 +3,7 @@ include ("inc/header.php");
 ?>
 
 
-<div class="content-wrapper">
+<div id="content-wrapper">
     <div class="location-bar">
         <div class="container">
             <ul class="breadcrumb">
