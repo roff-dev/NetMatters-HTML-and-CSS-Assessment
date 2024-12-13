@@ -158,27 +158,56 @@
     padding-bottom: 50px;
 }
 .send-form {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     button {
-        font-size: .9em;
+        font-size: 1.063rem;
         color: #fff;
         background-color: #926fb1;
         border-radius: 3px;
         border: 1px solid transparent;
-        display: inline-block;
         height: auto;
         line-height: 35px;
         text-transform: uppercase;
         white-space: normal;
-        margin-top: 15px;
-        margin-bottom: 0;
-        padding: 5px 30px;
+        padding: 5px 15px;
         font-weight: 400;
         text-align: center;
         vertical-align: middle;
         cursor: pointer;
     }
+    small::before {
+        content: "* ";
+        color: red;
+    }
+}
+.captcha {
+    font-size: 11px;
+    color: #333645;
+    font-size: 11px;
+    font-weight: 600;  
+}
+.icon-checkbox-unchecked {
+    font-size: 20px; 
+    color: #333645; 
+    cursor: pointer;
+    transition: color 0.3s ease;
+}
+.checkbox {
+    display: flex;
+    align-items:start;
 }
 
+input[type="checkbox"]:not(:checked) + .icon-checkbox-unchecked::before {
+    content: "\ea53"; 
+    color: #333645;
+}
+
+input[type="checkbox"]:checked + .icon-checkbox-unchecked::before {
+    content: "\ea52"; 
+    color: #333645; 
+}
 /*----------------------------------------------------------------------------------------------
 //////////////////////////// MEDIA QUERIES //////////////////////////////////////////
 ----------------------------------------------------------------------------------------------*/
