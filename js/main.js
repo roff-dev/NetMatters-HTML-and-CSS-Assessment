@@ -7,6 +7,7 @@ $(document).ready(function() {
     let lastScrollTop = 0;
     const header = $('.header-wrapper');
     const headerHeight = header.outerHeight();
+    let sideMenuOffset = 0;
     
     // Create placeholder div
     const placeholder = $('<div></div>').insertAfter(header);
@@ -29,10 +30,10 @@ $(document).ready(function() {
         // Determine scroll direction and toggle header
         if (currentScroll > lastScrollTop && currentScroll > headerHeight) {
             // Scrolling down
-            header.css('transform', 'translateY(-100%)');
+            header.css('transform', `translateY(-100%) translateX(${sideMenuOffset}px)`);
         } else {
             // Scrolling up
-            header.css('transform', 'translateY(0)');
+            header.css('transform', `translateY(0) translateX(${sideMenuOffset}px)`);
         }
         
         lastScrollTop = currentScroll;
@@ -42,6 +43,12 @@ $(document).ready(function() {
     $(window).resize(function() {
         placeholder.height(header.outerHeight());
     });
+
+    // Expose function to update side menu offset
+    window.updateHeaderOffset = function(offset) {
+        sideMenuOffset = offset;
+        header.css('transform', `translateY(0) translateX(${offset}px)`);
+    };
 });
 
 

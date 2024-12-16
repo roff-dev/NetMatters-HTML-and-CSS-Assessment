@@ -4,7 +4,6 @@ $(document).ready(function() {
     const $hamburger = $('.hamburger-icon');
     const $sideMenu = $('.side-menu');
     const $contentWrapper = $('#content-wrapper');
-    const $headerWrapper = $('.header-wrapper');
     const $overlay = $('#overlay');
     let menuIsOpen = false;
 
@@ -15,10 +14,9 @@ $(document).ready(function() {
         
         $sideMenu.addClass('active');
         $contentWrapper.css('transform', `translateX(-${menuWidth}px)`);
-        $headerWrapper.css({
-            'transform': `translateX(-${menuWidth}px)`,
-            'transition': 'transform 0.3s ease-in-out'
-        });
+        
+        // Update header position using the exposed function
+        window.updateHeaderOffset(-menuWidth);
         
         // Position overlay to cover both header and content
         $overlay.css({
@@ -43,7 +41,9 @@ $(document).ready(function() {
         menuIsOpen = false;
         $sideMenu.removeClass('active');
         $contentWrapper.css('transform', 'translateX(0)');
-        $headerWrapper.css('transform', 'translateX(0)');
+        
+        // Reset header position
+        window.updateHeaderOffset(0);
         
         $overlay.css({
             'opacity': '0',
@@ -61,7 +61,7 @@ $(document).ready(function() {
         'top': '0',
         'right': '0',
         'height': '100%',
-        'z-index': '1000',
+        'z-index': '100000',
         'overflow-y': 'auto'
     });
 
@@ -86,15 +86,7 @@ $(document).ready(function() {
         if (menuIsOpen) {
             const menuWidth = $sideMenu.outerWidth();
             $contentWrapper.css('transform', `translateX(-${menuWidth}px)`);
-            $headerWrapper.css('transform', `translateX(-${menuWidth}px)`);
-        }
-    });
-
-    // Ensure header stays transformed when sticky
-    $(window).on('scroll', function() {
-        if (menuIsOpen) {
-            const menuWidth = $sideMenu.outerWidth();
-            $headerWrapper.css('transform', `translateX(-${menuWidth}px)`);
+            window.updateHeaderOffset(-menuWidth);
         }
     });
 });
