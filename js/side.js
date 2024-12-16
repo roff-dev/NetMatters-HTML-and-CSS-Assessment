@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 document.addEventListener('DOMContentLoaded', () => {
     const hamburgerIcon = document.querySelector('.hamburger-icon');
     const sideMenu = document.querySelector('.side-menu');

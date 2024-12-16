@@ -1,4 +1,4 @@
-
+/* jshint esversion: 6 */
 //////////////////////////////////////////////////////////////////////////////// 
 // STICKY NAV
 ////////////////////////////////////////////////////////////////////////////////  
@@ -87,7 +87,7 @@ function handleScroll() {
     ticking = false;
 }
 
-//scroll event listener
+// //scroll event listener
 window.addEventListener('scroll', () => {
     if (!ticking) {
         window.requestAnimationFrame(() => {
