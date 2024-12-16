@@ -1,64 +1,125 @@
 /* jshint esversion: 6 */
+//////////////////////////////////////////////////////////////////////////////// 
+// STICKY NAV
+////////////////////////////////////////////////////////////////////////////////  
 
-$(document).ready(function() {
-    let lastScrollTop = 0;
-    const header = $('.header-wrapper');
-    const headerHeight = header.outerHeight();
+
+
+
+
+// //track scroll variables
+// let lastScrollY = window.scrollY;
+// let ticking = false;
+// let isSticky = false;
+// let navTop;
+// let headerOffset;
+
+// //get header
+// const headerWrapper = document.querySelector('.header-wrapper');
+// const nav = document.querySelector('.nav-popout');
+
+// //AND HERE
+// //placeholder div for jumping position
+// const placeholder = document.createElement('div');
+// placeholder.style.display = 'none';
+// headerWrapper.parentNode.insertBefore(placeholder, headerWrapper.nextSibling);
+
+// // start positions
+// //POTENTIAL ISSUE HERE
+// function updateNavPosition() {
+//     //get relative header pos
+//     const headerRect = headerWrapper.getBoundingClientRect();
+//     headerOffset = headerRect.top + window.scrollY;
     
-    // Create placeholder div
-    const placeholder = $('<div></div>').insertAfter(header);
-    placeholder.height(headerHeight).hide();
+//     //calc nav original pos
+//     navTop = headerOffset;
     
-    // Initial header state
-    header.css({
-        width: '100%',
-        transition: 'transform 0.3s ease-in-out'
-    });
+//     //update placeholder
+//     //placeholder.style.height = `${headerWrapper.offsetHeight}px`;
+// }
 
-    // Function to handle scroll events
-    $(window).scroll(function() {
-        let currentScroll = $(window).scrollTop();
-        
-        if (currentScroll > headerHeight) {
-            // Past the header height - make it fixed
-            if (!header.hasClass('is-fixed')) {
-                header.css({
-                    position: 'fixed',
-                    top: 0,
-                    left: 0,
-                    zIndex: 1000
-                }).addClass('is-fixed');
-                placeholder.show();
-            }
-            
-            // Handle hide/show animation
-            if (currentScroll > lastScrollTop) {
-                // Scrolling down
-                header.css('transform', 'translateY(-100%)');
-            } else {
-                // Scrolling up
-                header.css('transform', 'translateY(0)');
-            }
-        } else {
-            // At the top - return to normal
-            header.css({
-                position: '',
-                transform: '',
-                top: '',
-                left: '',
-                zIndex: ''
-            }).removeClass('is-fixed');
-            placeholder.hide();
-        }
-        
-        lastScrollTop = currentScroll;
-    });
+// //position calculation
+// updateNavPosition();
 
-    // Update placeholder height on window resize
-    $(window).resize(function() {
-        placeholder.height(header.outerHeight());
-    });
-});
+// //scroll behavior function
+// function handleScroll() {
+//     const currentScrollY = window.scrollY;
+    
+//     // Check if the side menu is active
+//     const sideMenu = document.querySelector('.side-menu');
+//     const isSideMenuActive = sideMenu.classList.contains('active');
+    
+//     // at or above nav default pos
+//     if (currentScrollY <= navTop) {
+//         if (isSticky) {
+//             //remove stick
+//             headerWrapper.classList.remove('sticky');
+//             headerWrapper.classList.remove('slide-up');
+//             headerWrapper.classList.remove('slide-down');
+//             //placeholder.style.display = 'none';
+//             isSticky = false;
+//         }
+//     } else if (currentScrollY < lastScrollY) {
+//         //scroll up and below def pos
+//         if (!isSticky && !isSideMenuActive) {
+//             //slide down animation
+//             headerWrapper.classList.add('sticky');
+//             headerWrapper.classList.remove('slide-up');
+//             headerWrapper.classList.add('slide-down');
+//             placeholder.style.display = 'block';
+//             isSticky = true;
+//         }
+//     } else {
+//         //if scroll down
+//         if (isSticky) {
+//             // add slide up
+//             headerWrapper.classList.add('slide-up');
+//             headerWrapper.classList.remove('slide-down');
+//             headerWrapper.classList.remove('sticky');
+//             //wait for animation to complete
+//             setTimeout(() => {
+//                 if (currentScrollY > lastScrollY) {  
+//                     headerWrapper.classList.remove('sticky');
+//                     placeholder.style.display = 'none';
+//                     isSticky = false;
+//                 }
+//             }, 300); 
+//         }
+//     }
+
+//     lastScrollY = currentScrollY;
+//     ticking = false;
+// }
+
+// // //scroll event listener
+// window.addEventListener('scroll', () => {
+//     if (!ticking) {
+//         window.requestAnimationFrame(() => {
+//             handleScroll();
+//         });
+//         ticking = true;
+//     }
+// });
+
+// //reset on page refresh
+// window.addEventListener('beforeunload', () => {
+//     headerWrapper.classList.remove('sticky');
+//     headerWrapper.classList.remove('slide-up');
+//     headerWrapper.classList.remove('slide-down');
+//     placeholder.style.display = 'none';
+// });
+
+// //window resize
+// let resizeTimeout;
+// window.addEventListener('resize', () => {
+//     clearTimeout(resizeTimeout);
+//     resizeTimeout = setTimeout(() => {
+//         //updateNavPosition();
+//     }, 250);
+// });
+
+
+// document.addEventListener('DOMContentLoaded', updateNavPosition);
 
 //////////////////////////////////////////////////////////////////////////////// 
 // COOKIE CONSENT
@@ -124,3 +185,44 @@ function hideConsentPopup() {
     document.getElementById('overlay').style.display = 'none'; 
     document.getElementById('cookieConsent').style.display = 'none'; 
 }
+
+$(document).ready(function() {
+    let lastScrollTop = 0;
+    const header = $('.header-wrapper');
+    const headerHeight = header.outerHeight();
+    
+    // Create placeholder div
+    const placeholder = $('<div></div>').insertAfter(header);
+    placeholder.height(headerHeight);
+    
+    // Add necessary CSS properties
+    header.css({
+        position: 'fixed',
+        width: '100%',
+        top: 0,
+        left: 0,
+        zIndex: 1000,
+        transition: 'transform 0.3s ease-in-out'
+    });
+
+    // Function to handle scroll events
+    $(window).scroll(function() {
+        let currentScroll = $(window).scrollTop();
+        
+        // Determine scroll direction and toggle header
+        if (currentScroll > lastScrollTop && currentScroll > headerHeight) {
+            // Scrolling down
+            header.css('transform', 'translateY(-100%)');
+        } else {
+            // Scrolling up
+            header.css('transform', 'translateY(0)');
+        }
+        
+        lastScrollTop = currentScroll;
+    });
+
+    // Update placeholder height on window resize
+    $(window).resize(function() {
+        placeholder.height(header.outerHeight());
+    });
+});
