@@ -8,32 +8,64 @@ $(document).ready(function() {
     const header = $('.header-wrapper');
     const headerHeight = header.outerHeight();
     let sideMenuOffset = 0;
+    let isHeaderFixed = false;
     
     // Create placeholder div
     const placeholder = $('<div></div>').insertAfter(header);
     placeholder.height(headerHeight);
+    placeholder.hide(); // Initially hide the placeholder
     
-    // Add necessary CSS properties
+    // Initial header state
     header.css({
-        position: 'fixed',
         width: '100%',
-        top: 0,
-        left: 0,
         zIndex: 1000,
-        transition: 'transform 0.3s ease-in-out'
+        transition: 'transform 0.3s ease-in-out, top 0.3s ease-in-out'
     });
 
     // Function to handle scroll events
     $(window).scroll(function() {
         let currentScroll = $(window).scrollTop();
         
-        // Determine scroll direction and toggle header
         if (currentScroll > lastScrollTop && currentScroll > headerHeight) {
             // Scrolling down
-            header.css('transform', `translateY(-100%) translateX(${sideMenuOffset}px)`);
-        } else {
+            if (isHeaderFixed) {
+                header.css({
+                    'transform': `translateY(-100%) translateX(${sideMenuOffset}px)`
+                });
+            }
+        } else if (currentScroll < lastScrollTop) {
             // Scrolling up
-            header.css('transform', `translateY(0) translateX(${sideMenuOffset}px)`);
+            if (!isHeaderFixed && currentScroll > headerHeight) {
+                // Make header fixed only when scrolling up and we're past the header height
+                isHeaderFixed = true;
+                placeholder.show();
+                header.css({
+                    'position': 'fixed',
+                    'top': '-100%',  // Start from above viewport
+                    'left': 0
+                });
+                // Force reflow
+                header[0].offsetHeight;
+                // Animate in
+                header.css({
+                    'top': '0'
+                });
+            }
+            if (isHeaderFixed) {
+                header.css({
+                    'transform': `translateY(0) translateX(${sideMenuOffset}px)`
+                });
+            }
+        }
+        
+        // If we're at the top of the page, reset header to normal flow
+        if (currentScroll <= 0) {
+            isHeaderFixed = false;
+            placeholder.hide();
+            header.css({
+                'position': 'static',
+                'transform': 'none'
+            });
         }
         
         lastScrollTop = currentScroll;
@@ -47,7 +79,9 @@ $(document).ready(function() {
     // Expose function to update side menu offset
     window.updateHeaderOffset = function(offset) {
         sideMenuOffset = offset;
-        header.css('transform', `translateY(0) translateX(${offset}px)`);
+        if (isHeaderFixed) {
+            header.css('transform', `translateY(0) translateX(${offset}px)`);
+        }
     };
 });
 
