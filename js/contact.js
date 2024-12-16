@@ -44,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function() {
     //phone regex
     const phonePattern = /^(?:\+44|0)7\d{9}$|^(?:\+44|0)(?:\d{2,4}|\(\d{2,4}\))\s?\d{3,4}\s?\d{3,4}$/;
 
-    form.addEventListener('submit', function(event) {
+    function validateForm() {
         let isValid = true;
         
         // clear error messages
@@ -83,15 +83,32 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
-        // Log the validation result
-        console.log("Form is valid:", isValid);
+        return isValid;
+    }
 
-        // prevent if invalid
-        if (!isValid) {
-            event.preventDefault();
-            console.log("Form submission prevented due to validation errors.");
-        } else {
-            alert("Contact Form Sent! Response will arrive shortly.");
+    document.getElementById('form').addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        if (validateForm()) {
+            const formData = new FormData(this);
+            
+            fetch('inc/process_contact.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                if (data.success) {
+                    alert('Thank you for your message. We will get back to you soon!');
+                    this.reset();
+                } else {
+                    alert('Error: ' + data.error);
+                }
+            })
+            .catch(error => {
+                console.error('Error:', error);
+                alert('An error occurred. Please try again later.');
+            });
         }
     });
 });

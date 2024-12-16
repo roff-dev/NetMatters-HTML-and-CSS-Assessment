@@ -87,7 +87,7 @@ include ("inc/header.php");
                 </div>
             </div>
             <div class="contact-form">
-                <form id="form">
+                <form id="form" action="inc/process_contact.php" method="POST">
                     <div class="group-wide">
                         <div class="form-group">
                             <label for="name">Your Name</label>
