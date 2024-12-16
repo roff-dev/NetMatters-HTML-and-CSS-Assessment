@@ -91,24 +91,24 @@ include ("inc/header.php");
                     <div class="group-wide">
                         <div class="form-group">
                             <label for="name">Your Name</label>
-                            <input required type="text" name="name" id="name">
+                            <input  type="text" name="name" id="name">
                         </div>
                         <div class="form-group">
                             <label for="company">Company Name</label>
-                            <input required type="text" name="company" id="company">
+                            <input  type="text" name="company" id="company">
                         </div>
                         <div class="form-group">
                             <label for="email">Your Email</label>
-                            <input required type="text" name="email" id="email">
+                            <input  type="text" name="email" id="email">
                         </div>
                         <div class="form-group">
                             <label for="phone">Your Telephone Number</label>
-                            <input required type="tel" name="phone" id="phone">
+                            <input  type="tel" name="phone" id="phone">
                         </div>
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea required name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
+                        <textarea  name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
                     </div>
                 
                     <div class="form-group">
