@@ -87,48 +87,50 @@ include ("inc/header.php");
                 </div>
             </div>
             <div class="contact-form">
-                <div class="group-wide">
-                    <div class="form-group">
-                        <label for="firstname">Your Name</label>
-                        <input type="text" name="firstname" id="firstname">
-                    </div>
-                    <div class="form-group">
-                        <label for="companyname">Company Name</label>
-                        <input type="text" name="companyname" id="companyname">
-                    </div>
-                    <div class="form-group">
-                        <label for="email">Your Email</label>
-                        <input type="text" name="email" id="email">
-                    </div>
-                    <div class="form-group">
-                        <label for="phone">Your Telephone Number</label>
-                        <input type="text" name="phone" id="phone">
-                    </div>
-
-                </div>
-                <div class="form-group">
-                    <label for="message">Message</label>
-                    <textarea name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
-                </div>
-                <div class="form-group">
-                    <label for="Checkbox">
-                        <div class="checkbox">
-                            <input type="checkbox" id="Checkbox" style="display: none;">
-                            <span class="icon-checkbox-unchecked custom-icon"></span>
-                            <span>
-                                Please tick this box if you wish to receive marketing information from us. 
-                                Please see our <a href="">Privacy Policy</a> for more information on how we keep your data safe.
-                            </span>
+                <form id="form">
+                    <div class="group-wide">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input required type="text" name="name" id="name">
                         </div>
-                    </label>
-                </div>
-                <div class="form-group captcha">
-                    <span>This site is protected by reCAPTCHA and the google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</span>
-                </div>
-                <div class="send-form">
-                    <button>send enquiry</button>
-                    <small>Fields Required</small>
-                </div>
+                        <div class="form-group">
+                            <label for="company">Company Name</label>
+                            <input required type="text" name="company" id="company">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input required type="text" name="email" id="email">
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Your Telephone Number</label>
+                            <input required type="tel" name="phone" id="phone">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="message">Message</label>
+                        <textarea required name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
+                    </div>
+                
+                    <div class="form-group">
+                        <label for="Checkbox">
+                            <div class="checkbox">
+                                <input type="checkbox" id="Checkbox" style="display: none;">
+                                <span class="icon-checkbox-unchecked custom-icon"></span>
+                                <span>
+                                    Please tick this box if you wish to receive marketing information from us. 
+                                    Please see our <a href="">Privacy Policy</a> for more information on how we keep your data safe.
+                                </span>
+                            </div>
+                        </label>
+                    </div>
+                    <div class="form-group captcha">
+                        <span>This site is protected by reCAPTCHA and the google <a href="">Privacy Policy</a> and <a href="">Terms of Service</a> apply.</span>
+                    </div>
+                    <div class="send-form">
+                        <button type="submit">send enquiry</button>
+                        <small>Fields Required</small>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
@@ -136,7 +138,7 @@ include ("inc/header.php");
 </div>
 
 
-
+<script src="js/contact.js"></script>
 <?php
 include ("inc/footer.php");
 ?>
