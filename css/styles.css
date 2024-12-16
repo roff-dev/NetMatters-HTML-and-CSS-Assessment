@@ -1003,6 +1003,18 @@ input[type=checkbox]:checked + .icon-checkbox-unchecked::before {
   display: none;
 }
 
+.error-message {
+  color: #ff0000;
+  font-size: 0.875rem;
+  margin-top: 5px;
+  display: block;
+}
+
+input.error,
+textarea.error {
+  border-color: #ff0000;
+}
+
 /*----------------------------------------------------------------------------------------------
 //////////////////////////// MEDIA QUERIES //////////////////////////////////////////
 ----------------------------------------------------------------------------------------------*/

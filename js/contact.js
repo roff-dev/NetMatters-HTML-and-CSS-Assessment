@@ -1,6 +1,7 @@
 /* 
 ////////////////////////////////////////// FORM VALIDATION/////////////////////////////////////////////////
 */
+/* jshint esversion: 6 */
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('form');
     // Check if form exists before proceeding
@@ -8,6 +9,30 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Form element not found!");
         return; // Exit if form is not found
     }
+
+    // Function to show error message
+    function showError(input, message) {
+        const formControl = input.parentElement;
+        const errorDiv = formControl.querySelector('.error-message') || document.createElement('div');
+        errorDiv.className = 'error-message';
+        errorDiv.textContent = message;
+        
+        if (!formControl.querySelector('.error-message')) {
+            formControl.appendChild(errorDiv);
+        }
+        
+        input.classList.add('error');
+    }
+
+    // Function to clear all error messages
+    function clearErrorMessages() {
+        const errorMessages = document.querySelectorAll('.error-message');
+        const errorInputs = document.querySelectorAll('.error');
+        
+        errorMessages.forEach(error => error.remove());
+        errorInputs.forEach(input => input.classList.remove('error'));
+    }
+
     const nameInput = document.getElementById('name');
     const companyInput = document.getElementById('company');
     const emailInput = document.getElementById('email');
