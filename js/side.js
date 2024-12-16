@@ -1,85 +1,100 @@
 /* jshint esversion: 6 */
-document.addEventListener('DOMContentLoaded', () => {
-    const hamburgerIcon = document.querySelector('.hamburger-icon');
-    const sideMenu = document.querySelector('.side-menu');
-    const body = document.body;
-    const overlay = document.getElementById('overlay');
-    const contentWrapper = document.getElementById('content-wrapper');
-    const headerWrapper = document.getElementById('header-wrapper');
 
-   
+$(document).ready(function() {
+    const $hamburger = $('.hamburger-icon');
+    const $sideMenu = $('.side-menu');
+    const $contentWrapper = $('#content-wrapper');
+    const $headerWrapper = $('.header-wrapper');
+    const $overlay = $('#overlay');
+    let menuIsOpen = false;
 
-    //open the menu
+    // Function to open menu
     function openMenu() {
-        sideMenu.classList.add('active');
-        contentWrapper.style.transform = `translateX(-${sideMenu.offsetWidth}px)`;
-        headerWrapper.style.transform = `translateX(-${sideMenu.offsetWidth}px)`;
-        overlay.style.display = 'block';
-        overlay.style.opacity = '1';
-        overlay.style.pointerEvents = 'auto';
-        body.style.overflow = 'hidden';
-        hamburgerIcon.classList.add('active');
-        hamburgerIcon.querySelector('.hamburger-line').classList.add('x-icon');
-
-    }
-
-    //close the menu
-    function closeMenu() {
-        sideMenu.classList.remove('active');
-        contentWrapper.style.transform = 'translateX(0)';
-        headerWrapper.style.transform = 'translateX(0)';
-        overlay.style.opacity = '0';
-        overlay.style.pointerEvents = 'none';
-        body.style.overflow = '';
-        hamburgerIcon.classList.remove('active');
-        hamburgerIcon.querySelector('.hamburger-line').classList.remove('x-icon');
-
-    }
-
-    //menu function
-    function toggleMenu() {
-        if (sideMenu.classList.contains('active')) {
-            closeMenu();
-            
-        } else {
-            openMenu();
-        }
-    }
-
-    //menu functionality
-    function Menu() {
-        //side menu positioning
-        sideMenu.style.position = 'fixed';
-        sideMenu.style.top = '0';
-        sideMenu.style.right = '0';
-        sideMenu.style.height = '100%';
-        sideMenu.style.zIndex = '1000';
+        const menuWidth = $sideMenu.outerWidth();
+        menuIsOpen = true;
         
-    
-        hamburgerIcon.addEventListener('click', (e) => {
-            e.preventDefault();
-            
-            toggleMenu();
+        $sideMenu.addClass('active');
+        $contentWrapper.css('transform', `translateX(-${menuWidth}px)`);
+        $headerWrapper.css({
+            'transform': `translateX(-${menuWidth}px)`,
+            'transition': 'transform 0.3s ease-in-out'
         });
-
-        //failsafe for if hamburger is not visible
-        // click overlay to close
-        overlay.addEventListener('click', closeMenu);
-
-        // esc key to close
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape' && sideMenu.classList.contains('active')) {
-                closeMenu();
-            }
+        
+        // Position overlay to cover both header and content
+        $overlay.css({
+            'display': 'block',
+            'opacity': '1',
+            'pointer-events': 'auto',
+            'z-index': '99999',
+            'position': 'fixed',
+            'top': '0',
+            'left': '0',
+            'width': '100%',
+            'height': '100%'
         });
-
-        //window resize
-        window.addEventListener('resize', () => {
-            // If menu is open, adjust the content wrapper translation
-            if (sideMenu.classList.contains('active')) {
-                contentWrapper.style.transform = `translateX(-${sideMenu.offsetWidth}px)`;
-            }
-        });
+        
+        $hamburger.addClass('active')
+            .find('.hamburger-line')
+            .addClass('x-icon');
     }
-    Menu();
+
+    // Function to close menu
+    function closeMenu() {
+        menuIsOpen = false;
+        $sideMenu.removeClass('active');
+        $contentWrapper.css('transform', 'translateX(0)');
+        $headerWrapper.css('transform', 'translateX(0)');
+        
+        $overlay.css({
+            'opacity': '0',
+            'pointer-events': 'none'
+        });
+        
+        $hamburger.removeClass('active')
+            .find('.hamburger-line')
+            .removeClass('x-icon');
+    }
+
+    // Set initial menu position
+    $sideMenu.css({
+        'position': 'fixed',
+        'top': '0',
+        'right': '0',
+        'height': '100%',
+        'z-index': '1000',
+        'overflow-y': 'auto'
+    });
+
+    // Click handlers
+    $hamburger.on('click', function(e) {
+        e.preventDefault();
+        $(this).hasClass('active') ? closeMenu() : openMenu();
+    });
+
+    // Close menu when clicking overlay
+    $overlay.on('click', closeMenu);
+
+    // Close menu on ESC key
+    $(document).on('keydown', function(e) {
+        if (e.key === 'Escape' && $sideMenu.hasClass('active')) {
+            closeMenu();
+        }
+    });
+
+    // Handle window resize
+    $(window).on('resize', function() {
+        if (menuIsOpen) {
+            const menuWidth = $sideMenu.outerWidth();
+            $contentWrapper.css('transform', `translateX(-${menuWidth}px)`);
+            $headerWrapper.css('transform', `translateX(-${menuWidth}px)`);
+        }
+    });
+
+    // Ensure header stays transformed when sticky
+    $(window).on('scroll', function() {
+        if (menuIsOpen) {
+            const menuWidth = $sideMenu.outerWidth();
+            $headerWrapper.css('transform', `translateX(-${menuWidth}px)`);
+        }
+    });
 });
