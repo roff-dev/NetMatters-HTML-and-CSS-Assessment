@@ -914,6 +914,10 @@ footer .footer-row .footer-menu ul a:hover {
   transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
 }
 
+label[data-no-asterisk]::after {
+  content: none;
+}
+
 .contact-section {
   padding-bottom: 50px;
 }

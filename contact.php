@@ -112,7 +112,7 @@ include ("inc/header.php");
                     </div>
                 
                     <div class="form-group">
-                        <label for="Checkbox">
+                        <label data-no-asterisk for="Checkbox">
                             <div class="checkbox">
                                 <input type="checkbox" id="Checkbox" style="display: none;">
                                 <span class="icon-checkbox-unchecked custom-icon"></span>
