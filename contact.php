@@ -87,6 +87,12 @@ include ("inc/header.php");
                 </div>
             </div>
             <div class="contact-form">
+                <div class="alert alert-success">
+                    <button>x</button>
+                </div>
+                <div class="alert alert-error">
+                    <button>x</button>
+                </div>
                 <form id="form" action="inc/process_contact.php" method="POST">
                     <div class="group-wide">
                         <div class="form-group">

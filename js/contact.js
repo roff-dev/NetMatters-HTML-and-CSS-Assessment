@@ -100,16 +100,31 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
+                const alertDiv = document.querySelector('.alert-error');
                 if (data.success) {
-                    alert('Thank you for your message. We will get back to you soon!');
                     this.reset();
+                    if (alertDiv) {
+                        alertDiv.style.display = 'block';
+                        alertDiv.innerHTML = '<div class="success-message">Thank you for your message. We will get back to you soon!</div>';
+                        // Hide success message after 5 seconds
+                        setTimeout(() => {
+                            alertDiv.style.display = 'none';
+                        }, 5000);
+                    }
                 } else {
-                    alert('Error: ' + data.error);
+                    if (alertDiv) {
+                        alertDiv.style.display = 'block';
+                        alertDiv.innerHTML = `<div class="error-message">${data.error}</div>`;
+                    }
                 }
             })
             .catch(error => {
                 console.error('Error:', error);
-                alert('An error occurred. Please try again later.');
+                const alertDiv = document.querySelector('.alert-error');
+                if (alertDiv) {
+                    alertDiv.style.display = 'block';
+                    alertDiv.innerHTML = '<div class="error-message">An error occurred. Please try again later.</div>';
+                }
             });
         }
     });
