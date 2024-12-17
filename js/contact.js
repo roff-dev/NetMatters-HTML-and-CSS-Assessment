@@ -64,19 +64,21 @@ document.addEventListener("DOMContentLoaded", function() {
         if (emailInput.value.trim() === "") {
             showError(emailInput, "Field required, Do not leave blank.");
             isValid = false;
-        } else if (!emailPattern.test(emailInput.value)) {
-            showError(emailInput, "Please enter a valid email.");
-            isValid = false;
-        }
+        } 
+        // else if (!emailPattern.test(emailInput.value)) {
+        //     showError(emailInput, "Please enter a valid email.");
+        //     isValid = false;
+        // }
 
         // Validate phone number using regex
         if (phoneInput.value.trim() === "") {
             showError(phoneInput, "Field required, Do not leave blank.");
             isValid = false;
-        } else if (!phonePattern.test(phoneInput.value)) {
-            showError(phoneInput, "Please enter a valid phone number.");
-            isValid = false;
-        }
+        } 
+        // else if (!phonePattern.test(phoneInput.value)) {
+        //     showError(phoneInput, "Please enter a valid phone number.");
+        //     isValid = false;
+        // }
 
         if (messageInput.value.trim() === "") {
             showError(messageInput, "Field required, Do not leave blank.");
