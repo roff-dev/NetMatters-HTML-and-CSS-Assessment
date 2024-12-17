@@ -33,6 +33,10 @@ try {
         throw new Exception('Invalid UK phone number format');
     }
     
+    // Message Length
+    if (strlen($message) < 5) {
+        throw new Exception('Message must be at least 5 characters');
+    }
     // Prepare and execute the SQL query
     $stmt = $pdo->prepare("
         INSERT INTO contact_submissions (name, company, email, phone, message, marketing_consent)

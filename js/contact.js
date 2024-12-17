@@ -116,7 +116,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     this.reset();
                     if (alertDiv) {
                         alertDiv.style.display = 'block';
-                        alertDiv.insertAdjacentHTML('beforeend', 'Thank you for your message. We will get back to you soon!');
+                        alertDiv.insertAdjacentHTML('beforeend', 'Your message has been sent!');
                         // Hide success message after 5 seconds
                         setTimeout(() => {
                             const successMessages = alertDiv.querySelectorAll('.success-message');
