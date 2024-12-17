@@ -94,7 +94,7 @@ include ("inc/header.php");
                             <input  type="text" name="name" id="name">
                         </div>
                         <div class="form-group">
-                            <label for="company">Company Name</label>
+                            <label data-no-asterisk for="company">Company Name</label>
                             <input  type="text" name="company" id="company">
                         </div>
                         <div class="form-group">

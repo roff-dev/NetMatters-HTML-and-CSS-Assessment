@@ -19,7 +19,7 @@ try {
     $marketing = isset($_POST['Checkbox']) ? 1 : 0;
 
     // Validate required fields
-    if (empty($name) || empty($email) || empty($message)) {
+    if (empty($name) || empty($email) || empty($message) || empty($phone)) {
         throw new Exception('Required fields are missing');
     }
 
