@@ -194,6 +194,10 @@ VARIABLES
 .link-1:hover span {
   color: white;
 }
+.link-1::after {
+  border-top: 10px solid #526781;
+  color: #526781;
+}
 
 .link-2 span {
   color: #4183D7;
@@ -203,6 +207,10 @@ VARIABLES
 }
 .link-2:hover span {
   color: white;
+}
+.link-2::after {
+  border-top: 10px solid #4183D7;
+  color: #4183D7;
 }
 
 .link-3 span {
@@ -214,6 +222,10 @@ VARIABLES
 .link-3:hover span {
   color: white;
 }
+.link-3::after {
+  border-top: 10px solid #2ECC71;
+  color: #2ECC71;
+}
 
 .link-4 span {
   color: #D64541;
@@ -223,6 +235,10 @@ VARIABLES
 }
 .link-4:hover span {
   color: white;
+}
+.link-4::after {
+  border-top: 10px solid #D64541;
+  color: #D64541;
 }
 
 .link-5 span {
@@ -234,6 +250,10 @@ VARIABLES
 .link-5:hover span {
   color: white;
 }
+.link-5::after {
+  border-top: 10px solid #926FB1;
+  color: #926FB1;
+}
 
 .link-6 span {
   color: #F62459;
@@ -244,6 +264,10 @@ VARIABLES
 .link-6:hover span {
   color: white;
 }
+.link-6::after {
+  border-top: 10px solid #F62459;
+  color: #F62459;
+}
 
 .link-7 span {
   color: #CE4125;
@@ -253,6 +277,10 @@ VARIABLES
 }
 .link-7:hover span {
   color: white;
+}
+.link-7::after {
+  border-top: 10px solid #CE4125;
+  color: #CE4125;
 }
 
 .pop-link-1 {
@@ -281,41 +309,6 @@ VARIABLES
 
 .pop-link-7 {
   background-color: #a3331d;
-}
-
-.link-1::after {
-  border-top: 10px solid #526781;
-  color: #526781;
-}
-
-.link-2::after {
-  border-top: 10px solid #4183D7;
-  color: #4183D7;
-}
-
-.link-3::after {
-  border-top: 10px solid #2ECC71;
-  color: #2ECC71;
-}
-
-.link-4::after {
-  border-top: 10px solid #D64541;
-  color: #D64541;
-}
-
-.link-5::after {
-  border-top: 10px solid #926FB1;
-  color: #926FB1;
-}
-
-.link-6::after {
-  border-top: 10px solid #F62459;
-  color: #F62459;
-}
-
-.link-7::after {
-  border-top: 10px solid #CE4125;
-  color: #CE4125;
 }
 
 .banner-1 .btn-hero {

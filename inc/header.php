@@ -71,7 +71,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-2">
                         <a class="link-2" href="#">
                             <span class="icon-display"></span>
                             <small>IT</small>
@@ -89,7 +89,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-3">
                         <a class="link-3" href="#">
                             <span class="icon-stats-bars2"></span>
                             <small>Digital</small>
@@ -107,7 +107,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-4">
                         <a class="link-4" href="#">
                             <span class="icon-phone"></span>
                             <small>Telecoms</small>
@@ -125,7 +125,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-5">
                         <a class="link-5" href="#">
                             <span class="icon-embed"></span>
                             <small>Web</small>
@@ -143,7 +143,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-6">
                         <a class="link-6" href="#">
                             <span class="icon-security"></span>
                             <small>Cyber</small>
@@ -161,7 +161,7 @@
                             </ul>
                         </div>
                     </li>
-                    <li>
+                    <li class="link-7">
                         <a class="link-7" href="#">
                             <span class="icon-stats-bars"></span>
                             <small>Developer</small>
