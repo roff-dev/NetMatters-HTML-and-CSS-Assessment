@@ -28,6 +28,11 @@ try {
         throw new Exception('Invalid email format');
     }
 
+    // Validate phone number format
+    if (!preg_match('/^\d{10}$/', $phone)) {
+        throw new Exception('Invalid phone number format');
+    }
+    
     // Prepare and execute the SQL query
     $stmt = $pdo->prepare("
         INSERT INTO contact_submissions (name, company, email, phone, message, marketing_consent)

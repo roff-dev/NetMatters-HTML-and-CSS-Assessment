@@ -56,10 +56,10 @@ document.addEventListener("DOMContentLoaded", function() {
             isValid = false;
         }
 
-        if (companyInput.value.trim() === "") {
-            showError(companyInput, "Field required, Do not leave blank.");
-            isValid = false;
-        }
+        // if (companyInput.value.trim() === "") {
+        //     showError(companyInput, "Field required, Do not leave blank.");
+        //     isValid = false;
+        // }
 
         if (emailInput.value.trim() === "") {
             showError(emailInput, "Field required, Do not leave blank.");
