@@ -2,6 +2,17 @@
 ////////////////////////////////////////// FORM VALIDATION/////////////////////////////////////////////////
 */
 /* jshint esversion: 6 */
+
+// Global function to remove alerts
+function removeAlert(event) {
+    const button = event.target;
+    const alertDiv = button.closest('.alert');
+    if (alertDiv) {
+        alertDiv.style.display = 'none';
+        alertDiv.innerHTML = ''; // Clear the content
+    }
+}
+
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('form');
     // Check if form exists before proceeding
@@ -9,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function() {
         console.error("Form element not found!");
         return; // Exit if form is not found
     }
-
+    const alertDiv = document.querySelector('.alert-error');
     // Function to show error message
     function showError(input, message) {
         const formControl = input.parentElement;
@@ -100,21 +111,25 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
-                const alertDiv = document.querySelector('.alert-error');
+                
                 if (data.success) {
                     this.reset();
                     if (alertDiv) {
                         alertDiv.style.display = 'block';
-                        alertDiv.innerHTML = '<div class="success-message">Thank you for your message. We will get back to you soon!</div>';
+                        alertDiv.insertAdjacentHTML('beforeend', 'Thank you for your message. We will get back to you soon!');
                         // Hide success message after 5 seconds
                         setTimeout(() => {
-                            alertDiv.style.display = 'none';
+                            const successMessages = alertDiv.querySelectorAll('.success-message');
+                            successMessages.forEach(msg => msg.remove());
+                            if (alertDiv.children.length === 0) {
+                                alertDiv.style.display = 'none';
+                            }
                         }, 5000);
                     }
                 } else {
                     if (alertDiv) {
                         alertDiv.style.display = 'block';
-                        alertDiv.innerHTML = `<div class="error-message">${data.error}</div>`;
+                        alertDiv.insertAdjacentHTML('beforeend', `${data.error}`);
                     }
                 }
             })
@@ -123,7 +138,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 const alertDiv = document.querySelector('.alert-error');
                 if (alertDiv) {
                     alertDiv.style.display = 'block';
-                    alertDiv.innerHTML = '<div class="error-message">An error occurred. Please try again later.</div>';
+                    alertDiv.insertAdjacentHTML('beforeend', '<div class="error-message">An error occurred. Please try again later.</div>');
                 }
             });
         }
