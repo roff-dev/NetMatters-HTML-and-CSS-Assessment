@@ -29,9 +29,9 @@ try {
     }
 
     // Validate phone number format
-    if (!preg_match('/^\d{10}$/', $phone)) {
-        throw new Exception('Invalid phone number format');
-    }
+    // if (!preg_match('/^\d{10}$/', $phone)) {
+    //     throw new Exception('Invalid phone number format');
+    // }
     
     // Prepare and execute the SQL query
     $stmt = $pdo->prepare("
