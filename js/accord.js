@@ -1,3 +1,4 @@
+/* jshint esversion: 6 */
 const dropdown = document.getElementById('accordion-dropdown');
 const bodyText = document.querySelector('.accordion-text');
 

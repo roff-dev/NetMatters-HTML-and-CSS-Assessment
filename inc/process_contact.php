@@ -24,7 +24,7 @@ try {
     }
 
     // Validate email format
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { //POTENTIALLY NEEDS CHANGING FOR MORE STRICT RULES
         throw new Exception('Invalid email format');
     }
 
