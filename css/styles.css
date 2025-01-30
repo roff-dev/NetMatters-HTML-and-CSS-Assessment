@@ -2352,31 +2352,66 @@ textarea.error {
 }
 
 .banner-1 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/hero.png");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/hero.png);
+}
+@media (min-width: 992px) {
+  .banner-1 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/hero.png);
+  }
 }
 
 .banner-2 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/bespoke.jpeg");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/bespoke.jpeg);
+}
+@media (min-width: 992px) {
+  .banner-2 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/bespoke.jpeg);
+  }
 }
 
 .banner-3 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/it-sup.png");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/it-sup.png);
+}
+@media (min-width: 992px) {
+  .banner-3 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/it-sup.png);
+  }
 }
 
 .banner-4 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/dig-mark.png");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/dig-mark.png);
+}
+@media (min-width: 992px) {
+  .banner-4 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/dig-mark.png);
+  }
 }
 
 .banner-5 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/telecom.png");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/telecom.png);
+}
+@media (min-width: 992px) {
+  .banner-5 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/telecom.png);
+  }
 }
 
 .banner-6 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/web-des.jpeg");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/web-des.jpeg);
+}
+@media (min-width: 992px) {
+  .banner-6 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/web-des.jpeg);
+  }
 }
 
 .banner-7 {
-  background-image: linear-gradient(270deg, transparent 25%, #000), url("../img/cyber.png");
+  background-image: linear-gradient(270deg, transparent 1%, #000), url(../img/cyber.png);
+}
+@media (min-width: 992px) {
+  .banner-7 {
+    background-image: linear-gradient(270deg, transparent 25%, #000), url(../img/cyber.png);
+  }
 }
 
 .top-row {

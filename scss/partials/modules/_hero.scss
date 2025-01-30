@@ -124,38 +124,61 @@
         }
      }
 }
-.banner-1 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/hero.png");
+$banner-images: (
+    "banner-1": "../img/hero.png",
+    "banner-2": "../img/bespoke.jpeg",
+    "banner-3": "../img/it-sup.png",
+    "banner-4": "../img/dig-mark.png",
+    "banner-5": "../img/telecom.png",
+    "banner-6": "../img/web-des.jpeg",
+    "banner-7": "../img/cyber.png"
+);
+
+@each $class, $image in $banner-images {
+    .#{$class} {
+        background-image: 
+            linear-gradient(270deg, transparent 1%, #000), 
+            url(#{$image});
+        @include mq('m') {
+            background-image: 
+                linear-gradient(270deg, transparent 25%, #000), 
+                url(#{$image});
+        }
+    }
 }
-.banner-2 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/bespoke.jpeg");
-}
-.banner-3 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/it-sup.png");
-}
-.banner-4 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/dig-mark.png");
-}
-.banner-5 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/telecom.png");
-}
-.banner-6 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/web-des.jpeg");
-}
-.banner-7 {
-    background-image: 
-        linear-gradient(270deg, transparent 25%, #000), 
-        url("../img/cyber.png");
-}
+
+// .banner-1 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/hero.png");
+// }
+// .banner-2 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/bespoke.jpeg");
+// }
+// .banner-3 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/it-sup.png");
+// }
+// .banner-4 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/dig-mark.png");
+// }
+// .banner-5 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/telecom.png");
+// }
+// .banner-6 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/web-des.jpeg");
+// }
+// .banner-7 {
+//     background-image: 
+//         linear-gradient(270deg, transparent 25%, #000), 
+//         url("../img/cyber.png");
+// }
