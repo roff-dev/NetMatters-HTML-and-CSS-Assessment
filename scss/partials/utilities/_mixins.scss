@@ -42,6 +42,11 @@ MIXINS
     h3 {
         @content;
         margin-top: 0;
+        font-size: 1rem;
+        line-height: 1.5rem;
+        font-weight: 600;
+        margin: 0 0 30px;
+        
     }
 
     img {
@@ -49,9 +54,11 @@ MIXINS
         
     }
     p {
-      font-size: 14px;
-      color: #333645;
+      font-size: .8125rem;
       margin-bottom: 30px;
+      line-height: 1.375rem;
+      color: #666666;
+      letter-spacing: .4px;
     }
     a {
         color: white;
@@ -60,6 +67,7 @@ MIXINS
         padding: 10px 15px;
         font-size: 18px;
         text-decoration: none;
+        text-transform: uppercase;
         
     }
     .news-info {
@@ -72,7 +80,7 @@ MIXINS
         display: flex;
         padding: 15px 0;
         margin: 0 30px;
-        border-top: 1px solid gray;
+        border-top: 1px solid #ccc;
         height: 123px;
         z-index: 1;
         ul {
@@ -81,9 +89,11 @@ MIXINS
             li:first-child {
               font-weight: 600;
               padding: 5px 0 3px;
+              color: #333645;
             }
             li {
-              font-size: .875rem
+              font-size: .875rem;
+              color: #666666;
             }
             
         }
