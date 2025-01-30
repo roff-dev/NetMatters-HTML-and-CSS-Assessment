@@ -28,8 +28,19 @@ document.addEventListener("DOMContentLoaded", function() {
 
     // Function to clear all error messages
     function clearErrorMessages() {
-        // Implementation of clearErrorMessages
+        const alertDivError = document.querySelector('.alert-error');
+        if (alertDivError) {
+            alertDivError.style.display = 'none';
+            alertDivError.innerHTML = ''; // Clear existing messages
+        }
     }
+
+    // Add event listener for the "x" button to clear error alerts
+    document.addEventListener('click', function(event) {
+        if (event.target.matches('.alert-error .close-button')) { // Assuming the close button has a class 'close-button'
+            clearErrorMessages();
+        }
+    });
 
     // Function to validate form
     function validateForm() {
@@ -39,6 +50,8 @@ document.addEventListener("DOMContentLoaded", function() {
 
     document.getElementById('form').addEventListener('submit', function(e) {
         e.preventDefault();
+        
+        clearErrorMessages(); // Clear existing error messages before validation
         
         if (validateForm()) {
             const formData = new FormData(this);
