@@ -10,6 +10,8 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
 }
 
 try {
+    $errors = []; // Array to collect all errors
+
     // Get and sanitize form data
     $name = filter_input(INPUT_POST, 'name', FILTER_SANITIZE_STRING);
     $company = filter_input(INPUT_POST, 'company', FILTER_SANITIZE_STRING);
@@ -20,22 +22,27 @@ try {
 
     // Validate required fields
     if (empty($name) || empty($email) || empty($message) || empty($phone)) {
-        throw new Exception('Required fields are missing');
+        $errors[] = 'Required fields are missing';
     }
 
     // Validate email format
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) { //POTENTIALLY NEEDS CHANGING FOR MORE STRICT RULES
-        throw new Exception('Invalid email format');
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+        $errors[] = 'Invalid email format';
     }
 
     // Validate phone number format
     if (!preg_match('/^(?:(?:\+44\s?|0)(?:1|2|3|7)(?:\d\s?){8,9})$/', $phone)) {
-        throw new Exception('Invalid UK phone number format');
+        $errors[] = 'Invalid UK phone number format';
     }
     
     // Message Length
     if (strlen($message) < 5) {
-        throw new Exception('Message must be at least 5 characters');
+        $errors[] = 'Message must be at least 5 characters';
+    }
+
+    // If there are any errors, throw them all at once
+    if (!empty($errors)) {
+        throw new Exception(json_encode($errors));
     }
     // Prepare and execute the SQL query
     $stmt = $pdo->prepare("
@@ -56,5 +63,12 @@ try {
 
 } catch (Exception $e) {
     http_response_code(400);
-    echo json_encode(['error' => $e->getMessage()]);
+    $errorMessage = $e->getMessage();
+    // Check if the message is a JSON array of errors
+    $decodedErrors = json_decode($errorMessage, true);
+    if (json_last_error() === JSON_ERROR_NONE) {
+        echo json_encode(['errors' => $decodedErrors]);
+    } else {
+        echo json_encode(['errors' => [$errorMessage]]);
+    }
 }

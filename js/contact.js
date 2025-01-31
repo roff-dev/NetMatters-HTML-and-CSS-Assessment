@@ -36,6 +36,20 @@ document.addEventListener("DOMContentLoaded", function() {
         alertDiv.style.display = 'block'; // Show the alert
     }
 
+    // Function to clear form fields
+    function clearForm() {
+        form.reset();
+        // Reset the custom checkbox if you have one
+        const checkbox = document.getElementById('Checkbox');
+        if (checkbox) {
+            checkbox.checked = false;
+            const customIcon = document.querySelector('.custom-icon');
+            if (customIcon) {
+                customIcon.className = 'icon-checkbox-unchecked custom-icon';
+            }
+        }
+    }
+
     // Function to validate form
     function validateForm() {
         const errors = []; // Array to hold error messages
@@ -72,20 +86,27 @@ document.addEventListener("DOMContentLoaded", function() {
             })
             .then(response => response.json())
             .then(data => {
-                if (data.success) { // Check if the response indicates success
+                if (data.success) {
                     const alertDiv = document.createElement('div');
                     alertDiv.className = 'alert alert-success';
                     alertDiv.innerHTML = `<button onclick="removeAlert(event)">x</button>Your message has been sent!`;
-                    document.querySelector('.contact-form').insertBefore(alertDiv, form); // Insert alert before the form
-                    alertDiv.style.display = 'block'; // Show the alert
+                    document.querySelector('.contact-form').insertBefore(alertDiv, form);
+                    alertDiv.style.display = 'block';
+
+                    // Clear form fields on success
+                    clearForm();
 
                     // Hide success message after 5 seconds
                     setTimeout(() => {
                         alertDiv.style.display = 'none';
                     }, 5000);
+                } else if (data.errors) {
+                    // Handle multiple errors
+                    data.errors.forEach(error => {
+                        showError(error);
+                    });
                 } else {
-                    // Handle server-side validation errors - comes from process_contact.php exceptions
-                    showError(data.error || 'An error occurred. Please try again later.');
+                    showError('An error occurred. Please try again later.');
                 }
             })
             .catch(error => {
