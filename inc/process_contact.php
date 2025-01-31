@@ -36,7 +36,7 @@ try {
     }
     
     // Message Length
-    if (strlen($message) < 5) {
+    if (strlen($message) >=1 && strlen($message) < 5) {
         $errors[] = 'Message must be at least 5 characters';
     }
 
