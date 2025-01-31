@@ -3,7 +3,7 @@
 */
 /* jshint esversion: 6 */
 
-// Global function to remove alerts
+//function to remove alerts
 function removeAlert(event) {
     const alertDiv = event.target.closest('.alert');
     if (alertDiv) {
@@ -13,16 +13,16 @@ function removeAlert(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('form');
-    // Check if form exists before proceeding
+    // check form exists
     if (!form) return;
 
-    // Function to clear all error messages
+    //clear all error messages
     function clearErrorMessages() {
         const alertDivs = document.querySelectorAll('.alert');
-        alertDivs.forEach(alertDiv => alertDiv.remove()); // Remove all existing alerts
+        alertDivs.forEach(alertDiv => alertDiv.remove()); // remove existing alerts
     }
 
-    // Function to create and display an error alert
+    // create and display an error alert
     function showError(message) {
         const alertDiv = document.createElement('div');
         alertDiv.className = 'alert alert-error';
@@ -31,10 +31,10 @@ document.addEventListener("DOMContentLoaded", function() {
         alertDiv.style.display = 'block';
     }
 
-    // Function to clear form fields
+    //clear form fields
     function clearForm() {
         form.reset();
-        // Reset the custom checkbox
+        // reset checkbox
         const checkbox = document.getElementById('Checkbox');
         if (checkbox) {
             checkbox.checked = false;
@@ -65,15 +65,15 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.contact-form').insertBefore(alertDiv, form);
                 alertDiv.style.display = 'block';
 
-                // Clear form fields on success
+                // clear form on success
                 clearForm();
 
-                // Hide success message after 5 seconds
+                // hide success message after 5 seconds
                 setTimeout(() => {
                     alertDiv.style.display = 'none';
                 }, 5000);
             } else if (data.errors) {
-                // Handle multiple errors
+                // multiple errors
                 data.errors.forEach(error => {
                     showError(error);
                 });
