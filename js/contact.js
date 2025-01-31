@@ -84,7 +84,7 @@ document.addEventListener("DOMContentLoaded", function() {
                         alertDiv.style.display = 'none';
                     }, 5000);
                 } else {
-                    // Handle server-side validation errors
+                    // Handle server-side validation errors - comes from process_contact.php exceptions
                     showError(data.error || 'An error occurred. Please try again later.');
                 }
             })

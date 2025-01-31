@@ -150,17 +150,19 @@
         border: 0;
     }
 }
+
 .alert-error {
     display: none;
-    background-color: #f2dede;
-    border-color: #ebccd1;
-    color: #a94442;
+    background-color: #ffcccc; 
+    border-color: #ff0000; 
+    color: #900; 
 }
+
 .alert-success {
     display: none;
-    background-color: green;
-    border-color: #d6e9c6;
-    color: black;
+    background-color: #d4edda; 
+    border-color: #155724; 
+    color: #155724; 
 }
 .form-group {
     margin: 0 0 15px;
