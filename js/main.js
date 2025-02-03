@@ -15,9 +15,10 @@ $(document).ready(function() {
     placeholder.height(headerHeight);
     placeholder.hide(); // Initially hide the placeholder
     
-    // Initial header state
-    header.css({
+     // Initial header state
+     header.css({
         width: '100%',
+        position: 'relative',  // Start with relative positioning
         zIndex: 1000,
         transition: 'transform 0.3s ease-in-out, top 0.3s ease-in-out'
     });
@@ -30,19 +31,20 @@ $(document).ready(function() {
             // Scrolling down
             if (isHeaderFixed) {
                 header.css({
+                    'position': 'fixed',
                     'transform': `translateY(-100%) translateX(${sideMenuOffset}px)`
                 });
             }
         } else if (currentScroll < lastScrollTop) {
             // Scrolling up
             if (!isHeaderFixed && currentScroll > headerHeight) {
-                // Make header fixed only when scrolling up and we're past the header height
                 isHeaderFixed = true;
                 placeholder.show();
                 header.css({
                     'position': 'fixed',
-                    'top': '-100%',  // Start from above viewport
-                    'left': 0
+                    'top': '-100%',
+                    'left': 0,
+                    'transform': `translateX(${sideMenuOffset}px)`
                 });
                 // Force reflow
                 header[0].offsetHeight;
@@ -53,36 +55,36 @@ $(document).ready(function() {
             }
             if (isHeaderFixed) {
                 header.css({
-                    'transform': `translateY(0) translateX(${sideMenuOffset}px)`
+                    'transform': `translateX(${sideMenuOffset}px)`
                 });
             }
         }
         
-        // If we're at the top of the page, reset header to normal flow
+        // If we're at the top of the page
         if (currentScroll <= 0) {
             isHeaderFixed = false;
             placeholder.hide();
             header.css({
-                'position': 'static',
-                'transform': 'none'
+                'position': 'relative',
+                'top': '0',
+                'left': '0',
+                'transform': `translateX(${sideMenuOffset}px)`
             });
         }
         
         lastScrollTop = currentScroll;
     });
-
-    // Update placeholder height on window resize
-    $(window).resize(function() {
-        placeholder.height(header.outerHeight());
-    });
-
-    // Expose function to update side menu offset
-    window.updateHeaderOffset = function(offset) {
-        sideMenuOffset = offset;
-        if (isHeaderFixed) {
-            header.css('transform', `translateY(0) translateX(${offset}px)`);
-        }
-    };
+    
+        // Update placeholder height on window resize
+        $(window).resize(function() {
+            placeholder.height(header.outerHeight());
+        });
+    
+        // Expose function to update side menu offset
+        window.updateHeaderOffset = function(offset) {
+            sideMenuOffset = offset;
+            header.css('transform', `translateX(${offset}px)`);
+        };
 });
 
 
