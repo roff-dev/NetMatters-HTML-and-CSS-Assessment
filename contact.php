@@ -114,7 +114,7 @@ include ("inc/header.php");
                     </div>
                     <div class="form-group">
                         <label for="message">Message</label>
-                        <textarea  name="message" id="message" placeholder="Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?"></textarea>
+                        <textarea  name="message" id="message" placeholder="">Hi, I am interested in discussing a Our Offices solution, could you please give me a call or send an email?</textarea>
                     </div>
                 
                     <div class="form-group">

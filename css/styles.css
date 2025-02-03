@@ -932,6 +932,7 @@ footer .footer-row .footer-menu ul a:hover {
   height: 100px;
   padding: 5px 15px;
   font-family: Poppins, sans-serif;
+  color: #666;
 }
 .form-group input, .form-group textarea {
   border-color: #ccc;
