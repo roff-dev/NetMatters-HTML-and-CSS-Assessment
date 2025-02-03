@@ -257,6 +257,16 @@ include ("inc/connection.php");
                 </div>
             </div>
             <div class="news-s">
+                <?php
+                
+                try {
+                    $stmt = $pdo->query("SELECT title, img, category, bodyText, author, authorImg, authorDate FROM news_articles ORDER BY authorDate DESC LIMIT 3");
+                    $newsItems = $stmt->fetchAll(); // Fetch all rows as an associative array
+                } catch (PDOException $e) {
+                    die("Error fetching news data: " . $e->getMessage());
+                }
+                
+                ?>
             <?php foreach ($newsItems as $index => $item): ?>  
                 <div class="newsbox<?= $index + 1 ?>">  
                 <div class="category-tag <?= strtolower(htmlspecialchars($item['category'])) ?>">
