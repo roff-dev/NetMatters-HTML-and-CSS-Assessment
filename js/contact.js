@@ -13,13 +13,26 @@ function removeAlert(event) {
 
 document.addEventListener("DOMContentLoaded", function() {
     const form = document.getElementById('form');
-    // check form exists
+    // check form exists before proceeding
     if (!form) return;
+
+    // get required input fields
+    const requiredFields = [
+        { element: document.getElementById('name'), name: 'Name' },
+        { element: document.getElementById('email'), name: 'Email' },
+        { element: document.getElementById('phone'), name: 'Phone' },
+        { element: document.getElementById('message'), name: 'Message' }
+    ];
 
     //clear all error messages
     function clearErrorMessages() {
         const alertDivs = document.querySelectorAll('.alert');
-        alertDivs.forEach(alertDiv => alertDiv.remove()); // remove existing alerts
+        alertDivs.forEach(alertDiv => alertDiv.remove());
+        
+        // remove red border
+        requiredFields.forEach(field => {
+            field.element.style.border = '';
+        });
     }
 
     // create and display an error alert
@@ -31,10 +44,10 @@ document.addEventListener("DOMContentLoaded", function() {
         alertDiv.style.display = 'block';
     }
 
-    //clear form fields
+    // clear form fields
     function clearForm() {
         form.reset();
-        // reset checkbox
+        // reset the checkbox
         const checkbox = document.getElementById('Checkbox');
         if (checkbox) {
             checkbox.checked = false;
@@ -45,11 +58,38 @@ document.addEventListener("DOMContentLoaded", function() {
         }
     }
 
+    // validate required fields are not empty
+    function validateRequiredFields() {
+        let isValid = true;
+        const emptyFields = [];
+
+        requiredFields.forEach(field => {
+            if (!field.element.value.trim()) {
+                field.element.style.border = '1px solid red';
+                emptyFields.push(field.name);
+                isValid = false;
+            }
+        });
+
+        // show empty fields in error message
+        if (!isValid) {
+            showError(`Please fill in the following required fields: ${emptyFields.join(', ')}`);
+        }
+
+        return isValid;
+    }
+
     form.addEventListener('submit', function(e) {
         e.preventDefault();
         
         clearErrorMessages();
+
+        // check required fields first
+        if (!validateRequiredFields()) {
+            return;
+        }
         
+        // if fields not empty proceed with php
         const formData = new FormData(this);
         
         fetch('inc/process_contact.php', {
@@ -65,7 +105,7 @@ document.addEventListener("DOMContentLoaded", function() {
                 document.querySelector('.contact-form').insertBefore(alertDiv, form);
                 alertDiv.style.display = 'block';
 
-                // clear form on success
+                // clear form fields on success
                 clearForm();
 
                 // hide success message after 5 seconds
@@ -73,7 +113,7 @@ document.addEventListener("DOMContentLoaded", function() {
                     alertDiv.style.display = 'none';
                 }, 5000);
             } else if (data.errors) {
-                // multiple errors
+                // handle multiple errors
                 data.errors.forEach(error => {
                     showError(error);
                 });
@@ -84,6 +124,15 @@ document.addEventListener("DOMContentLoaded", function() {
         .catch(error => {
             console.error('Error:', error);
             showError('An error occurred. Please try again later.');
+        });
+    });
+
+    // remove red outline when user starts typing
+    requiredFields.forEach(field => {
+        field.element.addEventListener('input', function() {
+            if (this.value.trim()) {
+                this.style.border = '';
+            }
         });
     });
 });
