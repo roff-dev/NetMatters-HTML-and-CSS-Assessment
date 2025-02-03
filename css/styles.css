@@ -2245,35 +2245,21 @@ textarea.error {
   padding: 0;
   margin: 0;
 }
-
-.slick-dots li {
-  margin: 0 5px;
-}
-
-.slick-dots li button {
-  width: 12px;
-  height: 12px;
-  background-color: #ccc;
-  border-radius: 50%;
-  transition: all 0.3s ease;
-}
-
-.slick-dots li.slick-active button {
-  background-color: #fff;
-  border: 2px solid white;
-}
-
 .slick-dots li button:before {
-  font-family: "slick";
-  content: "";
-  color: transparent;
+  color: white;
+  padding-top: 3.5px;
+  font-size: 0.75rem;
 }
-
 .slick-dots li.slick-active button:before {
-  border: 3px solid white;
+  display: flex;
+  padding-top: 0.093rem;
+  padding-right: 0.05rem;
+  padding-left: 0.05rem;
+  border: solid 2.95px white;
   border-radius: 50%;
-  margin-left: -5.5px;
-  margin-top: -5.5px;
+  color: white;
+  justify-content: center;
+  opacity: 100;
 }
 
 [class^=banner] {

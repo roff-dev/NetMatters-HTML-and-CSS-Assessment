@@ -1,3 +1,4 @@
+// banner nav dots - slick dots
 .slick-dots { 
     position: absolute;
     bottom: 20px;
@@ -8,36 +9,29 @@
     list-style: none;
     padding: 0;
     margin: 0;
+
+    li {
+        & button:before{
+            color:white;
+            padding-top:3.5px;
+            font-size:.75rem;
+        }
+        &.slick-active{ //active dot styling
+            & button:before{
+                display:flex;
+                padding-top:.093rem;
+                padding-right:0.05rem;
+                padding-left:0.05rem;
+                border:solid 2.95px white;
+                border-radius:50%;
+                color:white;
+                justify-content:center;
+                opacity: 100;
+            }
+        }
+    }
   }
   
-  .slick-dots li {
-    margin: 0 5px;
-  }
-  
-  .slick-dots li button {
-    width: 12px;
-    height: 12px;
-    background-color: #ccc;
-    border-radius: 50%;
-    transition: all 0.3s ease;
-  }
-  
-  .slick-dots li.slick-active button {
-    background-color: #fff;
-    border: 2px solid white;
-    
-  }
-    .slick-dots li button:before {
-        font-family: 'slick';
-        content: '';
-        color: transparent;
-}
-.slick-dots li.slick-active button:before {
-    border: 3px solid white;
-    border-radius: 50%;
-    margin-left: -5.5px;
-    margin-top: -5.5px;
-}
 //background image
 [class^="banner"] {
     height: 550px;
@@ -124,6 +118,7 @@
         }
      }
 }
+// banner image url map
 $banner-images: (
     "banner-1": "../img/hero.png",
     "banner-2": "../img/bespoke.jpeg",
@@ -146,39 +141,3 @@ $banner-images: (
         }
     }
 }
-
-// .banner-1 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/hero.png");
-// }
-// .banner-2 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/bespoke.jpeg");
-// }
-// .banner-3 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/it-sup.png");
-// }
-// .banner-4 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/dig-mark.png");
-// }
-// .banner-5 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/telecom.png");
-// }
-// .banner-6 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/web-des.jpeg");
-// }
-// .banner-7 {
-//     background-image: 
-//         linear-gradient(270deg, transparent 25%, #000), 
-//         url("../img/cyber.png");
-// }
