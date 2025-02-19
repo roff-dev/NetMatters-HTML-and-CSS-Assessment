@@ -2077,6 +2077,9 @@ textarea.error {
   #small-submit {
     border-radius: 3px 3px;
   }
+  .pop-link ul {
+    width: 950px;
+  }
 }
 @media (min-width: 1260px) {
   .small-input {
@@ -2087,7 +2090,7 @@ textarea.error {
     width: 167px;
   }
   .pop-link ul {
-    width: 1200px;
+    width: 1175px;
   }
   #small-submit {
     border-radius: 0 3px 3px 0;

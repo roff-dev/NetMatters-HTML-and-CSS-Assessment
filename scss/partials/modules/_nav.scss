@@ -365,7 +365,9 @@ position: relative;
     #small-submit{
       border-radius: 3px 3px;
     }
-    
+    .pop-link ul {
+      width: 950px;
+    }
   }
   @include mq('l') {
     .small-input {
@@ -378,7 +380,7 @@ position: relative;
       }
     }
     .pop-link ul {
-      width: 1200px;
+      width: 1175px;
     }
     #small-submit{
       border-radius: 0 3px 3px 0;
