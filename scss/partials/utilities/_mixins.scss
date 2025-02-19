@@ -114,10 +114,10 @@ MIXINS
       color: white; 
       font-size: 0.8em; 
       &.career {
-          background-color: $news-2; 
+          background-color: $news-1; 
       }
       &.news {
-          background-color: $news-1; 
+          background-color: $news-2; 
       }
   }
 }
